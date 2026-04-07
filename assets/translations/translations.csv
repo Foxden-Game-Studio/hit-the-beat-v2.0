@@ -1,0 +1,16 @@
+key,en_GB,de
+start_button,Start,Start
+settings_button,Settings,Einstellungen
+quit_button,Quit,Beenden
+song_list_title,Select a Song,Wähle einen Song
+difficulty_easy,Easy,Einfach
+difficulty_medium,Medium,Mittel
+difficulty_hard,Hard,Schwer
+language,Language,Sprache
+song_title,Song Title,Song Titel
+difficulty,Difficulty,Schwierigkeit
+input_device_label,Input Device,Eingabegerät
+midi_device,MIDI Drum kit,MIDI Schlagzeug
+keyboard_device,Keyboard,Tastatur
+touch_device,Touch screen,Touch screen
+diy_device,DIY Drum kit,DIY Schlagzeug

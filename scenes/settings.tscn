@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://dcvheftc8smfc"]
+
+[ext_resource type="Texture2D" uid="uid://dn3ckq1tmyg84" path="res://assets/graphics/htb_background.png" id="1_5p8wc"]
+[ext_resource type="Script" uid="uid://e4vyym12qcdm" path="res://scripts/settings.gd" id="1_6wm04"]
+[ext_resource type="Texture2D" uid="uid://cenlp110dtsmm" path="res://assets/icons/arrow_back_100dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.svg" id="3_6wm04"]
+
+[node name="Settings" type="Control" unique_id=773654442]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6wm04")
+
+[node name="background" type="TextureRect" parent="." unique_id=1623742841]
+modulate = Color(0.39308554, 0.39308554, 0.39308533, 1)
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_5p8wc")
+
+[node name="back_button" type="Button" parent="." unique_id=1387473285]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = -16.0
+icon = ExtResource("3_6wm04")
+icon_alignment = 1
+expand_icon = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=712791978]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 128.0
+offset_right = 320.0
+offset_bottom = 168.0
+
+[node name="Label" type="Label" parent="HBoxContainer" unique_id=626611818]
+layout_mode = 2
+text = "language"
+
+[node name="OptionButton" type="OptionButton" parent="HBoxContainer" unique_id=1419929607]
+layout_mode = 2
+selected = 0
+item_count = 2
+popup/item_0/text = "English (British)"
+popup/item_0/id = 0
+popup/item_1/text = "Deutch"
+popup/item_1/id = 1
+
+[connection signal="pressed" from="back_button" to="." method="_on_back_button_pressed"]
+[connection signal="item_selected" from="HBoxContainer/OptionButton" to="." method="_on_option_button_item_selected"]

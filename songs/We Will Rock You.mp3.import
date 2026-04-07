@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bfnsq4mf8b20p"
+path="res://.godot/imported/We Will Rock You.mp3-b51b8d2eead0c670d0d144530a3e7fdf.mp3str"
+
+[deps]
+
+source_file="res://songs/We Will Rock You.mp3"
+dest_files=["res://.godot/imported/We Will Rock You.mp3-b51b8d2eead0c670d0d144530a3e7fdf.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

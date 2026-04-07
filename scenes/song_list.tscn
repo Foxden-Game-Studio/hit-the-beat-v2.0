@@ -1,0 +1,143 @@
+[gd_scene format=3 uid="uid://du4bcd4p3bwos"]
+
+[ext_resource type="Texture2D" uid="uid://dn3ckq1tmyg84" path="res://assets/graphics/htb_background.png" id="1_oph07"]
+[ext_resource type="Script" uid="uid://1rvvbgkaxt3" path="res://scripts/song_list.gd" id="1_sbo1c"]
+[ext_resource type="Texture2D" uid="uid://cenlp110dtsmm" path="res://assets/icons/arrow_back_100dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.svg" id="3_1fkl3"]
+[ext_resource type="Texture2D" uid="uid://dqel7ea848qbn" path="res://assets/icons/keyboard_25dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" id="4_rtj73"]
+[ext_resource type="Texture2D" uid="uid://cl5axtwcruyd1" path="res://assets/icons/touch_app_25dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" id="4_vauox"]
+
+[node name="SongList" type="Control" unique_id=1502943494]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sbo1c")
+
+[node name="background" type="TextureRect" parent="." unique_id=1057668776]
+modulate = Color(0.39308554, 0.39308554, 0.39308533, 1)
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_oph07")
+
+[node name="title" type="Label" parent="." unique_id=651943608]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -64.0
+offset_right = 64.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "song_list_title"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="header" type="HBoxContainer" parent="." unique_id=2033695510]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -480.0
+offset_top = 100.0
+offset_right = 482.0
+offset_bottom = 140.0
+grow_horizontal = 2
+
+[node name="song_title" type="Label" parent="header" unique_id=356444893]
+custom_minimum_size = Vector2(800, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "song_title"
+
+[node name="difficulty" type="Label" parent="header" unique_id=1176853867]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+text = "difficulty"
+horizontal_alignment = 2
+
+[node name="HSeparator" type="HSeparator" parent="." unique_id=1812674037]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -510.0
+offset_top = 130.0
+offset_right = 510.0
+offset_bottom = 134.0
+grow_horizontal = 2
+
+[node name="song_list" type="ScrollContainer" parent="." unique_id=252755909]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -500.0
+offset_top = -225.0
+offset_right = 500.0
+offset_bottom = 225.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="song_list" type="VBoxContainer" parent="song_list" unique_id=1545162712]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="back_button" type="Button" parent="." unique_id=1169872120]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = -16.0
+icon = ExtResource("3_1fkl3")
+icon_alignment = 1
+expand_icon = true
+
+[node name="input_settings" type="HBoxContainer" parent="." unique_id=399289311]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -308.0
+offset_top = -56.0
+offset_bottom = -16.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="input_settings" unique_id=1766245397]
+layout_mode = 2
+text = "input_device_label"
+
+[node name="input_device" type="OptionButton" parent="input_settings" unique_id=1718280371]
+layout_mode = 2
+selected = 0
+item_count = 4
+popup/item_0/text = "midi_device"
+popup/item_0/id = 0
+popup/item_1/text = "keyboard_device"
+popup/item_1/icon = ExtResource("4_rtj73")
+popup/item_1/id = 1
+popup/item_2/text = "touch_device"
+popup/item_2/icon = ExtResource("4_vauox")
+popup/item_2/id = 2
+popup/item_2/disabled = true
+popup/item_3/text = "diy_device"
+popup/item_3/id = 3
+popup/item_3/disabled = true
+
+[connection signal="pressed" from="back_button" to="." method="_on_back_button_pressed"]
+[connection signal="item_selected" from="input_settings/input_device" to="." method="_on_input_device_item_selected"]
