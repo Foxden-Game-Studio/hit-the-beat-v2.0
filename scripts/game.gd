@@ -6,7 +6,6 @@ var song = GlobalSettings.selected_song
 var timestamps = []
 var queued_inputs = []
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	setup_input_device()
 
@@ -23,8 +22,7 @@ func _ready() -> void:
 		audio_player.stream = stream
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if not audio_player.playing:
 		return
 

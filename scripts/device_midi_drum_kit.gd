@@ -1,6 +1,6 @@
 extends Node
 
-signal input
+signal input(drum: String)
 
 func pitch_to_name(pitch: int) -> String:
 	match  pitch:
@@ -24,4 +24,8 @@ func _input(event: InputEvent) -> void:
 func _process_midi_input(midi_event: InputEventMIDI) -> void:
 	match midi_event.message:
 		248: pass
-		_:	input.emit(pitch_to_name(midi_event.pitch))
+		_:	
+			var drum = pitch_to_name(midi_event.pitch)
+			if !drum.is_empty():
+				input.emit(drum)
+			

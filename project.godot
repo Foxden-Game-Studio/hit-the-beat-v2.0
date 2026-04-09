@@ -34,6 +34,7 @@ window/size/viewport_width=1280
 window/size/viewport_height=720
 window/size/resizable=false
 window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 mouse_cursor/custom_image="uid://b04ipan4eymns"
 mouse_cursor/custom_image_hotspot=Vector2(16, 16)
 

@@ -43,4 +43,22 @@ offset_right = 72.0
 offset_bottom = 72.0
 icon = ExtResource("2_yqjtg")
 
+[node name="current_song_title" type="Label" parent="overlay" unique_id=40040501]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="score_container" type="HBoxContainer" parent="overlay" unique_id=1661207724]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="title" type="Label" parent="overlay/score_container" unique_id=1830427711]
+layout_mode = 2
+text = "score"
+
+[node name="score" type="Label" parent="overlay/score_container" unique_id=209220986]
+layout_mode = 2
+text = "0"
+
 [connection signal="finished" from="audio_player" to="." method="_on_audio_player_finished"]
