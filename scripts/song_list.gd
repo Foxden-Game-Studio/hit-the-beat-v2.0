@@ -35,6 +35,7 @@ func _on_back_button_pressed() -> void:
 
 func _on_song_button_pressed(song: String) -> void:
 	GlobalSettings.selected_song = song
+	get_tree().change_scene_to_file("res://scenes/game.tscn")
 
 
 func _on_input_device_item_selected(index: int) -> void:
