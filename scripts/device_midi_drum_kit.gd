@@ -2,19 +2,19 @@ extends Node
 
 signal input(drum: String)
 
-func pitch_to_name(pitch: int) -> String:
+func pitch_to_drum(pitch: int) -> String:
 	match  pitch:
-		41: return "tom_4"
-		43: return "tom_3"
-		45: return "tom_2"
-		48: return "tom_1"
-		38: return "snare"
-		51, 53, 59: return "ride"
-		57: return "crash_2"
-		49: return "crash_1"
-		46: return "hi_hat"
-		36: return "bass"
-		42: return "hi_hat_down"
+		41: return "Floor Tom 2"
+		43: return "Floor Tom 1"
+		45: return "Rack Tom 2"
+		48: return "Rack Tom 1"
+		38: return "Snare Drum"
+		51, 53, 59: return "Ride"
+		57: return "Crash Cymbal 2"
+		49: return "Crash Cymbal 1"
+		46: return "Hi-Hat_1"
+		36: return "Bass Drum"
+		42: return "Hi-Hat_2"
 		_: return ""
 
 func _input(event: InputEvent) -> void:
@@ -25,7 +25,7 @@ func _process_midi_input(midi_event: InputEventMIDI) -> void:
 	match midi_event.message:
 		248: pass
 		_:	
-			var drum = pitch_to_name(midi_event.pitch)
+			var drum = pitch_to_drum(midi_event.pitch)
 			if !drum.is_empty():
 				input.emit(drum)
 			
