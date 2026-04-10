@@ -1,0 +1,113 @@
+[gd_scene format=3 uid="uid://cpjtnuvja4le1"]
+
+[ext_resource type="PackedScene" uid="uid://hs8wg0fe70bj" path="res://assets/models/e-drum-kit.glb" id="1_p8koa"]
+[ext_resource type="Script" uid="uid://blwxcgvsw4m1b" path="res://scripts/e_drum_kit.gd" id="2_ki6qx"]
+[ext_resource type="Shader" uid="uid://dq4sofa0bh047" path="res://assets/shaders/test.gdshader" id="3_ki6qx"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kjpbu"]
+render_priority = 0
+shader = ExtResource("3_ki6qx")
+shader_parameter/drum_color = Color(0.1, 0.1, 0.1, 1)
+shader_parameter/flash_color = Color(0, 0, 0, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4b80v"]
+render_priority = 0
+shader = ExtResource("3_ki6qx")
+shader_parameter/drum_color = Color(0.1, 0.1, 0.1, 1)
+shader_parameter/flash_color = Color(0, 0, 0, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mmblg"]
+render_priority = 0
+shader = ExtResource("3_ki6qx")
+shader_parameter/drum_color = Color(0.1, 0.1, 0.1, 1)
+shader_parameter/flash_color = Color(0, 0, 0, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2gjs1"]
+render_priority = 0
+shader = ExtResource("3_ki6qx")
+shader_parameter/drum_color = Color(0.1, 0.1, 0.1, 1)
+shader_parameter/flash_color = Color(0, 0, 0, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_70kwx"]
+render_priority = 0
+shader = ExtResource("3_ki6qx")
+shader_parameter/drum_color = Color(0.1, 0.1, 0.1, 1)
+shader_parameter/flash_color = Color(0, 0, 0, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2tvai"]
+render_priority = 0
+shader = ExtResource("3_ki6qx")
+shader_parameter/drum_color = Color(0.1, 0.1, 0.1, 1)
+shader_parameter/flash_color = Color(0, 0, 0, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tlvsh"]
+render_priority = 0
+shader = ExtResource("3_ki6qx")
+shader_parameter/drum_color = Color(0.1, 0.1, 0.1, 1)
+shader_parameter/flash_color = Color(0, 0, 0, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2q555"]
+render_priority = 0
+shader = ExtResource("3_ki6qx")
+shader_parameter/drum_color = Color(0.1, 0.1, 0.1, 1)
+shader_parameter/flash_color = Color(0, 0, 0, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xa8cj"]
+render_priority = 0
+shader = ExtResource("3_ki6qx")
+shader_parameter/drum_color = Color(0.1, 0.1, 0.1, 1)
+shader_parameter/flash_color = Color(0, 0, 0, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_e43xm"]
+render_priority = 0
+shader = ExtResource("3_ki6qx")
+shader_parameter/drum_color = Color(0.1, 0.1, 0.1, 1)
+shader_parameter/flash_color = Color(0, 0, 0, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ki6qx"]
+render_priority = 0
+shader = ExtResource("3_ki6qx")
+shader_parameter/drum_color = Color(0.1, 0.1, 0.1, 1)
+shader_parameter/flash_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ki6qx"]
+albedo_color = Color(0.32175887, 0.48638183, 1, 1)
+
+[node name="e-drum-kit" unique_id=1920168289 instance=ExtResource("1_p8koa")]
+script = ExtResource("2_ki6qx")
+
+[node name="Rack Tom 1" parent="." index="0" unique_id=510750961]
+surface_material_override/0 = SubResource("ShaderMaterial_kjpbu")
+
+[node name="Snare Drum" parent="." index="1" unique_id=784251327]
+surface_material_override/0 = SubResource("ShaderMaterial_4b80v")
+
+[node name="Rack Tom 2" parent="." index="2" unique_id=194358813]
+surface_material_override/0 = SubResource("ShaderMaterial_mmblg")
+
+[node name="Floor Tom 1" parent="." index="3" unique_id=819520066]
+surface_material_override/0 = SubResource("ShaderMaterial_2gjs1")
+
+[node name="Floor Tom 2" parent="." index="4" unique_id=297540436]
+surface_material_override/0 = SubResource("ShaderMaterial_70kwx")
+
+[node name="Bass Drum" parent="." index="5" unique_id=1511609186]
+surface_material_override/0 = SubResource("ShaderMaterial_2tvai")
+
+[node name="Hi-Hat_1" parent="." index="6" unique_id=686225686]
+surface_material_override/0 = SubResource("ShaderMaterial_tlvsh")
+
+[node name="Crash Cymbal 1" parent="." index="7" unique_id=622638392]
+surface_material_override/0 = SubResource("ShaderMaterial_2q555")
+
+[node name="Crash Cymbal 2" parent="." index="8" unique_id=347658447]
+surface_material_override/0 = SubResource("ShaderMaterial_xa8cj")
+
+[node name="Ride" parent="." index="9" unique_id=794307110]
+surface_material_override/0 = SubResource("ShaderMaterial_e43xm")
+
+[node name="Hi-Hat_2" parent="." index="10" unique_id=1994313625]
+surface_material_override/0 = SubResource("ShaderMaterial_ki6qx")
+
+[node name="Control Panel" parent="." index="11" unique_id=1758267832]
+surface_material_override/0 = SubResource("StandardMaterial3D_ki6qx")

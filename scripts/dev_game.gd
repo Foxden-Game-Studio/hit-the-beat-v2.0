@@ -1,14 +1,13 @@
-extends Node2D
+extends Node3D
 
-@onready var audio_player: AudioStreamPlayer2D = $audio_player
+@onready var audio_player: AudioStreamPlayer3D = $audio_player
+@onready var e_drum_kit: Node3D = $"e-drum-kit"
 
 var song = GlobalSettings.selected_song
 var timestamps = []
 var queued_inputs = []
 
 func _ready() -> void:
-	setup_input_device()
-
 	var song_file = FileAccess.get_file_as_string(song)
 	if not song_file:
 		get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
@@ -23,8 +22,7 @@ func _ready() -> void:
 
 
 func _process(_delta: float) -> void:
-	if not audio_player.playing:
-		return
+	pass
 
 func setup_input_device():
 	var input_handler = Node.new()
@@ -37,7 +35,19 @@ func setup_input_device():
 func _on_input(type: String):
 	var current_time = audio_player.get_playback_position()
 	queued_inputs.push_back({"type": type, "time": current_time})
+	e_drum_kit.on_drum_hit(type)
 
 
 func _on_audio_player_finished() -> void:
 	pass # Replace with function body.
+
+
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	if anim_name != "intro":
+		return
+
+	setup_input_device()
+
+
+func _on_menu_button_pressed() -> void:
+	pass

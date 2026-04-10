@@ -1,120 +1,123 @@
 [gd_scene format=3 uid="uid://u45yojqn7mn"]
 
-[ext_resource type="ArrayMesh" uid="uid://by4b4c3ww81km" path="res://assets/models/e-drum-kit.obj" id="1_jirf1"]
-
-[sub_resource type="Curve3D" id="Curve3D_jirf1"]
-_data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -12.742934, 7.739397, 10.940295, 0, 0, 0, 0, 0, 0, -0.0065740347, 0.05478573, -0.039850593),
-"tilts": PackedFloat32Array(0, 0)
-}
-point_count = 2
+[ext_resource type="Script" uid="uid://c7pvdlj505ybp" path="res://scripts/dev_game.gd" id="1_bhm3r"]
+[ext_resource type="PackedScene" uid="uid://cpjtnuvja4le1" path="res://scenes/e_drum_kit.tscn" id="2_bhm3r"]
+[ext_resource type="Script" uid="uid://mvwvnenyx5bq" path="res://scripts/overlay_mouse_input.gd" id="3_wf456"]
+[ext_resource type="Texture2D" uid="uid://dgtd5835fdpt2" path="res://assets/icons/menu_100dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.svg" id="3_wse1b"]
 
 [sub_resource type="Animation" id="Animation_bhm3r"]
-length = 0.001
-tracks/0/type = "bezier"
+length = 0.1
+tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Path3D/PathFollow3D:progress_ratio")
+tracks/0/path = NodePath("Camera3D:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 15, 8)]
 }
-tracks/1/type = "bezier"
+tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Path3D/PathFollow3D:rotation:x")
+tracks/1/path = NodePath("Camera3D:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(-0.42864466, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-tracks/2/type = "bezier"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Path3D/PathFollow3D:rotation:y")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(-0.8593135, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-tracks/3/type = "bezier"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Path3D/PathFollow3D:rotation:z")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(-1.6383368e-08, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.7853982, 0, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_wse1b"]
-resource_name = "intro_fly_in"
+resource_name = "intro"
 length = 2.0
-tracks/0/type = "bezier"
+tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Path3D/PathFollow3D:progress_ratio")
+tracks/0/path = NodePath("Camera3D:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"handle_modes": PackedInt32Array(0, 2),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.33333334, -0.16666667, 0, 0),
-"times": PackedFloat32Array(0, 2)
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-55.190212, 57.055546, 45.285576), Vector3(-0.21747875, 10.785628, 6.011755)]
 }
-tracks/1/type = "bezier"
+tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Path3D/PathFollow3D:rotation:x")
+tracks/1/path = NodePath("Camera3D:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"handle_modes": PackedInt32Array(0, 2),
-"points": PackedFloat32Array(-0.42864466, -0.25, 0, 0.25, 0, -0.73599726, -0.33333334, 0.051225435, 0, 0),
-"times": PackedFloat32Array(0, 2)
-}
-tracks/2/type = "bezier"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Path3D/PathFollow3D:rotation:y")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"handle_modes": PackedInt32Array(0, 2),
-"points": PackedFloat32Array(-0.8593135, -0.25, 0, 0.25, 0, 0.011822065, -0.33333334, -0.14518926, 0, 0),
-"times": PackedFloat32Array(0, 2)
-}
-tracks/3/type = "bezier"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Path3D/PathFollow3D:rotation:z")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"handle_modes": PackedInt32Array(0, 2),
-"points": PackedFloat32Array(-1.6383368e-08, -0.25, 0, 0.25, 0, -0.0039325287, -0.33333334, 0.0006554187, 0, 0),
-"times": PackedFloat32Array(0, 2)
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.4604095, -0.7412806, -0.013602698), Vector3(-0.74900806, 0, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wf456"]
 _data = {
 &"RESET": SubResource("Animation_bhm3r"),
-&"intro_fly_in": SubResource("Animation_wse1b")
+&"intro": SubResource("Animation_wse1b")
 }
 
+[sub_resource type="PlaneMesh" id="PlaneMesh_wse1b"]
+size = Vector2(4, 2.25)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_wf456"]
+viewport_path = NodePath("MeshInstance3D/SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pqflw"]
+resource_local_to_scene = true
+transparency = 1
+shading_mode = 0
+albedo_texture = SubResource("ViewportTexture_wf456")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wf456"]
+size = Vector3(4, 0.1, 2.25)
+
 [node name="DevGame" type="Node3D" unique_id=187842444]
+script = ExtResource("1_bhm3r")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=700944497]
 
-[node name="Control" type="Control" parent="CanvasLayer" unique_id=1089076550]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1439028084]
+transform = Transform3D(1, 0, 0, 0, 0.32254654, 0.9465535, 0, -0.9465535, 0.32254654, 0, 3, 0)
+
+[node name="audio_player" type="AudioStreamPlayer3D" parent="." unique_id=1288260856]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0804412, -0.646158)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=388735014]
+transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, 15, 8)
+
+[node name="e-drum-kit" parent="." unique_id=1039073883 instance=ExtResource("2_bhm3r")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1578454914]
+libraries/ = SubResource("AnimationLibrary_wf456")
+autoplay = &"intro"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1178078700]
+transform = Transform3D(0.8925858, 0.34539223, 0.2898185, 0, 0.64278764, -0.76604444, -0.45087752, 0.6837604, 0.5737431, -6.93923, 4.345, 2.193474)
+mesh = SubResource("PlaneMesh_wse1b")
+surface_material_override/0 = SubResource("StandardMaterial3D_pqflw")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D" unique_id=776206301]
+script = ExtResource("3_wf456")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D" unique_id=1067243350]
+transform = Transform3D(1.0000005, 0, 0, 0, 1.000001, 0, 0, 0, 1.0000083, 0, 0, 0)
+shape = SubResource("BoxShape3D_wf456")
+
+[node name="SubViewport" type="SubViewport" parent="MeshInstance3D" unique_id=1930828186]
+transparent_bg = true
+size = Vector2i(640, 360)
+
+[node name="overlay" type="Control" parent="MeshInstance3D/SubViewport" unique_id=1089076550]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -122,23 +125,50 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1439028084]
-transform = Transform3D(1, 0, 0, 0, 0.7071068, 0.7071068, 0, -0.7071068, 0.7071068, 0, 3, 0)
+[node name="menu_button" type="Button" parent="MeshInstance3D/SubViewport/overlay" unique_id=416687459]
+layout_mode = 1
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 72.0
+offset_bottom = 72.0
+icon = ExtResource("3_wse1b")
+icon_alignment = 1
 
-[node name="EDrumKit" type="MeshInstance3D" parent="." unique_id=146622770]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
-mesh = ExtResource("1_jirf1")
+[node name="song_title" type="Label" parent="MeshInstance3D/SubViewport/overlay" unique_id=1457435100]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -36.0
+offset_top = 16.0
+offset_right = 36.0
+offset_bottom = 39.0
+grow_horizontal = 2
+text = "song title"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Path3D" type="Path3D" parent="." unique_id=1975167340]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.054486036, 3.2067792, 1.7082376)
-curve = SubResource("Curve3D_jirf1")
+[node name="HBoxContainer" type="HBoxContainer" parent="MeshInstance3D/SubViewport/overlay" unique_id=707654963]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -28.0
+offset_top = -20.0
+offset_right = 28.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="PathFollow3D" type="PathFollow3D" parent="Path3D" unique_id=2109411561]
-transform = Transform3D(0.6529419, 0.31479132, -0.6888494, -1.4900805e-08, 0.90949833, 0.41562423, 0.7573763, -0.27138484, 0.59386414, -12.742934, 7.739397, 10.940295)
-loop = false
+[node name="score_title" type="Label" parent="MeshInstance3D/SubViewport/overlay/HBoxContainer" unique_id=99182778]
+layout_mode = 2
+text = "score"
 
-[node name="Camera3D" type="Camera3D" parent="Path3D/PathFollow3D" unique_id=1462765149]
+[node name="score" type="Label" parent="MeshInstance3D/SubViewport/overlay/HBoxContainer" unique_id=1907130959]
+layout_mode = 2
+text = "0"
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1949083850]
-libraries/ = SubResource("AnimationLibrary_wf456")
-autoplay = &"intro_fly_in"
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="pressed" from="MeshInstance3D/SubViewport/overlay/menu_button" to="." method="_on_menu_button_pressed"]
