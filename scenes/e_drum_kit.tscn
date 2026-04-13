@@ -71,43 +71,43 @@ shader_parameter/drum_color = Color(0.1, 0.1, 0.1, 1)
 shader_parameter/flash_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ki6qx"]
-albedo_color = Color(0.32175887, 0.48638183, 1, 1)
+albedo_color = Color(0.101960786, 0.101960786, 0.101960786, 1)
 
 [node name="e-drum-kit" unique_id=1920168289 instance=ExtResource("1_p8koa")]
 script = ExtResource("2_ki6qx")
 
-[node name="Rack Tom 1" parent="." index="0" unique_id=2049373468]
+[node name="Rack Tom 1" parent="." index="0" unique_id=673288877]
 surface_material_override/0 = SubResource("ShaderMaterial_kjpbu")
 
-[node name="Snare Drum" parent="." index="1" unique_id=1840931771]
+[node name="Snare Drum" parent="." index="1" unique_id=761575149]
 surface_material_override/0 = SubResource("ShaderMaterial_4b80v")
 
-[node name="Rack Tom 2" parent="." index="2" unique_id=578362677]
+[node name="Rack Tom 2" parent="." index="2" unique_id=177701211]
 surface_material_override/0 = SubResource("ShaderMaterial_mmblg")
 
-[node name="Floor Tom 1" parent="." index="3" unique_id=90741657]
+[node name="Floor Tom 1" parent="." index="3" unique_id=1872375509]
 surface_material_override/0 = SubResource("ShaderMaterial_2gjs1")
 
-[node name="Floor Tom 2" parent="." index="4" unique_id=599740198]
+[node name="Floor Tom 2" parent="." index="4" unique_id=444107739]
 surface_material_override/0 = SubResource("ShaderMaterial_70kwx")
 
-[node name="Bass Drum" parent="." index="5" unique_id=1265002760]
+[node name="Bass Drum" parent="." index="5" unique_id=41457908]
 surface_material_override/0 = SubResource("ShaderMaterial_2tvai")
 
-[node name="Hi-Hat_1" parent="." index="6" unique_id=1893110917]
+[node name="Hi-Hat_1" parent="." index="6" unique_id=2029045241]
 surface_material_override/0 = SubResource("ShaderMaterial_tlvsh")
 
-[node name="Crash Cymbal 1" parent="." index="7" unique_id=44801468]
+[node name="Crash Cymbal 1" parent="." index="7" unique_id=594139202]
 surface_material_override/0 = SubResource("ShaderMaterial_2q555")
 
-[node name="Crash Cymbal 2" parent="." index="8" unique_id=1984522270]
+[node name="Crash Cymbal 2" parent="." index="8" unique_id=1033911469]
 surface_material_override/0 = SubResource("ShaderMaterial_xa8cj")
 
-[node name="Ride" parent="." index="9" unique_id=1473271096]
+[node name="Ride" parent="." index="9" unique_id=2044636460]
 surface_material_override/0 = SubResource("ShaderMaterial_e43xm")
 
-[node name="Hi-Hat_2" parent="." index="10" unique_id=1069322047]
+[node name="Hi-Hat_2" parent="." index="10" unique_id=1474918311]
 surface_material_override/0 = SubResource("ShaderMaterial_ki6qx")
 
-[node name="Control Panel" parent="." index="11" unique_id=197018525]
+[node name="Control Panel" parent="." index="11" unique_id=1004429226]
 surface_material_override/0 = SubResource("StandardMaterial3D_ki6qx")

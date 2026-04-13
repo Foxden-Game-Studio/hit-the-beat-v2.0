@@ -115,13 +115,13 @@ script = ExtResource("1_bhm3r")
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=700944497]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1439028084]
-transform = Transform3D(1, 0, 0, 0, 0.32254654, 0.9465535, 0, -0.9465535, 0.32254654, 0, 3, 0)
+transform = Transform3D(1, 0, 0, 0, -0.023751676, 0.9997178, 0, -0.9997178, -0.023751676, 0, 3, 0)
 
 [node name="audio_player" type="AudioStreamPlayer3D" parent="." unique_id=1288260856]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0804412, -0.646158)
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=388735014]
-transform = Transform3D(0.89493436, -0.2868104, 0.34180734, 0, 0.76604444, 0.6427876, -0.4461978, -0.5752527, 0.6855595, -6.3108835, 5.392911, 3.3244762)
+transform = Transform3D(0.89493436, -0.28681037, 0.34180734, 0, 0.7660444, 0.6427876, -0.4461978, -0.57525265, 0.6855595, -6.3108835, 5.392911, 3.3244762)
 
 [node name="e-drum-kit" parent="." unique_id=1039073883 instance=ExtResource("2_bhm3r")]
 
