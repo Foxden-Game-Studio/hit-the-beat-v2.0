@@ -14,11 +14,14 @@ var device_index_to_string = {
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("dev_toggle_fullscreen"):
-		if window_is_fullscreen:
-			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
-			DisplayServer.window_set_size(window_size_windowed)
-			window_is_fullscreen = !window_is_fullscreen
-		elif !window_is_fullscreen:
-			window_size_windowed = DisplayServer.window_get_size()
-			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
-			window_is_fullscreen = !window_is_fullscreen
+		toggle_fullscreen()
+			
+func toggle_fullscreen():
+	if window_is_fullscreen:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+		DisplayServer.window_set_size(window_size_windowed)
+		window_is_fullscreen = !window_is_fullscreen
+	elif !window_is_fullscreen:
+		window_size_windowed = DisplayServer.window_get_size()
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+		window_is_fullscreen = !window_is_fullscreen

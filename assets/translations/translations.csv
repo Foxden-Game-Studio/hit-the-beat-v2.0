@@ -15,3 +15,5 @@ keyboard_device,Keyboard,Tastatur
 touch_device,Touch screen,Touch screen
 diy_device,DIY Drum kit,DIY Schlagzeug
 score,Score,Punktzahl
+resume_button,Resume,Fortsetzen
+fullscreen,Fullscreen,Vollbild
