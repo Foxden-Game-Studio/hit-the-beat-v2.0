@@ -5,8 +5,8 @@
 [ext_resource type="Script" uid="uid://mvwvnenyx5bq" path="res://scripts/overlay_mouse_input.gd" id="3_wf456"]
 [ext_resource type="Texture2D" uid="uid://dgtd5835fdpt2" path="res://assets/icons/menu_100dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.svg" id="3_wse1b"]
 
-[sub_resource type="Animation" id="Animation_bhm3r"]
-length = 0.1
+[sub_resource type="Animation" id="Animation_pqflw"]
+length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -17,7 +17,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(0, 15, 8)]
+"values": [Vector3(-6.3108835, 5.392911, 3.3244762)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -29,7 +29,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector3(-0.7853982, 0, 0)]
+"values": [Vector3(-0.6981317, 0.46251225, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_wse1b"]
@@ -60,10 +60,38 @@ tracks/1/keys = {
 "values": [Vector3(-0.4604095, -0.7412806, -0.013602698), Vector3(-0.74900806, 0, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_wf456"]
+resource_name = "toggle_game_menu"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.217, 10.786, 6.012), Vector3(-6.3108835, 5.392911, 3.3244762)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.7487463, 0, 0), Vector3(-0.6981317, 0.46251225, 0)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wf456"]
 _data = {
-&"RESET": SubResource("Animation_bhm3r"),
-&"intro": SubResource("Animation_wse1b")
+&"RESET": SubResource("Animation_pqflw"),
+&"intro": SubResource("Animation_wse1b"),
+&"toggle_game_menu": SubResource("Animation_wf456")
 }
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_wse1b"]
@@ -93,7 +121,7 @@ transform = Transform3D(1, 0, 0, 0, 0.32254654, 0.9465535, 0, -0.9465535, 0.3225
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0804412, -0.646158)
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=388735014]
-transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, 15, 8)
+transform = Transform3D(0.89493436, -0.2868104, 0.34180734, 0, 0.76604444, 0.6427876, -0.4461978, -0.5752527, 0.6855595, -6.3108835, 5.392911, 3.3244762)
 
 [node name="e-drum-kit" parent="." unique_id=1039073883 instance=ExtResource("2_bhm3r")]
 
@@ -125,7 +153,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="menu_button" type="Button" parent="MeshInstance3D/SubViewport/overlay" unique_id=416687459]
+[node name="game_statistics" type="Control" parent="MeshInstance3D/SubViewport/overlay" unique_id=725647083]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="menu_button" type="Button" parent="MeshInstance3D/SubViewport/overlay/game_statistics" unique_id=416687459]
 layout_mode = 1
 offset_left = 16.0
 offset_top = 16.0
@@ -134,7 +170,7 @@ offset_bottom = 72.0
 icon = ExtResource("3_wse1b")
 icon_alignment = 1
 
-[node name="song_title" type="Label" parent="MeshInstance3D/SubViewport/overlay" unique_id=1457435100]
+[node name="song_title" type="Label" parent="MeshInstance3D/SubViewport/overlay/game_statistics" unique_id=1457435100]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -148,7 +184,7 @@ text = "song title"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MeshInstance3D/SubViewport/overlay" unique_id=707654963]
+[node name="HBoxContainer" type="HBoxContainer" parent="MeshInstance3D/SubViewport/overlay/game_statistics" unique_id=707654963]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -162,13 +198,46 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="score_title" type="Label" parent="MeshInstance3D/SubViewport/overlay/HBoxContainer" unique_id=99182778]
+[node name="score_title" type="Label" parent="MeshInstance3D/SubViewport/overlay/game_statistics/HBoxContainer" unique_id=99182778]
 layout_mode = 2
 text = "score"
 
-[node name="score" type="Label" parent="MeshInstance3D/SubViewport/overlay/HBoxContainer" unique_id=1907130959]
+[node name="score" type="Label" parent="MeshInstance3D/SubViewport/overlay/game_statistics/HBoxContainer" unique_id=1907130959]
 layout_mode = 2
 text = "0"
 
+[node name="game_menu" type="Control" parent="MeshInstance3D/SubViewport/overlay" unique_id=1788451941]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MeshInstance3D/SubViewport/overlay/game_menu" unique_id=518723795]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -63.5
+offset_top = -33.0
+offset_right = 63.5
+offset_bottom = 33.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="resume_button" type="Button" parent="MeshInstance3D/SubViewport/overlay/game_menu/VBoxContainer" unique_id=843933864]
+layout_mode = 2
+text = "resume_button"
+
+[node name="quit_button" type="Button" parent="MeshInstance3D/SubViewport/overlay/game_menu/VBoxContainer" unique_id=945741786]
+layout_mode = 2
+text = "quit_button"
+
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
-[connection signal="pressed" from="MeshInstance3D/SubViewport/overlay/menu_button" to="." method="_on_menu_button_pressed"]
+[connection signal="pressed" from="MeshInstance3D/SubViewport/overlay/game_statistics/menu_button" to="." method="_on_menu_button_pressed"]
+[connection signal="pressed" from="MeshInstance3D/SubViewport/overlay/game_menu/VBoxContainer/resume_button" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="MeshInstance3D/SubViewport/overlay/game_menu/VBoxContainer/quit_button" to="." method="_on_quit_button_pressed"]

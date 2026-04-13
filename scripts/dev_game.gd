@@ -50,4 +50,16 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 
 
 func _on_menu_button_pressed() -> void:
-	pass
+	$AnimationPlayer.play("toggle_game_menu")
+	$MeshInstance3D/SubViewport/overlay/game_statistics.visible = false
+	$MeshInstance3D/SubViewport/overlay/game_menu.visible = true
+
+
+func _on_resume_button_pressed() -> void:
+	$AnimationPlayer.play_backwards("toggle_game_menu")
+	$MeshInstance3D/SubViewport/overlay/game_menu.visible = false
+	$MeshInstance3D/SubViewport/overlay/game_statistics.visible = true
+
+
+func _on_quit_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")

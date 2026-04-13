@@ -37,12 +37,20 @@ icon = ExtResource("3_6wm04")
 icon_alignment = 1
 expand_icon = true
 
+[node name="CheckButton" type="CheckButton" parent="." unique_id=421531446]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 146.0
+offset_right = 115.0
+offset_bottom = 186.0
+text = "fullscreen"
+
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=712791978]
 layout_mode = 0
-offset_left = 64.0
-offset_top = 128.0
-offset_right = 320.0
-offset_bottom = 168.0
+offset_left = 71.0
+offset_top = 97.0
+offset_right = 327.0
+offset_bottom = 137.0
 
 [node name="Label" type="Label" parent="HBoxContainer" unique_id=626611818]
 layout_mode = 2
@@ -54,8 +62,9 @@ selected = 0
 item_count = 2
 popup/item_0/text = "English (British)"
 popup/item_0/id = 0
-popup/item_1/text = "Deutch"
+popup/item_1/text = "Deutsch"
 popup/item_1/id = 1
 
 [connection signal="pressed" from="back_button" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="CheckButton" to="." method="_on_check_button_pressed"]
 [connection signal="item_selected" from="HBoxContainer/OptionButton" to="." method="_on_option_button_item_selected"]
