@@ -1,0 +1,399 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║              RHYTHM GAME INPUT COMPARISON WORKFLOW DIAGRAMS                  ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+1. PER-FRAME LOOP FLOWCHART
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+                            ┌─────────────────────────┐
+                            │  Game Frame Starts      │
+                            └────────────┬────────────┘
+                                         │
+                                         ▼
+                         ┌───────────────────────────────┐
+                         │ Get current audio playback    │
+                         │ position (seconds)            │
+                         └────────────┬──────────────────┘
+                                      │
+                                      ▼
+                     ┌──────────────────────────────────────┐
+                     │ Collect all inputs this frame        │
+                     │ (keyboard, MIDI, touch, etc.)        │
+                     └────────────┬─────────────────────────┘
+                                  │
+                    ┌─────────────┐ ┌──────────────────────┐
+                    │             │ │                      │
+                    ▼             ▼                         ▼
+            ┌──────────────┐  Inputs?  ┌─────────────────────────┐
+            │ No inputs    │           │ Process each input      │
+            │ this frame   │           │ [See input handler      │
+            └──────────────┘           │  diagram below]         │
+                    │                  └────────────┬─────────────┘
+                    │                               │
+                    ▼                               ▼
+            ┌──────────────┐         ┌──────────────────────────┐
+            │ Check for    │         │ Move to next input       │
+            │ missed notes │         │ once this is matched     │
+            │ [See diagram │         └──────────────┬───────────┘
+            │  below]      │                        │
+            └──────────────┘                        └──→ Loop back
+                    │
+                    ▼
+            ┌──────────────┐
+            │ Update note  │
+            │ positions on │
+            │ screen       │
+            └──────────────┘
+                    │
+                    ▼
+            ┌──────────────┐
+            │ Render frame │
+            └──────────────┘
+                    │
+                    ▼
+            ┌──────────────┐
+            │ Frame done   │
+            └──────────────┘
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+2. INPUT PROCESSING FLOWCHART (Per-Frame Loop Detail)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+              ┌─────────────────────────────────────┐
+              │ Input received at: input_time       │
+              └────────────┬────────────────────────┘
+                           │
+                           ▼
+              ┌─────────────────────────────────────┐
+              │ Apply latency compensation offset   │
+              │ adjusted_time = input_time - offset │
+              └────────────┬────────────────────────┘
+                           │
+                           ▼
+       ┌───────────────────────────────────────────────────┐
+       │ Find candidate notes within search window:        │
+       │ [adjusted_time - SEARCH_WINDOW,                   │
+       │  adjusted_time + SEARCH_WINDOW]                   │
+       │                                                   │
+       │ Search methods:                                   │
+       │ • Linear scan (small songs)                       │
+       │ • Binary search (medium songs)                    │
+       │ • Spatial bucketing (large songs)                 │
+       └────────────┬────────────────────────────────────┘
+                    │
+         ┌──────────┴──────────┐
+         │                     │
+         ▼                     ▼
+    No candidates      Found candidates
+         │                     │
+         │                     ▼
+         │         ┌─────────────────────────────┐
+         │         │ For each candidate:         │
+         │         │ Skip if already matched     │
+         │         └────────────┬────────────────┘
+         │                      │
+         │                      ▼
+         │         ┌─────────────────────────────┐
+         │         │ Calculate timing delta:     │
+         │         │ delta = adjusted_time -     │
+         │         │         note.time           │
+         │         └────────────┬────────────────┘
+         │                      │
+         │                      ▼
+         │         ┌─────────────────────────────┐
+         │         │ Is |delta| < best_delta?    │
+         │         └────────────┬────────────────┘
+         │                      │
+         │          ┌───────────┴───────────┐
+         │          │                       │
+         │          ▼                       ▼
+         │         Yes                     No
+         │          │                       │
+         │          ▼                       ▼
+         │   Update best_match      Continue to next
+         │   Update best_delta      candidate
+         │          │
+         │          └─────────────┬────────────┐
+         │                        │            │
+         ▼                        ▼            ▼
+    Register miss    ┌──────────────────────────────┐
+    Return           │ Validate hit against windows │
+                     │ Check: PERFECT/GREAT/GOOD/OK │
+                     └────────────┬─────────────────┘
+                                  │
+                    ┌─────────────┴──────────────┐
+                    │                            │
+                    ▼                            ▼
+              Within window              Outside window
+                    │                            │
+                    ▼                            ▼
+            Register hit with      Register miss
+            hit quality            Return
+            Mark as matched
+            Update combo/score
+            Show feedback
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+3. NOTE SEARCH ALGORITHM COMPARISON (Execution Timeline)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SCENARIO: Song with 10,000 notes, input at position 5,000 (middle)
+Search window: ±2 seconds (usually ~100-200 notes within window at typical BPM)
+
+LINEAR SCAN (O(n)):
+┌──────────────────────────────────────────────────────────────────┐
+│ Comparisons needed: ~5,000 average (half of total)               │
+│ Time: HIGH (slower games or mobile)                              │
+│ ↓                                                                 │
+│ [====== Check position 0 ======]                                │
+│ [====== Check position 1 ======]                                │
+│ ...                                                              │
+│ [====== Check position 4999 ======] ← Finally in range           │
+│ [====== Check position 5000 ======] ✓ FOUND                      │
+│ [====== Check position 5001 ======] ✓ FOUND                      │
+│ ...                                                              │
+│ [====== Check position 5199 ======] ✓ FOUND                      │
+│ [====== Check position 5200 ======] ✗ Out of range, continue    │
+│ [====== Check position 10000 ======]                             │
+└──────────────────────────────────────────────────────────────────┘
+
+BINARY SEARCH (O(log n)):
+┌──────────────────────────────────────────────────────────────────┐
+│ Comparisons needed: ~14 to find position, then expand            │
+│ Time: GOOD (most games)                                          │
+│ ↓                                                                 │
+│ Step 1: Check position 5000 (middle)      ✓ In range             │
+│ Step 2: Check position 2500 (below range) ✗ Too early            │
+│ Step 3: Check position 7500 (above range) ✗ Too late             │
+│ ... (continue binary search for ~14 steps total)                 │
+│ Found insertion point at position ~5000                          │
+│                                                                  │
+│ Then expand window:                                             │
+│ Check 4900-5100 range: ~100 notes found ✓                       │
+└──────────────────────────────────────────────────────────────────┘
+
+SPATIAL BUCKETING (O(1) average):
+┌──────────────────────────────────────────────────────────────────┐
+│ Bucket size: 0.1 seconds (time-based)                            │
+│ Song duration: 300 seconds = 3000 buckets                        │
+│ ↓                                                                 │
+│ Input at time 234.56 seconds:                                   │
+│ Bucket ID = floor(234.56 / 0.1) = 2345                          │
+│ Search buckets: 2343-2347 (±2 buckets for ±0.2s window)         │
+│ Total comparisons: ~5-20 notes (direct access to buckets)        │
+│ Time: EXCELLENT (modern games, streaming scenarios)              │
+└──────────────────────────────────────────────────────────────────┘
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+4. TIMING WINDOW VISUALIZATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Timeline for a single note at t = 1.000s, with standard windows:
+
+Time (seconds):  0.800    0.850    0.900    0.950    1.000    1.050    1.100    1.150    1.200
+                  |        |        |        |        |        |        |        |        |
+                  ◄────────────────────────────────────────────────────────────────────────►
+                  
+Early inputs:     [Ignored (too early)]
+                           │
+                  ┌────────┴────────┐
+                  ▼                 ▼
+                EARLY         ┌─────────────┐
+              (outside        │   Perfect   │  ±40ms
+               miss window)   │  ±0.04s     │
+                              │             │ = "PERFECT" feedback
+                  ┌──────────────────────────────┐
+                  │         GREAT WINDOW         │ ±80ms = "GREAT" feedback
+                  │         ±0.08s              │
+                  │                              │
+                  ├──────────────────────────────┤
+                  │        GOOD WINDOW           │ ±120ms = "GOOD" feedback
+                  │        ±0.12s               │ Combo may break on this
+                  │                              │
+                  ├──────────────────────────────┤
+                  │         OK WINDOW            │ ±180ms = "OK" feedback
+                  │        ±0.18s               │ No combo bonus
+                  │                              │
+                  ├──────────────────────────────┤
+                  │  LATE (outside any window)   │ >180ms = "MISS"
+                  │     Auto-fails if not hit     │
+
+Visual timeline:
+             EARLY_WINDOW          LATE_WINDOW
+             (no input)            (no input)
+                  │                    │
+              ─────────────────────────────────────────
+  Time:    0.82              1.00              1.18
+           [Before window]   [NOTE TIME]   [After window]
+                │                 │              │
+             Miss zone         Perfect        Miss zone
+                              (±40ms)
+
+Input examples:
+  • Input at 0.96s:  delta = -40ms → PERFECT ✓
+  • Input at 0.98s:  delta = -20ms → PERFECT ✓
+  • Input at 1.00s:  delta =   0ms → PERFECT ✓
+  • Input at 1.02s:  delta = +20ms → PERFECT ✓
+  • Input at 1.04s:  delta = +40ms → PERFECT ✓
+  • Input at 1.06s:  delta = +60ms → GREAT ○
+  • Input at 1.08s:  delta = +80ms → GREAT ○
+  • Input at 1.10s:  delta = +100ms → GOOD △
+  • Input at 1.14s:  delta = +140ms → OK ◇
+  • Input at 1.20s:  delta = +200ms → MISS ✗ (outside window)
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+5. MISSED NOTE DETECTION TIMELINE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Note at t = 5.000s, current_time advancing:
+
+                           Current Time Advancing ───────────────────────►
+
+Time:   4.8s    4.9s    5.0s    5.1s    5.2s    5.3s    5.4s    5.5s
+         │       │       │       │       │       │       │       │
+         ◄───────┼───────┼───────┼───────┼───────┼───────┼───────┼──────
+                 │      [NOTE]   │       │       │       │       │
+                 │              │       │       │       │       │
+        Before  │              │       │       │       │       │
+        Note    │              │       │       │       │       │
+                 │     HITTABLE │REGION │       │       │       │
+        Early    │     (PERFECT/│(can   │LATE   │       │       │
+        Inputs   │     GREAT)   │be hit)│WINDOW │MISSED │GONE   │
+        Ignored  │              │       │       │MARKED │       │
+                 ▲              ▲       ▲       ▲       ▲       
+                 │              │       │       │       │
+        Input too   Hittable    Note   Hittable  Miss    Clean
+        early       range open  time   range     check   up
+                                       closes    (auto-
+                                                  miss)
+
+Frame checks during game loop:
+  Frame @4.95s: Note exists, hittable, waiting for input
+  Frame @5.00s: Note at target time, still waiting
+  Frame @5.10s: Note passed, in hittable range, can still be hit
+  Frame @5.15s: Note getting old, still in window but getting late
+  Frame @5.20s: Note now OUTSIDE late window → AUTO-MISS registered
+  Frame @5.30s: Note removed from active list (cleanup)
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+6. SIMULTANEOUS INPUT HANDLING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Scenario: Player presses 3 buttons at the same frame, 3 notes nearby
+
+Frame time: 2.000s
+
+Available Notes:
+  Note A: 1.990s (delta: -10ms)  ← Closest
+  Note B: 2.005s (delta: +5ms)   ← Second closest
+  Note C: 2.050s (delta: +50ms)  ← Third closest
+
+User Inputs:
+  Input 1: Lane 0, time 2.000s
+  Input 2: Lane 1, time 2.000s
+  Input 3: Lane 2, time 2.000s
+
+Matching Algorithm:
+
+  FOR each input (sorted by delta to nearest note):
+    
+    Input 1 (Lane 0):
+      Best match: Note A (delta -10ms = PERFECT)
+      Result: HIT! Mark Note A as matched
+      │
+      ├─ Note A removed from available pool
+      │
+    Input 2 (Lane 1):
+      Candidates: Note B, Note C (Note A now matched)
+      Best match: Note B (delta +5ms = PERFECT)
+      Result: HIT! Mark Note B as matched
+      │
+      ├─ Note B removed from available pool
+      │
+    Input 3 (Lane 2):
+      Candidates: Note C only (A & B matched)
+      Best match: Note C (delta +50ms = GOOD)
+      Result: HIT! Mark Note C as matched
+      │
+      └─ All inputs consumed, all notes matched!
+
+Timeline visualization:
+  
+  1.99s ──────── Note A (lane 0)
+        ▲
+       -10ms = Perfect timing for Input 1
+  
+  2.00s ──────── Input 1, Input 2, Input 3 all press
+        │
+        ├─ Input 1 → Note A (delta -10ms) ✓
+        ├─ Input 2 → Note B (delta +5ms)  ✓
+        └─ Input 3 → Note C (delta +50ms) ✓
+        
+  2.005s ─────── Note B (lane 1)
+  
+  2.05s ──────── Note C (lane 2)
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+7. LATENCY COMPENSATION PROCESS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+User presses button at REAL time t = 0.000s
+But the game detects it later after accounting for various delays:
+
+REAL WORLD TIMELINE:
+═══════════════════════════════════════════════════════════════════
+
+t=0ms:    ▓ User presses button
+          
+          ~5-20ms: Button signal travels through hardware/USB
+          ▓ Input device detects press
+          
+          ~10-50ms: Audio latency (system buffer)
+          ▓ Audio actually plays through speakers
+          
+          ~16-100ms: Display lag (GPU, monitor refresh)
+          ▓ Visual feedback displayed on screen
+          
+          ~30-170ms: TOTAL LATENCY
+
+═══════════════════════════════════════════════════════════════════
+
+COMPENSATION IN GAME:
+
+Without compensation:
+  Real press time: 0.000s
+  Audio playback time: +50ms (buffered)
+  Game sees press at: 0.050s
+  Result: Registers 50ms LATE on target notes (inaccurate!)
+
+With compensation (CORRECT):
+  Raw input time: 0.050s (as detected by game)
+  Audio latency offset: -0.050s (compensate backwards)
+  Adjusted time: 0.050 - 0.050 = 0.000s
+  Result: Correctly aligned with music (accurate!)
+
+CALIBRATION PROCESS:
+
+User enters calibration mode:
+  1. Visible click appears on screen
+  2. User presses when they hear the sound
+  3. Game measures: audio_time - input_time = offset
+  4. Offset stored and applied to all future inputs
+  
+Example:
+  User presses at t=2.500s (as detected)
+  Audio marker was at t=2.450s
+  Offset = 2.500 - 2.450 = +50ms
+  Store: latency_offset = 0.050
+  
+Future calculations:
+  input_time - latency_offset = adjusted_time
+  2.500 - 0.050 = 2.450 ✓ Correct!
+

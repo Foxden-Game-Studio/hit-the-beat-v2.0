@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://hs8wg0fe70bj" path="res://assets/models/e-drum-kit.glb" id="1_p8koa"]
 [ext_resource type="Script" uid="uid://blwxcgvsw4m1b" path="res://scripts/e_drum_kit.gd" id="2_ki6qx"]
-[ext_resource type="Shader" uid="uid://dq4sofa0bh047" path="res://assets/shaders/test.gdshader" id="3_ki6qx"]
+[ext_resource type="Shader" uid="uid://dq4sofa0bh047" path="res://assets/shaders/e_drum_kit.gdshader" id="3_ki6qx"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_kjpbu"]
 render_priority = 0

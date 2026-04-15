@@ -1,64 +1,272 @@
-[gd_scene format=3 uid="uid://cqcu5xbwcbist"]
+[gd_scene format=3 uid="uid://u45yojqn7mn"]
 
-[ext_resource type="Script" uid="uid://c2306y8x5js46" path="res://scripts/game.gd" id="1_lnu2h"]
-[ext_resource type="Texture2D" uid="uid://dn3ckq1tmyg84" path="res://assets/graphics/htb_background.png" id="1_uwrxv"]
-[ext_resource type="Texture2D" uid="uid://dgtd5835fdpt2" path="res://assets/icons/menu_100dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.svg" id="2_yqjtg"]
+[ext_resource type="Script" uid="uid://c7pvdlj505ybp" path="res://scripts/game.gd" id="1_iywne"]
+[ext_resource type="PackedScene" uid="uid://cpjtnuvja4le1" path="res://scenes/e_drum_kit.tscn" id="2_p57ef"]
+[ext_resource type="Script" uid="uid://mvwvnenyx5bq" path="res://scripts/overlay_mouse_input.gd" id="3_u5sy4"]
+[ext_resource type="Texture2D" uid="uid://dgtd5835fdpt2" path="res://assets/icons/menu_100dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.svg" id="4_gee14"]
+[ext_resource type="Script" uid="uid://cnvsl0vy8xt2v" path="res://scripts/game_overlay.gd" id="4_p57ef"]
+[ext_resource type="Texture2D" uid="uid://bn7rets4il5jp" path="res://assets/icons/play_arrow_100dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.svg" id="6_p57ef"]
+[ext_resource type="Script" uid="uid://bu1co8u8bfgh3" path="res://scripts/input_handler.gd" id="7_u5sy4"]
 
-[node name="Game" type="Node2D" unique_id=714355359]
-script = ExtResource("1_lnu2h")
+[sub_resource type="Animation" id="Animation_pqflw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-6.3108835, 5.392911, 3.3244762)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.6981317, 0.46251225, 0)]
+}
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=63072314]
+[sub_resource type="Animation" id="Animation_wse1b"]
+resource_name = "intro"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-55.190212, 57.055546, 45.285576), Vector3(-0.21747875, 10.785628, 6.011755)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.4604095, -0.7412806, -0.013602698), Vector3(-0.74900806, 0, 0)]
+}
 
-[node name="audio_player" type="AudioStreamPlayer2D" parent="." unique_id=259096306]
+[sub_resource type="Animation" id="Animation_wf456"]
+resource_name = "toggle_game_menu"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.217, 10.786, 6.012), Vector3(-6.3108835, 5.392911, 3.3244762)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.7487463, 0, 0), Vector3(-0.6981317, 0.46251225, 0)]
+}
 
-[node name="overlay" type="Control" parent="." unique_id=1004344473]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wf456"]
+_data = {
+&"RESET": SubResource("Animation_pqflw"),
+&"intro": SubResource("Animation_wse1b"),
+&"toggle_game_menu": SubResource("Animation_wf456")
+}
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_wse1b"]
+size = Vector2(4, 2.25)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_wf456"]
+viewport_path = NodePath("MeshInstance3D/SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pqflw"]
+resource_local_to_scene = true
+transparency = 1
+shading_mode = 0
+albedo_texture = SubResource("ViewportTexture_wf456")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wf456"]
+size = Vector3(4, 0.1, 2.25)
+
+[node name="Game" type="Node3D" unique_id=187842444]
+script = ExtResource("1_iywne")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1439028084]
+transform = Transform3D(1, 0, 0, 0, -0.023751676, 0.9997178, 0, -0.9997178, -0.023751676, 0, 3, 0)
+
+[node name="audio_player" type="AudioStreamPlayer3D" parent="." unique_id=1288260856]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.567072, 3.9254007)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=388735014]
+transform = Transform3D(0.89493436, -0.28681034, 0.34180734, 0, 0.7660443, 0.6427876, -0.4461978, -0.5752526, 0.6855595, -6.3108835, 5.392911, 3.3244762)
+
+[node name="e-drum-kit" parent="." unique_id=1039073883 instance=ExtResource("2_p57ef")]
+
+[node name="anim_player" type="AnimationPlayer" parent="." unique_id=1578454914]
+libraries/ = SubResource("AnimationLibrary_wf456")
+autoplay = &"intro"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1178078700]
+transform = Transform3D(0.8925858, 0.34539223, 0.2898185, 0, 0.64278764, -0.76604444, -0.45087752, 0.6837604, 0.5737431, -6.93923, 4.345, 2.193474)
+mesh = SubResource("PlaneMesh_wse1b")
+surface_material_override/0 = SubResource("StandardMaterial3D_pqflw")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D" unique_id=776206301]
+script = ExtResource("3_u5sy4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D" unique_id=1067243350]
+transform = Transform3D(1.0000005, 0, 0, 0, 1.000001, 0, 0, 0, 1.0000083, 0, 0, 0)
+shape = SubResource("BoxShape3D_wf456")
+
+[node name="SubViewport" type="SubViewport" parent="MeshInstance3D" unique_id=1930828186]
+transparent_bg = true
+size = Vector2i(640, 360)
+
+[node name="overlay" type="Control" parent="MeshInstance3D/SubViewport" unique_id=1089076550]
 layout_mode = 3
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -640.0
-offset_top = -360.0
-offset_right = 640.0
-offset_bottom = 360.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("4_p57ef")
 
-[node name="background" type="TextureRect" parent="overlay" unique_id=2117207645]
-z_index = -1
+[node name="game_statistics" type="Control" parent="MeshInstance3D/SubViewport/overlay" unique_id=725647083]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_uwrxv")
 
-[node name="pause_menu_button" type="Button" parent="overlay" unique_id=2077358996]
+[node name="menu_button" type="Button" parent="MeshInstance3D/SubViewport/overlay/game_statistics" unique_id=416687459]
 layout_mode = 1
 offset_left = 16.0
 offset_top = 16.0
 offset_right = 72.0
 offset_bottom = 72.0
-icon = ExtResource("2_yqjtg")
+icon = ExtResource("4_gee14")
+icon_alignment = 1
 
-[node name="current_song_title" type="Label" parent="overlay" unique_id=40040501]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+[node name="play_pause_button" type="Button" parent="MeshInstance3D/SubViewport/overlay/game_statistics" unique_id=509818241]
+layout_mode = 1
+offset_left = 80.0
+offset_top = 16.0
+offset_right = 136.0
+offset_bottom = 72.0
+toggle_mode = true
+icon = ExtResource("6_p57ef")
 
-[node name="score_container" type="HBoxContainer" parent="overlay" unique_id=1661207724]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="song_title" type="Label" parent="MeshInstance3D/SubViewport/overlay/game_statistics" unique_id=1457435100]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -36.0
+offset_top = 16.0
+offset_right = 36.0
+offset_bottom = 39.0
+grow_horizontal = 2
+text = "song title"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="title" type="Label" parent="overlay/score_container" unique_id=1830427711]
+[node name="VBoxContainer" type="VBoxContainer" parent="MeshInstance3D/SubViewport/overlay/game_statistics" unique_id=406534064]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -33.5
+offset_top = -25.0
+offset_right = 33.5
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="score_HBoxContainer" type="HBoxContainer" parent="MeshInstance3D/SubViewport/overlay/game_statistics/VBoxContainer" unique_id=707654963]
+layout_mode = 2
+
+[node name="score_title" type="Label" parent="MeshInstance3D/SubViewport/overlay/game_statistics/VBoxContainer/score_HBoxContainer" unique_id=99182778]
 layout_mode = 2
 text = "score"
 
-[node name="score" type="Label" parent="overlay/score_container" unique_id=209220986]
+[node name="score" type="Label" parent="MeshInstance3D/SubViewport/overlay/game_statistics/VBoxContainer/score_HBoxContainer" unique_id=1907130959]
 layout_mode = 2
 text = "0"
 
-[connection signal="finished" from="audio_player" to="." method="_on_audio_player_finished"]
+[node name="combo_HBoxContainer" type="HBoxContainer" parent="MeshInstance3D/SubViewport/overlay/game_statistics/VBoxContainer" unique_id=1200204831]
+layout_mode = 2
+
+[node name="combo_title" type="Label" parent="MeshInstance3D/SubViewport/overlay/game_statistics/VBoxContainer/combo_HBoxContainer" unique_id=893181405]
+layout_mode = 2
+text = "combo"
+
+[node name="combo" type="Label" parent="MeshInstance3D/SubViewport/overlay/game_statistics/VBoxContainer/combo_HBoxContainer" unique_id=627399765]
+layout_mode = 2
+text = "0"
+
+[node name="game_menu" type="Control" parent="MeshInstance3D/SubViewport/overlay" unique_id=1788451941]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MeshInstance3D/SubViewport/overlay/game_menu" unique_id=518723795]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -63.5
+offset_top = -33.0
+offset_right = 63.5
+offset_bottom = 33.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="resume_button" type="Button" parent="MeshInstance3D/SubViewport/overlay/game_menu/VBoxContainer" unique_id=843933864]
+layout_mode = 2
+text = "resume_button"
+
+[node name="quit_button" type="Button" parent="MeshInstance3D/SubViewport/overlay/game_menu/VBoxContainer" unique_id=945741786]
+layout_mode = 2
+text = "quit_button"
+
+[node name="input_handler" type="Node" parent="." unique_id=979150013]
+script = ExtResource("7_u5sy4")
+
+[connection signal="animation_finished" from="anim_player" to="." method="_on_animation_player_animation_finished"]
+[connection signal="pressed" from="MeshInstance3D/SubViewport/overlay/game_statistics/menu_button" to="MeshInstance3D/SubViewport/overlay" method="_on_menu_button_pressed"]
+[connection signal="toggled" from="MeshInstance3D/SubViewport/overlay/game_statistics/play_pause_button" to="MeshInstance3D/SubViewport/overlay" method="_on_pause_play_button_toggled"]
+[connection signal="pressed" from="MeshInstance3D/SubViewport/overlay/game_menu/VBoxContainer/resume_button" to="MeshInstance3D/SubViewport/overlay" method="_on_resume_button_pressed"]
+[connection signal="pressed" from="MeshInstance3D/SubViewport/overlay/game_menu/VBoxContainer/quit_button" to="MeshInstance3D/SubViewport/overlay" method="_on_quit_button_pressed"]
