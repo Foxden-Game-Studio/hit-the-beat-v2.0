@@ -1,6 +1,8 @@
 # Hit the Beat v2.0
 
-[🇩🇪 Deutsch](README.de.md) | [🇬🇧 English](README.md)
+## Ändere die Sprache bei bedarf:
+
+[🇬🇧 English](README.md) | [🇩🇪 Deutsch (aktuelle)](README.de.md)
 
 Ein Rhythmusspiel, das in **Godot 4.6** entwickelt wurde, bei dem Spieler zusammen mit Schlagzeugmustern in Musikspuren spielen. Es verfügt über ein interaktives 3D-Schlagzeug, mehrere Eingabemethoden (Tastatur, MIDI) und ein Bewertungssystem, das auf Zeitgenauigkeit basiert.
 
