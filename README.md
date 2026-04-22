@@ -2,7 +2,7 @@
 
 ## Switch language if needed:
 
-[🇬🇧 English](README.md) | [🇩🇪 Deutsch](README.de.md)
+[🇬🇧 English (current)](README.md) | [🇩🇪 Deutsch](README.de.md)
 
 A rhythm game built in **Godot 4.6** where players play along with drum patterns in musical tracks. Features a 3D interactive drum kit, multiple input methods (keyboard, MIDI), and a scoring system based on timing accuracy.
 
