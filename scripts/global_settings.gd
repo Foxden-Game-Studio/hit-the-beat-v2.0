@@ -15,7 +15,7 @@ var device_index_to_string = {
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("dev_toggle_fullscreen"):
 		toggle_fullscreen()
-			
+
 func toggle_fullscreen():
 	if window_is_fullscreen:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)

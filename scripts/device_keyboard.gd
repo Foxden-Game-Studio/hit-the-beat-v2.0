@@ -19,6 +19,6 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("Ride", false, true): input.emit("Ride")
 	if event.is_action_pressed("Crash Cymbal 1", false, true): input.emit("Crash Cymbal 1")
 	if event.is_action_pressed("Crash Cymbal 2", false, true): input.emit("Crash Cymbal 2")
-	if event.is_action_pressed("Hi-Hat_1", false, true): input.emit("Hi-Hat_1")
-	if event.is_action_pressed("Hi-Hat_2", false, true): input.emit("Hi-Hat_2")
+	if event.is_action_pressed("Hi-Hat_1", false, true): input.emit("Hi-Hat 1")
+	if event.is_action_pressed("Hi-Hat_2", false, true): input.emit("Hi-Hat 2")
 	if event.is_action_pressed("Bass Drum", false, true): input.emit("Bass Drum")
