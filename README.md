@@ -1,6 +1,6 @@
 # Hit the Beat v2.0
 
-## Switch language if needed:
+Switch language if needed:
 
 [🇬🇧 English (current)](README.md) | [🇩🇪 Deutsch](README.de.md)
 
