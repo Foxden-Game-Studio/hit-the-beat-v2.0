@@ -1,1647 +1,1647 @@
 {
-	"song_name": "We Will Rock You",
-	"difficulty": "easy",
-	"audio_file": "res://songs/We Will Rock You.mp3",
-	"timestamps": [
-		{
-			"time": 0.197,
-			"type": "tom 1"
-		},
-		{
-			"time": 0.197,
-			"type": "tom 2"
-		},
-		{
-			"time": 0.566,
-			"type": "tom 1"
-		},
-		{
-			"time": 0.566,
-			"type": "tom 2"
-		},
-		{
-			"time": 0.935,
-			"type": "snare"
-		},
-		{
-			"time": 1.673,
-			"type": "tom 1"
-		},
-		{
-			"time": 1.673,
-			"type": "tom 2"
-		},
-		{
-			"time": 2.042,
-			"type": "tom 1"
-		},
-		{
-			"time": 2.042,
-			"type": "tom 2"
-		},
-		{
-			"time": 2.411,
-			"type": "snare"
-		},
-		{
-			"time": 3.149,
-			"type": "tom 1"
-		},
-		{
-			"time": 3.149,
-			"type": "tom 2"
-		},
-		{
-			"time": 3.518,
-			"type": "tom 1"
-		},
-		{
-			"time": 3.518,
-			"type": "tom 2"
-		},
-		{
-			"time": 3.887,
-			"type": "snare"
-		},
-		{
-			"time": 4.625,
-			"type": "tom 1"
-		},
-		{
-			"time": 4.625,
-			"type": "tom 2"
-		},
-		{
-			"time": 4.994,
-			"type": "tom 1"
-		},
-		{
-			"time": 4.994,
-			"type": "tom 2"
-		},
-		{
-			"time": 5.363,
-			"type": "snare"
-		},
-		{
-			"time": 6.101,
-			"type": "tom 1"
-		},
-		{
-			"time": 6.101,
-			"type": "tom 2"
-		},
-		{
-			"time": 6.47,
-			"type": "tom 1"
-		},
-		{
-			"time": 6.47,
-			"type": "tom 2"
-		},
-		{
-			"time": 6.839,
-			"type": "snare"
-		},
-		{
-			"time": 7.577,
-			"type": "tom 1"
-		},
-		{
-			"time": 7.577,
-			"type": "tom 2"
-		},
-		{
-			"time": 7.946,
-			"type": "tom 1"
-		},
-		{
-			"time": 7.946,
-			"type": "tom 2"
-		},
-		{
-			"time": 8.315,
-			"type": "snare"
-		},
-		{
-			"time": 9.053,
-			"type": "tom 1"
-		},
-		{
-			"time": 9.053,
-			"type": "tom 2"
-		},
-		{
-			"time": 9.422,
-			"type": "tom 1"
-		},
-		{
-			"time": 9.422,
-			"type": "tom 2"
-		},
-		{
-			"time": 9.791,
-			"type": "snare"
-		},
-		{
-			"time": 10.529,
-			"type": "tom 1"
-		},
-		{
-			"time": 10.529,
-			"type": "tom 2"
-		},
-		{
-			"time": 10.898,
-			"type": "tom 1"
-		},
-		{
-			"time": 10.898,
-			"type": "tom 2"
-		},
-		{
-			"time": 11.267,
-			"type": "snare"
-		},
-		{
-			"time": 12.005,
-			"type": "tom 1"
-		},
-		{
-			"time": 12.005,
-			"type": "tom 2"
-		},
-		{
-			"time": 12.374,
-			"type": "tom 1"
-		},
-		{
-			"time": 12.374,
-			"type": "tom 2"
-		},
-		{
-			"time": 12.743,
-			"type": "snare"
-		},
-		{
-			"time": 13.481,
-			"type": "tom 1"
-		},
-		{
-			"time": 13.481,
-			"type": "tom 2"
-		},
-		{
-			"time": 13.85,
-			"type": "tom 1"
-		},
-		{
-			"time": 13.85,
-			"type": "tom 2"
-		},
-		{
-			"time": 14.219,
-			"type": "snare"
-		},
-		{
-			"time": 14.957,
-			"type": "tom 1"
-		},
-		{
-			"time": 14.957,
-			"type": "tom 2"
-		},
-		{
-			"time": 15.326,
-			"type": "tom 1"
-		},
-		{
-			"time": 15.326,
-			"type": "tom 2"
-		},
-		{
-			"time": 15.695,
-			"type": "snare"
-		},
-		{
-			"time": 16.433,
-			"type": "tom 1"
-		},
-		{
-			"time": 16.433,
-			"type": "tom 2"
-		},
-		{
-			"time": 16.802,
-			"type": "tom 1"
-		},
-		{
-			"time": 16.802,
-			"type": "tom 2"
-		},
-		{
-			"time": 17.171,
-			"type": "snare"
-		},
-		{
-			"time": 17.909,
-			"type": "tom 1"
-		},
-		{
-			"time": 17.909,
-			"type": "tom 2"
-		},
-		{
-			"time": 18.278,
-			"type": "tom 1"
-		},
-		{
-			"time": 18.278,
-			"type": "tom 2"
-		},
-		{
-			"time": 18.647,
-			"type": "snare"
-		},
-		{
-			"time": 19.385,
-			"type": "tom 1"
-		},
-		{
-			"time": 19.385,
-			"type": "tom 2"
-		},
-		{
-			"time": 19.754,
-			"type": "tom 1"
-		},
-		{
-			"time": 19.754,
-			"type": "tom 2"
-		},
-		{
-			"time": 20.123,
-			"type": "snare"
-		},
-		{
-			"time": 20.861,
-			"type": "tom 1"
-		},
-		{
-			"time": 20.861,
-			"type": "tom 2"
-		},
-		{
-			"time": 21.23,
-			"type": "tom 1"
-		},
-		{
-			"time": 21.23,
-			"type": "tom 2"
-		},
-		{
-			"time": 21.599,
-			"type": "snare"
-		},
-		{
-			"time": 22.337,
-			"type": "tom 1"
-		},
-		{
-			"time": 22.337,
-			"type": "tom 2"
-		},
-		{
-			"time": 22.706,
-			"type": "tom 1"
-		},
-		{
-			"time": 22.706,
-			"type": "tom 2"
-		},
-		{
-			"time": 23.075,
-			"type": "snare"
-		},
-		{
-			"time": 23.813,
-			"type": "tom 1"
-		},
-		{
-			"time": 23.813,
-			"type": "tom 2"
-		},
-		{
-			"time": 24.182,
-			"type": "tom 1"
-		},
-		{
-			"time": 24.182,
-			"type": "tom 2"
-		},
-		{
-			"time": 24.551,
-			"type": "snare"
-		},
-		{
-			"time": 25.289,
-			"type": "tom 1"
-		},
-		{
-			"time": 25.289,
-			"type": "tom 2"
-		},
-		{
-			"time": 25.658,
-			"type": "tom 1"
-		},
-		{
-			"time": 25.658,
-			"type": "tom 2"
-		},
-		{
-			"time": 26.027,
-			"type": "snare"
-		},
-		{
-			"time": 26.765,
-			"type": "tom 1"
-		},
-		{
-			"time": 26.765,
-			"type": "tom 2"
-		},
-		{
-			"time": 27.134,
-			"type": "tom 1"
-		},
-		{
-			"time": 27.134,
-			"type": "tom 2"
-		},
-		{
-			"time": 27.503,
-			"type": "snare"
-		},
-		{
-			"time": 28.241,
-			"type": "tom 1"
-		},
-		{
-			"time": 28.241,
-			"type": "tom 2"
-		},
-		{
-			"time": 28.61,
-			"type": "tom 1"
-		},
-		{
-			"time": 28.61,
-			"type": "tom 2"
-		},
-		{
-			"time": 28.979,
-			"type": "snare"
-		},
-		{
-			"time": 29.717,
-			"type": "tom 1"
-		},
-		{
-			"time": 29.717,
-			"type": "tom 2"
-		},
-		{
-			"time": 30.086,
-			"type": "tom 1"
-		},
-		{
-			"time": 30.086,
-			"type": "tom 2"
-		},
-		{
-			"time": 30.455,
-			"type": "snare"
-		},
-		{
-			"time": 31.193,
-			"type": "tom 1"
-		},
-		{
-			"time": 31.193,
-			"type": "tom 2"
-		},
-		{
-			"time": 31.562,
-			"type": "tom 1"
-		},
-		{
-			"time": 31.562,
-			"type": "tom 2"
-		},
-		{
-			"time": 31.931,
-			"type": "snare"
-		},
-		{
-			"time": 32.669,
-			"type": "tom 1"
-		},
-		{
-			"time": 32.669,
-			"type": "tom 2"
-		},
-		{
-			"time": 33.038,
-			"type": "tom 1"
-		},
-		{
-			"time": 33.038,
-			"type": "tom 2"
-		},
-		{
-			"time": 33.407,
-			"type": "snare"
-		},
-		{
-			"time": 34.145,
-			"type": "tom 1"
-		},
-		{
-			"time": 34.145,
-			"type": "tom 2"
-		},
-		{
-			"time": 34.514,
-			"type": "tom 1"
-		},
-		{
-			"time": 34.514,
-			"type": "tom 2"
-		},
-		{
-			"time": 34.883,
-			"type": "snare"
-		},
-		{
-			"time": 35.621,
-			"type": "tom 1"
-		},
-		{
-			"time": 35.621,
-			"type": "tom 2"
-		},
-		{
-			"time": 35.99,
-			"type": "tom 1"
-		},
-		{
-			"time": 35.99,
-			"type": "tom 2"
-		},
-		{
-			"time": 36.359,
-			"type": "snare"
-		},
-		{
-			"time": 37.097,
-			"type": "tom 1"
-		},
-		{
-			"time": 37.097,
-			"type": "tom 2"
-		},
-		{
-			"time": 37.466,
-			"type": "tom 1"
-		},
-		{
-			"time": 37.466,
-			"type": "tom 2"
-		},
-		{
-			"time": 37.835,
-			"type": "snare"
-		},
-		{
-			"time": 38.573,
-			"type": "tom 1"
-		},
-		{
-			"time": 38.573,
-			"type": "tom 2"
-		},
-		{
-			"time": 38.942,
-			"type": "tom 1"
-		},
-		{
-			"time": 38.942,
-			"type": "tom 2"
-		},
-		{
-			"time": 39.311,
-			"type": "snare"
-		},
-		{
-			"time": 40.049,
-			"type": "tom 1"
-		},
-		{
-			"time": 40.049,
-			"type": "tom 2"
-		},
-		{
-			"time": 40.418,
-			"type": "tom 1"
-		},
-		{
-			"time": 40.418,
-			"type": "tom 2"
-		},
-		{
-			"time": 40.787,
-			"type": "snare"
-		},
-		{
-			"time": 41.525,
-			"type": "tom 1"
-		},
-		{
-			"time": 41.525,
-			"type": "tom 2"
-		},
-		{
-			"time": 41.894,
-			"type": "tom 1"
-		},
-		{
-			"time": 41.894,
-			"type": "tom 2"
-		},
-		{
-			"time": 42.263,
-			"type": "snare"
-		},
-		{
-			"time": 43.001,
-			"type": "tom 1"
-		},
-		{
-			"time": 43.001,
-			"type": "tom 2"
-		},
-		{
-			"time": 43.37,
-			"type": "tom 1"
-		},
-		{
-			"time": 43.37,
-			"type": "tom 2"
-		},
-		{
-			"time": 43.739,
-			"type": "snare"
-		},
-		{
-			"time": 44.477,
-			"type": "tom 1"
-		},
-		{
-			"time": 44.477,
-			"type": "tom 2"
-		},
-		{
-			"time": 44.846,
-			"type": "tom 1"
-		},
-		{
-			"time": 44.846,
-			"type": "tom 2"
-		},
-		{
-			"time": 45.215,
-			"type": "snare"
-		},
-		{
-			"time": 45.953,
-			"type": "tom 1"
-		},
-		{
-			"time": 45.953,
-			"type": "tom 2"
-		},
-		{
-			"time": 46.322,
-			"type": "tom 1"
-		},
-		{
-			"time": 46.322,
-			"type": "tom 2"
-		},
-		{
-			"time": 46.691,
-			"type": "snare"
-		},
-		{
-			"time": 47.429,
-			"type": "tom 1"
-		},
-		{
-			"time": 47.429,
-			"type": "tom 2"
-		},
-		{
-			"time": 47.798,
-			"type": "tom 1"
-		},
-		{
-			"time": 47.798,
-			"type": "tom 2"
-		},
-		{
-			"time": 48.167,
-			"type": "snare"
-		},
-		{
-			"time": 48.905,
-			"type": "tom 1"
-		},
-		{
-			"time": 48.905,
-			"type": "tom 2"
-		},
-		{
-			"time": 49.274,
-			"type": "tom 1"
-		},
-		{
-			"time": 49.274,
-			"type": "tom 2"
-		},
-		{
-			"time": 49.643,
-			"type": "snare"
-		},
-		{
-			"time": 50.382,
-			"type": "tom 1"
-		},
-		{
-			"time": 50.382,
-			"type": "tom 2"
-		},
-		{
-			"time": 50.751,
-			"type": "tom 1"
-		},
-		{
-			"time": 50.751,
-			"type": "tom 2"
-		},
-		{
-			"time": 51.12,
-			"type": "snare"
-		},
-		{
-			"time": 51.858,
-			"type": "tom 1"
-		},
-		{
-			"time": 51.858,
-			"type": "tom 2"
-		},
-		{
-			"time": 52.227,
-			"type": "tom 1"
-		},
-		{
-			"time": 52.227,
-			"type": "tom 2"
-		},
-		{
-			"time": 52.596,
-			"type": "snare"
-		},
-		{
-			"time": 53.334,
-			"type": "tom 1"
-		},
-		{
-			"time": 53.334,
-			"type": "tom 2"
-		},
-		{
-			"time": 53.703,
-			"type": "tom 1"
-		},
-		{
-			"time": 53.703,
-			"type": "tom 2"
-		},
-		{
-			"time": 54.072,
-			"type": "snare"
-		},
-		{
-			"time": 54.81,
-			"type": "tom 1"
-		},
-		{
-			"time": 54.81,
-			"type": "tom 2"
-		},
-		{
-			"time": 55.179,
-			"type": "tom 1"
-		},
-		{
-			"time": 55.179,
-			"type": "tom 2"
-		},
-		{
-			"time": 55.548,
-			"type": "snare"
-		},
-		{
-			"time": 56.286,
-			"type": "tom 1"
-		},
-		{
-			"time": 56.286,
-			"type": "tom 2"
-		},
-		{
-			"time": 56.655,
-			"type": "tom 1"
-		},
-		{
-			"time": 56.655,
-			"type": "tom 2"
-		},
-		{
-			"time": 57.024,
-			"type": "snare"
-		},
-		{
-			"time": 57.762,
-			"type": "tom 1"
-		},
-		{
-			"time": 57.762,
-			"type": "tom 2"
-		},
-		{
-			"time": 58.131,
-			"type": "tom 1"
-		},
-		{
-			"time": 58.131,
-			"type": "tom 2"
-		},
-		{
-			"time": 58.5,
-			"type": "snare"
-		},
-		{
-			"time": 59.238,
-			"type": "tom 1"
-		},
-		{
-			"time": 59.238,
-			"type": "tom 2"
-		},
-		{
-			"time": 59.607,
-			"type": "tom 1"
-		},
-		{
-			"time": 59.607,
-			"type": "tom 2"
-		},
-		{
-			"time": 59.976,
-			"type": "snare"
-		},
-		{
-			"time": 60.714,
-			"type": "tom 1"
-		},
-		{
-			"time": 60.714,
-			"type": "tom 2"
-		},
-		{
-			"time": 61.083,
-			"type": "tom 1"
-		},
-		{
-			"time": 61.083,
-			"type": "tom 2"
-		},
-		{
-			"time": 61.452,
-			"type": "snare"
-		},
-		{
-			"time": 62.19,
-			"type": "tom 1"
-		},
-		{
-			"time": 62.19,
-			"type": "tom 2"
-		},
-		{
-			"time": 62.559,
-			"type": "tom 1"
-		},
-		{
-			"time": 62.559,
-			"type": "tom 2"
-		},
-		{
-			"time": 62.928,
-			"type": "snare"
-		},
-		{
-			"time": 63.666,
-			"type": "tom 1"
-		},
-		{
-			"time": 63.666,
-			"type": "tom 2"
-		},
-		{
-			"time": 64.035,
-			"type": "tom 1"
-		},
-		{
-			"time": 64.035,
-			"type": "tom 2"
-		},
-		{
-			"time": 64.404,
-			"type": "snare"
-		},
-		{
-			"time": 65.142,
-			"type": "tom 1"
-		},
-		{
-			"time": 65.142,
-			"type": "tom 2"
-		},
-		{
-			"time": 65.511,
-			"type": "tom 1"
-		},
-		{
-			"time": 65.511,
-			"type": "tom 2"
-		},
-		{
-			"time": 65.88,
-			"type": "snare"
-		},
-		{
-			"time": 66.618,
-			"type": "tom 1"
-		},
-		{
-			"time": 66.618,
-			"type": "tom 2"
-		},
-		{
-			"time": 66.987,
-			"type": "tom 1"
-		},
-		{
-			"time": 66.987,
-			"type": "tom 2"
-		},
-		{
-			"time": 67.356,
-			"type": "snare"
-		},
-		{
-			"time": 68.094,
-			"type": "tom 1"
-		},
-		{
-			"time": 68.094,
-			"type": "tom 2"
-		},
-		{
-			"time": 68.463,
-			"type": "tom 1"
-		},
-		{
-			"time": 68.463,
-			"type": "tom 2"
-		},
-		{
-			"time": 68.832,
-			"type": "snare"
-		},
-		{
-			"time": 69.57,
-			"type": "tom 1"
-		},
-		{
-			"time": 69.57,
-			"type": "tom 2"
-		},
-		{
-			"time": 69.939,
-			"type": "tom 1"
-		},
-		{
-			"time": 69.939,
-			"type": "tom 2"
-		},
-		{
-			"time": 70.308,
-			"type": "snare"
-		},
-		{
-			"time": 71.046,
-			"type": "tom 1"
-		},
-		{
-			"time": 71.046,
-			"type": "tom 2"
-		},
-		{
-			"time": 71.415,
-			"type": "tom 1"
-		},
-		{
-			"time": 71.415,
-			"type": "tom 2"
-		},
-		{
-			"time": 71.784,
-			"type": "snare"
-		},
-		{
-			"time": 72.522,
-			"type": "tom 1"
-		},
-		{
-			"time": 72.522,
-			"type": "tom 2"
-		},
-		{
-			"time": 72.891,
-			"type": "tom 1"
-		},
-		{
-			"time": 72.891,
-			"type": "tom 2"
-		},
-		{
-			"time": 73.26,
-			"type": "snare"
-		},
-		{
-			"time": 73.998,
-			"type": "tom 1"
-		},
-		{
-			"time": 73.998,
-			"type": "tom 2"
-		},
-		{
-			"time": 74.367,
-			"type": "tom 1"
-		},
-		{
-			"time": 74.367,
-			"type": "tom 2"
-		},
-		{
-			"time": 74.736,
-			"type": "snare"
-		},
-		{
-			"time": 75.474,
-			"type": "tom 1"
-		},
-		{
-			"time": 75.474,
-			"type": "tom 2"
-		},
-		{
-			"time": 75.843,
-			"type": "tom 1"
-		},
-		{
-			"time": 75.843,
-			"type": "tom 2"
-		},
-		{
-			"time": 76.212,
-			"type": "snare"
-		},
-		{
-			"time": 76.95,
-			"type": "tom 1"
-		},
-		{
-			"time": 76.95,
-			"type": "tom 2"
-		},
-		{
-			"time": 77.319,
-			"type": "tom 1"
-		},
-		{
-			"time": 77.319,
-			"type": "tom 2"
-		},
-		{
-			"time": 77.688,
-			"type": "snare"
-		},
-		{
-			"time": 78.426,
-			"type": "tom 1"
-		},
-		{
-			"time": 78.426,
-			"type": "tom 2"
-		},
-		{
-			"time": 78.795,
-			"type": "tom 1"
-		},
-		{
-			"time": 78.795,
-			"type": "tom 2"
-		},
-		{
-			"time": 79.164,
-			"type": "snare"
-		},
-		{
-			"time": 79.902,
-			"type": "tom 1"
-		},
-		{
-			"time": 79.902,
-			"type": "tom 2"
-		},
-		{
-			"time": 80.271,
-			"type": "tom 1"
-		},
-		{
-			"time": 80.271,
-			"type": "tom 2"
-		},
-		{
-			"time": 80.64,
-			"type": "snare"
-		},
-		{
-			"time": 81.378,
-			"type": "tom 1"
-		},
-		{
-			"time": 81.378,
-			"type": "tom 2"
-		},
-		{
-			"time": 81.747,
-			"type": "tom 1"
-		},
-		{
-			"time": 81.747,
-			"type": "tom 2"
-		},
-		{
-			"time": 82.116,
-			"type": "snare"
-		},
-		{
-			"time": 82.854,
-			"type": "tom 1"
-		},
-		{
-			"time": 82.854,
-			"type": "tom 2"
-		},
-		{
-			"time": 83.223,
-			"type": "tom 1"
-		},
-		{
-			"time": 83.223,
-			"type": "tom 2"
-		},
-		{
-			"time": 83.592,
-			"type": "snare"
-		},
-		{
-			"time": 84.33,
-			"type": "tom 1"
-		},
-		{
-			"time": 84.33,
-			"type": "tom 2"
-		},
-		{
-			"time": 84.699,
-			"type": "tom 1"
-		},
-		{
-			"time": 84.699,
-			"type": "tom 2"
-		},
-		{
-			"time": 85.068,
-			"type": "snare"
-		},
-		{
-			"time": 85.806,
-			"type": "tom 1"
-		},
-		{
-			"time": 85.806,
-			"type": "tom 2"
-		},
-		{
-			"time": 86.175,
-			"type": "tom 1"
-		},
-		{
-			"time": 86.175,
-			"type": "tom 2"
-		},
-		{
-			"time": 86.544,
-			"type": "snare"
-		},
-		{
-			"time": 87.282,
-			"type": "tom 1"
-		},
-		{
-			"time": 87.282,
-			"type": "tom 2"
-		},
-		{
-			"time": 87.651,
-			"type": "tom 1"
-		},
-		{
-			"time": 87.651,
-			"type": "tom 2"
-		},
-		{
-			"time": 88.02,
-			"type": "snare"
-		},
-		{
-			"time": 88.758,
-			"type": "tom 1"
-		},
-		{
-			"time": 88.758,
-			"type": "tom 2"
-		},
-		{
-			"time": 89.127,
-			"type": "tom 1"
-		},
-		{
-			"time": 89.127,
-			"type": "tom 2"
-		},
-		{
-			"time": 89.496,
-			"type": "snare"
-		},
-		{
-			"time": 90.234,
-			"type": "tom 1"
-		},
-		{
-			"time": 90.234,
-			"type": "tom 2"
-		},
-		{
-			"time": 90.603,
-			"type": "tom 1"
-		},
-		{
-			"time": 90.603,
-			"type": "tom 2"
-		},
-		{
-			"time": 90.972,
-			"type": "snare"
-		},
-		{
-			"time": 91.71,
-			"type": "tom 1"
-		},
-		{
-			"time": 91.71,
-			"type": "tom 2"
-		},
-		{
-			"time": 92.079,
-			"type": "tom 1"
-		},
-		{
-			"time": 92.079,
-			"type": "tom 2"
-		},
-		{
-			"time": 92.448,
-			"type": "snare"
-		},
-		{
-			"time": 93.186,
-			"type": "tom 1"
-		},
-		{
-			"time": 93.186,
-			"type": "tom 2"
-		},
-		{
-			"time": 93.555,
-			"type": "tom 1"
-		},
-		{
-			"time": 93.555,
-			"type": "tom 2"
-		},
-		{
-			"time": 93.924,
-			"type": "snare"
-		},
-		{
-			"time": 94.662,
-			"type": "tom 1"
-		},
-		{
-			"time": 94.662,
-			"type": "tom 2"
-		},
-		{
-			"time": 95.031,
-			"type": "tom 1"
-		},
-		{
-			"time": 95.031,
-			"type": "tom 2"
-		},
-		{
-			"time": 95.4,
-			"type": "snare"
-		},
-		{
-			"time": 96.138,
-			"type": "tom 1"
-		},
-		{
-			"time": 96.138,
-			"type": "tom 2"
-		},
-		{
-			"time": 96.507,
-			"type": "tom 1"
-		},
-		{
-			"time": 96.507,
-			"type": "tom 2"
-		},
-		{
-			"time": 96.876,
-			"type": "snare"
-		},
-		{
-			"time": 97.614,
-			"type": "tom 1"
-		},
-		{
-			"time": 97.614,
-			"type": "tom 2"
-		},
-		{
-			"time": 97.983,
-			"type": "tom 1"
-		},
-		{
-			"time": 97.983,
-			"type": "tom 2"
-		},
-		{
-			"time": 98.352,
-			"type": "snare"
-		},
-		{
-			"time": 99.09,
-			"type": "tom 1"
-		},
-		{
-			"time": 99.09,
-			"type": "tom 2"
-		},
-		{
-			"time": 99.459,
-			"type": "tom 1"
-		},
-		{
-			"time": 99.459,
-			"type": "tom 2"
-		},
-		{
-			"time": 99.828,
-			"type": "snare"
-		},
-		{
-			"time": 100.566,
-			"type": "tom 1"
-		},
-		{
-			"time": 100.566,
-			"type": "tom 2"
-		},
-		{
-			"time": 100.935,
-			"type": "tom 1"
-		},
-		{
-			"time": 100.935,
-			"type": "tom 2"
-		},
-		{
-			"time": 101.304,
-			"type": "snare"
-		},
-		{
-			"time": 102.042,
-			"type": "tom 1"
-		},
-		{
-			"time": 102.042,
-			"type": "tom 2"
-		},
-		{
-			"time": 102.411,
-			"type": "tom 1"
-		},
-		{
-			"time": 102.411,
-			"type": "tom 2"
-		},
-		{
-			"time": 102.78,
-			"type": "snare"
-		},
-		{
-			"time": 103.518,
-			"type": "tom 1"
-		},
-		{
-			"time": 103.518,
-			"type": "tom 2"
-		},
-		{
-			"time": 103.887,
-			"type": "tom 1"
-		},
-		{
-			"time": 103.887,
-			"type": "tom 2"
-		},
-		{
-			"time": 104.256,
-			"type": "snare"
-		},
-		{
-			"time": 104.994,
-			"type": "tom 1"
-		},
-		{
-			"time": 104.994,
-			"type": "tom 2"
-		},
-		{
-			"time": 105.363,
-			"type": "tom 1"
-		},
-		{
-			"time": 105.363,
-			"type": "tom 2"
-		},
-		{
-			"time": 105.732,
-			"type": "snare"
-		},
-		{
-			"time": 106.47,
-			"type": "tom 1"
-		},
-		{
-			"time": 106.47,
-			"type": "tom 2"
-		},
-		{
-			"time": 106.839,
-			"type": "tom 1"
-		},
-		{
-			"time": 106.839,
-			"type": "tom 2"
-		},
-		{
-			"time": 107.208,
-			"type": "snare"
-		},
-		{
-			"time": 107.946,
-			"type": "tom 1"
-		},
-		{
-			"time": 107.946,
-			"type": "tom 2"
-		},
-		{
-			"time": 108.315,
-			"type": "tom 1"
-		},
-		{
-			"time": 108.315,
-			"type": "tom 2"
-		},
-		{
-			"time": 108.684,
-			"type": "snare"
-		},
-		{
-			"time": 109.422,
-			"type": "tom 1"
-		},
-		{
-			"time": 109.422,
-			"type": "tom 2"
-		},
-		{
-			"time": 109.791,
-			"type": "tom 1"
-		},
-		{
-			"time": 109.791,
-			"type": "tom 2"
-		},
-		{
-			"time": 110.16,
-			"type": "snare"
-		},
-		{
-			"time": 110.898,
-			"type": "tom 1"
-		},
-		{
-			"time": 110.898,
-			"type": "tom 2"
-		},
-		{
-			"time": 111.267,
-			"type": "tom 1"
-		},
-		{
-			"time": 111.267,
-			"type": "tom 2"
-		},
-		{
-			"time": 111.636,
-			"type": "snare"
-		},
-		{
-			"time": 112.374,
-			"type": "tom 1"
-		},
-		{
-			"time": 112.374,
-			"type": "tom 2"
-		},
-		{
-			"time": 112.743,
-			"type": "tom 1"
-		},
-		{
-			"time": 112.743,
-			"type": "tom 2"
-		},
-		{
-			"time": 113.112,
-			"type": "snare"
-		},
-		{
-			"time": 113.85,
-			"type": "tom 1"
-		},
-		{
-			"time": 113.85,
-			"type": "tom 2"
-		},
-		{
-			"time": 114.219,
-			"type": "tom 1"
-		},
-		{
-			"time": 114.219,
-			"type": "tom 2"
-		},
-		{
-			"time": 114.588,
-			"type": "snare"
-		},
-		{
-			"time": 115.326,
-			"type": "tom 1"
-		},
-		{
-			"time": 115.326,
-			"type": "tom 2"
-		},
-		{
-			"time": 115.695,
-			"type": "tom 1"
-		},
-		{
-			"time": 115.695,
-			"type": "tom 2"
-		},
-		{
-			"time": 116.064,
-			"type": "snare"
-		},
-		{
-			"time": 116.802,
-			"type": "tom 1"
-		},
-		{
-			"time": 116.802,
-			"type": "tom 2"
-		},
-		{
-			"time": 117.171,
-			"type": "tom 1"
-		},
-		{
-			"time": 117.171,
-			"type": "tom 2"
-		},
-		{
-			"time": 117.54,
-			"type": "snare"
-		},
-		{
-			"time": 118.278,
-			"type": "tom 1"
-		},
-		{
-			"time": 118.278,
-			"type": "tom 2"
-		},
-		{
-			"time": 118.647,
-			"type": "tom 1"
-		},
-		{
-			"time": 118.647,
-			"type": "tom 2"
-		},
-		{
-			"time": 119.016,
-			"type": "snare"
-		},
-		{
-			"time": 119.754,
-			"type": "tom 1"
-		},
-		{
-			"time": 119.754,
-			"type": "tom 2"
-		},
-		{
-			"time": 120.123,
-			"type": "tom 1"
-		},
-		{
-			"time": 120.123,
-			"type": "tom 2"
-		},
-		{
-			"time": 120.492,
-			"type": "snare"
-		}
-	]
+  "song_name": "We Will Rock You",
+  "difficulty": "easy",
+  "audio_file": "res://songs/We Will Rock You.mp3",
+  "timestamps": [
+    {
+      "time": 0.197,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 0.197,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 0.566,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 0.566,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 0.935,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 1.673,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 1.673,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 2.042,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 2.042,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 2.411,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 3.149,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 3.149,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 3.518,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 3.518,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 3.887,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 4.625,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 4.625,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 4.994,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 4.994,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 5.363,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 6.101,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 6.101,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 6.47,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 6.47,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 6.839,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 7.577,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 7.577,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 7.946,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 7.946,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 8.315,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 9.053,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 9.053,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 9.422,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 9.422,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 9.791,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 10.529,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 10.529,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 10.898,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 10.898,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 11.267,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 12.005,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 12.005,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 12.374,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 12.374,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 12.743,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 13.481,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 13.481,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 13.85,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 13.85,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 14.219,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 14.957,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 14.957,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 15.326,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 15.326,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 15.695,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 16.433,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 16.433,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 16.802,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 16.802,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 17.171,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 17.909,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 17.909,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 18.278,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 18.278,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 18.647,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 19.385,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 19.385,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 19.754,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 19.754,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 20.123,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 20.861,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 20.861,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 21.23,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 21.23,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 21.599,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 22.337,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 22.337,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 22.706,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 22.706,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 23.075,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 23.813,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 23.813,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 24.182,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 24.182,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 24.551,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 25.289,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 25.289,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 25.658,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 25.658,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 26.027,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 26.765,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 26.765,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 27.134,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 27.134,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 27.503,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 28.241,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 28.241,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 28.61,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 28.61,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 28.979,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 29.717,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 29.717,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 30.086,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 30.086,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 30.455,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 31.193,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 31.193,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 31.562,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 31.562,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 31.931,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 32.669,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 32.669,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 33.038,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 33.038,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 33.407,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 34.145,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 34.145,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 34.514,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 34.514,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 34.883,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 35.621,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 35.621,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 35.99,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 35.99,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 36.359,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 37.097,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 37.097,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 37.466,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 37.466,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 37.835,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 38.573,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 38.573,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 38.942,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 38.942,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 39.311,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 40.049,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 40.049,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 40.418,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 40.418,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 40.787,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 41.525,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 41.525,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 41.894,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 41.894,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 42.263,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 43.001,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 43.001,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 43.37,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 43.37,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 43.739,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 44.477,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 44.477,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 44.846,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 44.846,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 45.215,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 45.953,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 45.953,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 46.322,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 46.322,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 46.691,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 47.429,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 47.429,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 47.798,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 47.798,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 48.167,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 48.905,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 48.905,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 49.274,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 49.274,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 49.643,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 50.382,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 50.382,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 50.751,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 50.751,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 51.12,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 51.858,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 51.858,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 52.227,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 52.227,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 52.596,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 53.334,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 53.334,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 53.703,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 53.703,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 54.072,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 54.81,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 54.81,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 55.179,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 55.179,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 55.548,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 56.286,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 56.286,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 56.655,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 56.655,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 57.024,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 57.762,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 57.762,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 58.131,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 58.131,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 58.5,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 59.238,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 59.238,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 59.607,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 59.607,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 59.976,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 60.714,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 60.714,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 61.083,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 61.083,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 61.452,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 62.19,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 62.19,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 62.559,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 62.559,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 62.928,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 63.666,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 63.666,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 64.035,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 64.035,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 64.404,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 65.142,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 65.142,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 65.511,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 65.511,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 65.88,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 66.618,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 66.618,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 66.987,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 66.987,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 67.356,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 68.094,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 68.094,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 68.463,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 68.463,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 68.832,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 69.57,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 69.57,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 69.939,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 69.939,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 70.308,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 71.046,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 71.046,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 71.415,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 71.415,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 71.784,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 72.522,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 72.522,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 72.891,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 72.891,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 73.26,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 73.998,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 73.998,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 74.367,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 74.367,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 74.736,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 75.474,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 75.474,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 75.843,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 75.843,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 76.212,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 76.95,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 76.95,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 77.319,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 77.319,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 77.688,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 78.426,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 78.426,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 78.795,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 78.795,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 79.164,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 79.902,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 79.902,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 80.271,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 80.271,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 80.64,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 81.378,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 81.378,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 81.747,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 81.747,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 82.116,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 82.854,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 82.854,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 83.223,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 83.223,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 83.592,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 84.33,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 84.33,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 84.699,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 84.699,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 85.068,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 85.806,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 85.806,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 86.175,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 86.175,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 86.544,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 87.282,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 87.282,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 87.651,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 87.651,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 88.02,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 88.758,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 88.758,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 89.127,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 89.127,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 89.496,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 90.234,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 90.234,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 90.603,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 90.603,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 90.972,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 91.71,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 91.71,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 92.079,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 92.079,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 92.448,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 93.186,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 93.186,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 93.555,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 93.555,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 93.924,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 94.662,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 94.662,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 95.031,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 95.031,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 95.4,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 96.138,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 96.138,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 96.507,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 96.507,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 96.876,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 97.614,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 97.614,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 97.983,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 97.983,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 98.352,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 99.09,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 99.09,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 99.459,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 99.459,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 99.828,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 100.566,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 100.566,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 100.935,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 100.935,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 101.304,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 102.042,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 102.042,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 102.411,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 102.411,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 102.78,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 103.518,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 103.518,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 103.887,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 103.887,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 104.256,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 104.994,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 104.994,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 105.363,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 105.363,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 105.732,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 106.47,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 106.47,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 106.839,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 106.839,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 107.208,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 107.946,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 107.946,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 108.315,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 108.315,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 108.684,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 109.422,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 109.422,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 109.791,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 109.791,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 110.16,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 110.898,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 110.898,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 111.267,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 111.267,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 111.636,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 112.374,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 112.374,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 112.743,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 112.743,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 113.112,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 113.85,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 113.85,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 114.219,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 114.219,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 114.588,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 115.326,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 115.326,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 115.695,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 115.695,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 116.064,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 116.802,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 116.802,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 117.171,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 117.171,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 117.54,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 118.278,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 118.278,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 118.647,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 118.647,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 119.016,
+      "type": "Snare Drum"
+    },
+    {
+      "time": 119.754,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 119.754,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 120.123,
+      "type": "Rack Tom 1"
+    },
+    {
+      "time": 120.123,
+      "type": "Rack Tom 2"
+    },
+    {
+      "time": 120.492,
+      "type": "Snare Drum"
+    }
+  ]
 }

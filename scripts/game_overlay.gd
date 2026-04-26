@@ -12,10 +12,10 @@ var play_icon = load("res://assets/icons/play_arrow_100dp_E3E3E3_FILL0_wght400_G
 var pause_icon = load("res://assets/icons/pause_100dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.svg")
 
 func set_score(score: int) -> void:
-	score_label.text = score
+	score_label.text = String.num_int64(score)
 
 func set_combo(combo: int) -> void:
-	combo_label.text = combo
+	combo_label.text = String.num_int64(combo)
 
 func _on_menu_button_pressed() -> void:
 	anim_player.play("toggle_game_menu")
