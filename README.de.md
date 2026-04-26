@@ -55,7 +55,7 @@ Ein Rhythmusspiel, das in **Godot 4.6** entwickelt wurde, bei dem Spieler zusamm
 | Floor Tom 1 | K |
 | Floor Tom 2 | M |
 | Hi-Hat 1 | D |
-| Hi-Hat 2 | Shift+D |
+| Hi-Hat 2 | S |
 | Crash Cymbal 1 | R |
 | Crash Cymbal 2 | I |
 | Ride | L |
