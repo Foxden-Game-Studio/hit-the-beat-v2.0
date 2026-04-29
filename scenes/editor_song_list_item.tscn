@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://1omjvfoukogm"]
+
+[ext_resource type="Script" uid="uid://bvq00veui5man" path="res://scripts/editor_song_list_item.gd" id="1_2tbmw"]
+
+[node name="song_list_item" type="Button" unique_id=821966247]
+custom_minimum_size = Vector2(0, 40)
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 8.0
+grow_horizontal = 2
+script = ExtResource("1_2tbmw")
+
+[node name="details" type="HBoxContainer" parent="." unique_id=1815238985]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_right = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="title" type="Label" parent="details" unique_id=1406309004]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Song Title"
+vertical_alignment = 1
+
+[node name="difficulty" type="Label" parent="details" unique_id=1574398838]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+text = "Difficulty"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="timestamp_count" type="Label" parent="details" unique_id=1941283182]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Timestamps"
+horizontal_alignment = 2
+vertical_alignment = 1

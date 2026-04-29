@@ -1,0 +1,338 @@
+[gd_scene format=3 uid="uid://cwb6avypthoba"]
+
+[ext_resource type="PackedScene" uid="uid://cpjtnuvja4le1" path="res://scenes/e_drum_kit.tscn" id="2_5tm2q"]
+[ext_resource type="Script" uid="uid://mvwvnenyx5bq" path="res://scripts/overlay_mouse_input.gd" id="3_j8y2p"]
+[ext_resource type="Script" uid="uid://bu1co8u8bfgh3" path="res://scripts/input_handler.gd" id="7_74j0u"]
+
+[sub_resource type="GDScript" id="GDScript_ba0ut"]
+script/source = "extends Node3D
+
+@onready var audio_player: AudioStreamPlayer3D = $audio_player
+@onready var e_drum_kit: Node3D = $\"e-drum-kit\"
+@onready var game_overlay: Control = $\"MeshInstance3D/SubViewport/overlay\"
+@onready var input_handler: Node = $\"input_handler\"
+
+var music_resume_position = 0
+
+var song = GlobalSettings.selected_song
+var timestamps = []
+var queued_inputs = []
+
+var score: int = 0
+var combo: int = 0
+
+var last_search_index = 0
+var look_ahead_time = 1500
+
+func _ready() -> void:
+	var song_file = FileAccess.get_file_as_string(song)
+	if not song_file:
+		get_tree().change_scene_to_file(\"res://scenes/main_menu.tscn\")
+		return
+
+	var song_data = JSON.parse_string(song_file)
+	timestamps = song_data[\"timestamps\"]
+	timestamps.sort_custom(func(a, b): return a[\"time\"] < b[\"time\"])
+
+	for i in range(timestamps.size()):
+		timestamps[i][\"matched\"] = false
+		timestamps[i][\"id\"] = i
+
+	var stream = load(song_data[\"audio_file\"])
+	if stream:
+		audio_player.stream = stream
+
+
+func _process(_delta: float) -> void:
+	var processed = []
+	if not audio_player.playing:
+		for input in queued_inputs:
+			e_drum_kit.on_drum_hit(input[\"type\"], Color.BLUE_VIOLET)
+			processed.append(input)
+
+		for input in processed:
+			queued_inputs.erase(input)
+
+		processed.clear()
+		return
+
+	var current_time = audio_player.get_playback_position()
+
+	for input in queued_inputs:
+		process_input(input, current_time)
+		processed.append(input)
+
+	for input in processed:
+		queued_inputs.erase(input)
+
+	processed.clear()
+
+func process_input(input: Dictionary, current_time: float) -> void:
+	var input_type = input[\"type\"]
+	var candidates = find_nearby_notes(current_time, GlobalDefinitions.HIT_WINDOWS[GlobalDefinitions.OK])
+
+	var best_match = find_best_match(candidates, input_type, current_time)
+
+	if best_match:
+		var delta = current_time - best_match[\"time\"]
+		var hit_quality = evaluate_hit(delta)
+		best_match[\"matched\"] = true
+		update_score(hit_quality)
+		e_drum_kit.on_drum_hit(best_match[\"type\"], GlobalDefinitions.FEEDBACK_COLOR[hit_quality])
+	else:
+		e_drum_kit.on_drum_hit(input_type, GlobalDefinitions.FEEDBACK_COLOR[GlobalDefinitions.MISS])
+		combo = 0
+
+func find_best_match(candidates: Array, input_type: String, search_time: float) -> Dictionary:
+	var best_match = {}
+	var closest_distance = INF
+
+	for candidate in candidates:
+		if candidate[\"type\"] != input_type:
+			continue
+
+		var distance = abs(candidate[\"time\"] - search_time)
+		if distance < closest_distance:
+			closest_distance = distance
+			best_match = candidate
+
+	return best_match
+
+func update_score(hit_quality: String) -> void:
+	score += GlobalDefinitions.POINTS.get(hit_quality)
+
+	if hit_quality == \"PERFECT\" || hit_quality == \"GREAT\":
+		combo += 1
+	else:
+		combo = 0
+
+	game_overlay.set_score(score)
+	game_overlay.set_combo(combo)
+
+func find_nearby_notes(search_time: float, search_window: float) -> Array:
+	var candidates = []
+
+	var search_start = max(0, last_search_index - 20)
+
+	for i in range(search_start, timestamps.size()):
+		var note = timestamps[i]
+
+		if note[\"matched\"]:
+			continue
+
+		var delta = abs(note[\"time\"] - search_time)
+
+		if delta <= search_window:
+			candidates.append(note)
+
+		if note[\"time\"] > search_time + search_window:
+			last_search_index = i
+			break
+
+	return candidates
+
+func evaluate_hit(delta: float) -> String:
+	var abs_delta = abs(delta)
+
+	if abs_delta <= GlobalDefinitions.HIT_WINDOWS[GlobalDefinitions.PERFECT]:
+		return GlobalDefinitions.PERFECT
+	elif abs_delta <= GlobalDefinitions.HIT_WINDOWS[GlobalDefinitions.GREAT]:
+		return GlobalDefinitions.GREAT
+	elif abs_delta <= GlobalDefinitions.HIT_WINDOWS[GlobalDefinitions.GOOD]:
+		return GlobalDefinitions.GOOD
+	elif abs_delta <= GlobalDefinitions.HIT_WINDOWS[GlobalDefinitions.OK]:
+		return GlobalDefinitions.OK
+	else:
+		return GlobalDefinitions.MISS
+
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	if anim_name != \"intro\":
+		return
+
+	input_handler.setup_input_device()
+"
+
+[sub_resource type="Animation" id="Animation_pqflw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-6.3108835, 5.392911, 3.3244762)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.6981317, 0.46251225, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_wf456"]
+resource_name = "toggle_game_menu"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.217, 10.786, 6.012), Vector3(-6.3108835, 5.392911, 3.3244762)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.7487463, 0, 0), Vector3(-0.6981317, 0.46251225, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wf456"]
+_data = {
+&"RESET": SubResource("Animation_pqflw"),
+&"toggle_game_menu": SubResource("Animation_wf456")
+}
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_wse1b"]
+size = Vector2(4, 2.25)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_wf456"]
+viewport_path = NodePath("MeshInstance3D/SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pqflw"]
+resource_local_to_scene = true
+transparency = 1
+shading_mode = 0
+albedo_texture = SubResource("ViewportTexture_wf456")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wf456"]
+size = Vector3(4, 0.1, 2.25)
+
+[sub_resource type="GDScript" id="GDScript_q68jb"]
+script/source = "extends Control
+
+@onready var game: Node3D = $\"/root/Game\"
+@onready var anim_player: AnimationPlayer = $\"/root/Game/anim_player\"
+@onready var game_statistics_screen = $\"game_statistics\"
+@onready var game_menu_screen = $\"game_menu\"
+@onready var score_label = $\"game_statistics/VBoxContainer/score_HBoxContainer/score\"
+@onready var combo_label = $\"game_statistics/VBoxContainer/combo_HBoxContainer/combo\"
+@onready var play_pause_button: Button = $\"game_statistics/play_pause_button\"
+
+var play_icon = load(\"res://assets/icons/play_arrow_100dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.svg\")
+var pause_icon = load(\"res://assets/icons/pause_100dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.svg\")
+
+func _ready():
+	anim_player.play_backwards(\"toggle_game_menu\")
+
+func set_score(score: int) -> void:
+	score_label.text = String.num_int64(score)
+
+func set_combo(combo: int) -> void:
+	combo_label.text = String.num_int64(combo)
+
+func _on_menu_button_pressed() -> void:
+	anim_player.play(\"toggle_game_menu\")
+	game_statistics_screen.visible = false
+	game_menu_screen.visible = true
+
+
+func _on_resume_button_pressed() -> void:
+	anim_player.play_backwards(\"toggle_game_menu\")
+	game_menu_screen.visible = false
+	game_statistics_screen.visible = true
+
+
+func _on_quit_button_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://scenes/main_menu.tscn\")
+
+
+func _on_pause_play_button_toggled(toggled_on: bool) -> void:
+	if toggled_on:
+		game.audio_player.play(game.music_resume_position)
+		play_pause_button.icon = pause_icon
+	elif not toggled_on:
+		game.music_resume_position = game.audio_player.get_playback_position()
+		game.audio_player.stop()
+		play_pause_button.icon = play_icon
+"
+
+[sub_resource type="BoxMesh" id="BoxMesh_xg7d5"]
+
+[node name="Game" type="Node3D" unique_id=187842444]
+script = SubResource("GDScript_ba0ut")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1439028084]
+transform = Transform3D(1, 0, 0, 0, -0.023751676, 0.9997178, 0, -0.9997178, -0.023751676, 0, 3, 0)
+
+[node name="audio_player" type="AudioStreamPlayer3D" parent="." unique_id=1288260856]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.567072, 3.9254007)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=388735014]
+transform = Transform3D(0.89493436, -0.28681034, 0.34180734, 0, 0.7660443, 0.6427876, -0.4461978, -0.5752526, 0.6855595, -6.3108835, 5.392911, 3.3244762)
+
+[node name="e-drum-kit" parent="." unique_id=1039073883 instance=ExtResource("2_5tm2q")]
+
+[node name="anim_player" type="AnimationPlayer" parent="." unique_id=1578454914]
+libraries/ = SubResource("AnimationLibrary_wf456")
+autoplay = &"intro"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1178078700]
+transform = Transform3D(0.8925858, 0.34539223, 0.2898185, 0, 0.64278764, -0.76604444, -0.45087752, 0.6837604, 0.5737431, -6.93923, 4.345, 2.193474)
+mesh = SubResource("PlaneMesh_wse1b")
+surface_material_override/0 = SubResource("StandardMaterial3D_pqflw")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D" unique_id=776206301]
+script = ExtResource("3_j8y2p")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D" unique_id=1067243350]
+transform = Transform3D(1.0000005, 0, 0, 0, 1.000001, 0, 0, 0, 1.0000083, 0, 0, 0)
+shape = SubResource("BoxShape3D_wf456")
+
+[node name="SubViewport" type="SubViewport" parent="MeshInstance3D" unique_id=1930828186]
+transparent_bg = true
+size = Vector2i(640, 360)
+
+[node name="input_handler" type="Node" parent="." unique_id=979150013]
+script = ExtResource("7_74j0u")
+
+[node name="overlay" type="Control" parent="." unique_id=1089076550]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("GDScript_q68jb")
+
+[node name="menu_wall" type="MeshInstance3D" parent="." unique_id=2086153395]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.558313, 0, 15.618975)
+mesh = SubResource("BoxMesh_xg7d5")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="menu_wall" unique_id=1510372886]
+script = ExtResource("3_j8y2p")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="menu_wall/StaticBody3D" unique_id=1795528466]
+transform = Transform3D(1.0000005, 0, 0, 0, 1.000001, 0, 0, 0, 1.0000083, 0, 0, 0)
+shape = SubResource("BoxShape3D_wf456")
+
+[connection signal="animation_finished" from="anim_player" to="." method="_on_animation_player_animation_finished"]

@@ -1,3 +1,5 @@
+extends Node
+
 class Drum:
 	const rack_tom_1 = "Rack Tom 1"
 	const rack_tom_2 = "Rack Tom 2"

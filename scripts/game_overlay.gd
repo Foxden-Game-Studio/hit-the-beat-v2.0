@@ -7,9 +7,13 @@ extends Control
 @onready var score_label = $"game_statistics/VBoxContainer/score_HBoxContainer/score"
 @onready var combo_label = $"game_statistics/VBoxContainer/combo_HBoxContainer/combo"
 @onready var play_pause_button: Button = $"game_statistics/play_pause_button"
+@onready var song_label: Label = $"game_statistics/song_title"
 
 var play_icon = load("res://assets/icons/play_arrow_100dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.svg")
 var pause_icon = load("res://assets/icons/pause_100dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.svg")
+
+func set_song_title(song: String) -> void:
+	song_label.text = song
 
 func set_score(score: int) -> void:
 	score_label.text = String.num_int64(score)

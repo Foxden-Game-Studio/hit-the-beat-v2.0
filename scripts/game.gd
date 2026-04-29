@@ -24,6 +24,7 @@ func _ready() -> void:
 		return
 
 	var song_data = JSON.parse_string(song_file)
+	game_overlay.set_song_title(song_data["song_name"])
 	timestamps = song_data["timestamps"]
 	timestamps.sort_custom(func(a, b): return a["time"] < b["time"])
 

@@ -1,10 +1,10 @@
-[gd_scene format=3 uid="uid://du4bcd4p3bwos"]
+[gd_scene format=3 uid="uid://bq2aniaukh1d5"]
 
-[ext_resource type="Texture2D" uid="uid://dn3ckq1tmyg84" path="res://assets/graphics/htb_background.png" id="1_oph07"]
-[ext_resource type="Script" uid="uid://1rvvbgkaxt3" path="res://scripts/song_list.gd" id="1_sbo1c"]
-[ext_resource type="Texture2D" uid="uid://cenlp110dtsmm" path="res://assets/icons/arrow_back_100dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.svg" id="3_1fkl3"]
-[ext_resource type="Texture2D" uid="uid://dqel7ea848qbn" path="res://assets/icons/keyboard_25dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" id="4_rtj73"]
-[ext_resource type="Texture2D" uid="uid://cl5axtwcruyd1" path="res://assets/icons/touch_app_25dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" id="4_vauox"]
+[ext_resource type="Script" uid="uid://ry7ria4opx8f" path="res://scripts/editor_song_list.gd" id="1_muafw"]
+[ext_resource type="Texture2D" uid="uid://dn3ckq1tmyg84" path="res://assets/graphics/htb_background.png" id="2_7mbrc"]
+[ext_resource type="Texture2D" uid="uid://cenlp110dtsmm" path="res://assets/icons/arrow_back_100dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.svg" id="3_xujiu"]
+[ext_resource type="Texture2D" uid="uid://dqel7ea848qbn" path="res://assets/icons/keyboard_25dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" id="4_ig5kw"]
+[ext_resource type="Texture2D" uid="uid://cl5axtwcruyd1" path="res://assets/icons/touch_app_25dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" id="5_cu3jw"]
 
 [node name="SongList" type="Control" unique_id=1502943494]
 layout_mode = 3
@@ -13,7 +13,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_sbo1c")
+script = ExtResource("1_muafw")
 
 [node name="background" type="TextureRect" parent="." unique_id=1057668776]
 modulate = Color(0.39308554, 0.39308554, 0.39308533, 1)
@@ -24,7 +24,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_oph07")
+texture = ExtResource("2_7mbrc")
 
 [node name="title" type="Label" parent="." unique_id=651943608]
 layout_mode = 1
@@ -51,17 +51,25 @@ offset_bottom = 140.0
 grow_horizontal = 2
 
 [node name="song_title" type="Label" parent="header" unique_id=356444893]
-custom_minimum_size = Vector2(800, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 text = "song_title"
+vertical_alignment = 1
 
 [node name="difficulty" type="Label" parent="header" unique_id=1176853867]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 size_flags_horizontal = 8
 text = "difficulty"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="timestamp_count" type="Label" parent="header" unique_id=1156939458]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "found_timestamps"
 horizontal_alignment = 2
+vertical_alignment = 1
 
 [node name="HSeparator" type="HSeparator" parent="." unique_id=1812674037]
 layout_mode = 1
@@ -101,7 +109,7 @@ offset_left = 16.0
 offset_top = -64.0
 offset_right = 64.0
 offset_bottom = -16.0
-icon = ExtResource("3_1fkl3")
+icon = ExtResource("3_xujiu")
 icon_alignment = 1
 expand_icon = true
 
@@ -133,10 +141,10 @@ item_count = 4
 popup/item_0/text = "midi_device"
 popup/item_0/id = 0
 popup/item_1/text = "keyboard_device"
-popup/item_1/icon = ExtResource("4_rtj73")
+popup/item_1/icon = ExtResource("4_ig5kw")
 popup/item_1/id = 1
 popup/item_2/text = "touch_device"
-popup/item_2/icon = ExtResource("4_vauox")
+popup/item_2/icon = ExtResource("5_cu3jw")
 popup/item_2/id = 2
 popup/item_2/disabled = true
 popup/item_3/text = "diy_device"

@@ -13,7 +13,7 @@ func pitch_to_drum(pitch: int) -> String:
 		57: return GlobalDefinitions.Drum.crash_cymbal_2
 		49: return GlobalDefinitions.Drum.crash_cymbal_1
 		46: return GlobalDefinitions.Drum.hi_hat_1
-		36: return GlobalDefinitions.Drum.base
+		36: return GlobalDefinitions.Drum.bass
 		42: return GlobalDefinitions.Drum.hi_hat_2
 		_: return GlobalDefinitions.Drum.undefined
 

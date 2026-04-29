@@ -1,7 +1,7 @@
 extends Control
 
 var song_dir = "res://songs/"
-var song_list_item: PackedScene = load("res://scenes/song_list_item.tscn")
+var song_list_item: PackedScene = load("res://scenes/editor_song_list_item.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -24,7 +24,7 @@ func load_songs():
 				continue
 
 			var new_song_list_item = song_list_item.instantiate()
-			new_song_list_item.set_info(song_data["song_name"], song_data["difficulty"])
+			new_song_list_item.set_info(song_data["song_name"], song_data["difficulty"], song_data["timestamps"].size())
 			new_song_list_item.connect("pressed", _on_song_button_pressed.bind(song_dir + song))
 
 			$song_list/song_list.add_child(new_song_list_item)
@@ -34,8 +34,7 @@ func _on_back_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
 
 func _on_song_button_pressed(song: String) -> void:
-	GlobalSettings.selected_song = song
-	get_tree().change_scene_to_file("res://scenes/game.tscn")
+	pass
 
 
 func _on_input_device_item_selected(index: int) -> void:
