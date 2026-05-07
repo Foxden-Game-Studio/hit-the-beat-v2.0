@@ -15,3 +15,7 @@ func _input_event(_camera: Camera3D, event: InputEvent, event_position: Vector3,
 	event.position = viewport_pos
 	event.global_position = viewport_pos
 	viewport.push_input(event)
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event is InputEventKey or event is InputEventShortcut:
+		viewport.push_input(event)

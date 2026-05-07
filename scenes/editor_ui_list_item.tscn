@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://dviipi86svr7i"]
 
 [ext_resource type="Script" uid="uid://683i60uv4h72" path="res://scripts/editor_ui_list_item.gd" id="1_lukel"]
-[ext_resource type="Texture2D" uid="uid://cslibgdclc3lh" path="res://assets/icons/delete_100dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.svg" id="2_lukel"]
+[ext_resource type="Texture2D" uid="uid://d4k1cqd8l7ign" path="res://assets/icons/delete_16dp_E3E3E3_FILL0_wght400_GRAD0_opsz20.svg" id="2_qk0am"]
 
 [node name="HBoxContainer" type="HBoxContainer" unique_id=1205941612]
+size_flags_horizontal = 3
 script = ExtResource("1_lukel")
 
 [node name="Label" type="Label" parent="." unique_id=1072680548]
@@ -46,4 +47,5 @@ popup/item_10/id = 10
 
 [node name="del_button" type="Button" parent="." unique_id=710029666]
 layout_mode = 2
-icon = ExtResource("2_lukel")
+size_flags_horizontal = 10
+icon = ExtResource("2_qk0am")

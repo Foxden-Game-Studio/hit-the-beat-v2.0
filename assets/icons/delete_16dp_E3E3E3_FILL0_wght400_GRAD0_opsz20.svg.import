@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cslibgdclc3lh"
-path="res://.godot/imported/delete_100dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.svg-c67434705d4f267c529eeb89eb53b24d.ctex"
+uid="uid://d4k1cqd8l7ign"
+path="res://.godot/imported/delete_16dp_E3E3E3_FILL0_wght400_GRAD0_opsz20.svg-b71d2b34228b29777bedf167f5b69c2b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/delete_100dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.svg"
-dest_files=["res://.godot/imported/delete_100dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.svg-c67434705d4f267c529eeb89eb53b24d.ctex"]
+source_file="res://assets/icons/delete_16dp_E3E3E3_FILL0_wght400_GRAD0_opsz20.svg"
+dest_files=["res://.godot/imported/delete_16dp_E3E3E3_FILL0_wght400_GRAD0_opsz20.svg-b71d2b34228b29777bedf167f5b69c2b.ctex"]
 
 [params]
 

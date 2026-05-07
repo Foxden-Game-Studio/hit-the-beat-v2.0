@@ -41,3 +41,5 @@ const FEEDBACK_COLOR = {
 	"OK": Color.YELLOW,
 	"MISS": Color.RED
 }
+
+const USER_SONGS_DIR = "user://songs/"

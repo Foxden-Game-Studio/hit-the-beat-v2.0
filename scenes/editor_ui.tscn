@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cn4aaepa86u7f"]
 
 [ext_resource type="Script" uid="uid://1dsdvwo3ulh6" path="res://scripts/editor_ui.gd" id="1_7k3nc"]
+[ext_resource type="Script" uid="uid://bonp0t0h5epdb" path="res://scripts/file_path_menu.gd" id="2_41ahv"]
 
 [node name="EditorUi" type="Control" unique_id=271166115]
 layout_mode = 3
@@ -39,10 +40,19 @@ layout_mode = 2
 layout_mode = 2
 text = "audio_file"
 
-[node name="LineEdit" type="LineEdit" parent="song_details/song_audio" unique_id=1554788357]
+[node name="HBoxContainer" type="HBoxContainer" parent="song_details/song_audio" unique_id=934685896]
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("2_41ahv")
+
+[node name="LineEdit" type="LineEdit" parent="song_details/song_audio/HBoxContainer" unique_id=1554788357]
 layout_mode = 2
 size_flags_horizontal = 3
 placeholder_text = "audio_file_path"
+
+[node name="MenuButton" type="MenuButton" parent="song_details/song_audio/HBoxContainer" unique_id=1263097266]
+layout_mode = 2
+text = "v"
 
 [node name="browse_files_button" type="Button" parent="song_details/song_audio" unique_id=1657334597]
 layout_mode = 2
@@ -67,6 +77,25 @@ popup/item_1/id = 1
 popup/item_2/text = "difficulty_hard"
 popup/item_2/id = 2
 
+[node name="quit_options" type="HBoxContainer" parent="." unique_id=2027789407]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 280.0
+offset_right = 444.0
+offset_bottom = 320.0
+
+[node name="save" type="Button" parent="quit_options" unique_id=1984402786]
+layout_mode = 2
+text = "save"
+
+[node name="quit_no_save" type="Button" parent="quit_options" unique_id=859292071]
+layout_mode = 2
+text = "quit_without_save"
+
+[node name="save_quit" type="Button" parent="quit_options" unique_id=94473505]
+layout_mode = 2
+text = "save_and_quit"
+
 [node name="FileDialog" type="FileDialog" parent="." unique_id=844255072]
 oversampling_override = 1.0
 title = "Open a File"
@@ -81,7 +110,7 @@ use_native_dialog = true
 layout_mode = 0
 offset_left = 510.0
 offset_top = 43.0
-offset_right = 1039.0
+offset_right = 896.0
 offset_bottom = 674.0
 
 [node name="Label" type="Label" parent="song_timestamps" unique_id=2117913355]
@@ -100,14 +129,19 @@ size_flags_vertical = 3
 [node name="VBoxContainer" type="VBoxContainer" parent="song_timestamps/ScrollContainer/VBoxContainer" unique_id=482390793]
 layout_mode = 2
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="song_timestamps/ScrollContainer/VBoxContainer" unique_id=1376562395]
+[node name="HBoxContainer" type="HBoxContainer" parent="song_timestamps/ScrollContainer/VBoxContainer" unique_id=647767428]
 layout_mode = 2
 
-[node name="Button" type="Button" parent="song_timestamps/ScrollContainer/VBoxContainer/VBoxContainer2" unique_id=1344870636]
+[node name="add_button" type="Button" parent="song_timestamps/ScrollContainer/VBoxContainer/HBoxContainer" unique_id=1344870636]
 layout_mode = 2
-size_flags_horizontal = 4
+size_flags_horizontal = 6
 size_flags_vertical = 4
 text = "add"
+
+[node name="record_button" type="Button" parent="song_timestamps/ScrollContainer/VBoxContainer/HBoxContainer" unique_id=1902984262]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "record"
 
 [node name="error_label" type="Label" parent="." unique_id=1285533714]
 visible = false
@@ -128,5 +162,10 @@ offset_bottom = 260.0
 text = "OK"
 
 [connection signal="pressed" from="song_details/song_audio/browse_files_button" to="." method="_on_browse_files_button_pressed"]
+[connection signal="pressed" from="quit_options/save" to="." method="_on_save_pressed"]
+[connection signal="pressed" from="quit_options/quit_no_save" to="." method="_on_quit_no_save_pressed"]
+[connection signal="pressed" from="quit_options/save_quit" to="." method="_on_save_quit_pressed"]
 [connection signal="file_selected" from="FileDialog" to="." method="_on_file_dialog_file_selected"]
+[connection signal="pressed" from="song_timestamps/ScrollContainer/VBoxContainer/HBoxContainer/add_button" to="." method="_on_add_button_pressed"]
+[connection signal="pressed" from="song_timestamps/ScrollContainer/VBoxContainer/HBoxContainer/record_button" to="." method="_on_record_button_pressed"]
 [connection signal="pressed" from="error_acknowledged_button" to="." method="_on_error_acknowledged_button_pressed"]

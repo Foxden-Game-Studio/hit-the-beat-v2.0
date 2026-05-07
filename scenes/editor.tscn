@@ -39,20 +39,11 @@ size = Vector3(32, 18, 0.1)
 [node name="Editor" type="Node3D" unique_id=187842444]
 script = ExtResource("1_xg7d5")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1439028084]
-transform = Transform3D(1, 0, 0, 0, -0.023751676, 0.9997178, 0, -0.9997178, -0.023751676, 0, 3, 0)
-
-[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=150066614]
-transform = Transform3D(-0.0006282766, 0, -0.9999998, 0, 1, 0, 0.9999998, 0, -0.0006282766, 7.027995, 10, 13.568571)
-light_energy = 16.0
-spot_range = 28.571898
-spot_angle = 43.84663
-
 [node name="audio_player" type="AudioStreamPlayer3D" parent="." unique_id=1288260856]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.567072, 3.9254007)
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=388735014]
-transform = Transform3D(-0.06252933, 0.041393507, -0.99718446, 1.2499475e-09, 0.9991396, 0.04147467, 0.9980431, 0.0025933823, -0.062475536, 10.611264, 8.393053, 11.560735)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 13.999629, 7.4724264, 13.332488)
 
 [node name="e-drum-kit" parent="." unique_id=1039073883 instance=ExtResource("2_5tm2q")]
 
@@ -80,7 +71,7 @@ size = Vector2i(640, 360)
 script = ExtResource("7_74j0u")
 
 [node name="menu_wall" type="MeshInstance3D" parent="." unique_id=1944309774]
-transform = Transform3D(-0.051516853, -0.99867225, 4.365336e-08, -8.4854855e-16, -4.3711392e-08, -1, 0.99867225, -0.051516823, 2.2518778e-09, 25.496895, 7.3588734, 13.317109)
+transform = Transform3D(-4.3711392e-08, -1.0000001, 4.371139e-08, 0, -4.3711392e-08, -1, 1.0000001, -4.3711392e-08, 1.9106855e-15, 25.496895, 7.3588734, 13.317109)
 mesh = SubResource("PlaneMesh_wse1b")
 surface_material_override/0 = SubResource("StandardMaterial3D_mbgyq")
 
@@ -96,5 +87,8 @@ transparent_bg = true
 size = Vector2i(1280, 720)
 
 [node name="EditorUi" parent="menu_wall/SubViewport" unique_id=271166115 instance=ExtResource("5_xg7d5")]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=713839831]
+transform = Transform3D(-3.7855173e-08, 0.5, -0.8660254, 2.1855694e-08, 0.8660254, 0.5, 1, 0, -4.371139e-08, 0, 18, 11)
 
 [connection signal="animation_finished" from="anim_player" to="." method="_on_animation_player_animation_finished"]

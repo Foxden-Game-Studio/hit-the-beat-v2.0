@@ -1,7 +1,7 @@
 {
   "song_name": "We Will Rock You",
   "difficulty": "easy",
-  "audio_file": "res://songs/We Will Rock You.mp3",
+  "audio_file": "user://songs/We Will Rock You.mp3",
   "timestamps": [
 	{
 	  "time": 0.197,

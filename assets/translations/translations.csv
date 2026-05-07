@@ -24,3 +24,4 @@ editor,Song Editor,Lied Editor
 song_audio,Song Audio, Song Audio
 title, Title, Titel
 audio_file, Audio File, Audio Datei
+audio_file_path,e.g. res://songs/song.mp3,z.B. res://songs/song.mp3

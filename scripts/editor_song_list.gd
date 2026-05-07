@@ -1,6 +1,6 @@
 extends Control
 
-var song_dir = "res://songs/"
+var song_dir = GlobalDefinitions.USER_SONGS_DIR
 var song_list_item: PackedScene = load("res://scenes/editor_song_list_item.tscn")
 
 # Called when the node enters the scene tree for the first time.
