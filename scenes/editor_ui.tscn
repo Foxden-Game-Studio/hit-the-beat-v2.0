@@ -1,0 +1,132 @@
+[gd_scene format=3 uid="uid://cn4aaepa86u7f"]
+
+[ext_resource type="Script" uid="uid://1dsdvwo3ulh6" path="res://scripts/editor_ui.gd" id="1_7k3nc"]
+
+[node name="EditorUi" type="Control" unique_id=271166115]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7k3nc")
+
+[node name="song_details" type="VBoxContainer" parent="." unique_id=783063310]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 46.0
+offset_right = 489.0
+offset_bottom = 112.0
+
+[node name="song_title" type="HBoxContainer" parent="song_details" unique_id=2000194210]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="song_details/song_title" unique_id=1950114183]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "title"
+
+[node name="LineEdit" type="LineEdit" parent="song_details/song_title" unique_id=2035707483]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "song_title"
+max_length = 200
+
+[node name="song_audio" type="HBoxContainer" parent="song_details" unique_id=1743827255]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="song_details/song_audio" unique_id=858599785]
+layout_mode = 2
+text = "audio_file"
+
+[node name="LineEdit" type="LineEdit" parent="song_details/song_audio" unique_id=1554788357]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "audio_file_path"
+
+[node name="browse_files_button" type="Button" parent="song_details/song_audio" unique_id=1657334597]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "browse_files"
+
+[node name="song_difficulty" type="HBoxContainer" parent="song_details" unique_id=1930785258]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="song_details/song_difficulty" unique_id=215696624]
+layout_mode = 2
+text = "difficulty"
+
+[node name="OptionButton" type="OptionButton" parent="song_details/song_difficulty" unique_id=538063894]
+layout_mode = 2
+selected = 0
+item_count = 3
+popup/item_0/text = "difficulty_easy"
+popup/item_0/id = 0
+popup/item_1/text = "difficulty_medium"
+popup/item_1/id = 1
+popup/item_2/text = "difficulty_hard"
+popup/item_2/id = 2
+
+[node name="FileDialog" type="FileDialog" parent="." unique_id=844255072]
+oversampling_override = 1.0
+title = "Open a File"
+position = Vector2i(0, 36)
+file_mode = 0
+display_mode = 1
+access = 2
+filters = PackedStringArray("*.mp3;Audio Files")
+use_native_dialog = true
+
+[node name="song_timestamps" type="VBoxContainer" parent="." unique_id=234928733]
+layout_mode = 0
+offset_left = 510.0
+offset_top = 43.0
+offset_right = 1039.0
+offset_bottom = 674.0
+
+[node name="Label" type="Label" parent="song_timestamps" unique_id=2117913355]
+layout_mode = 2
+text = "timestampts"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="song_timestamps" unique_id=616657438]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="song_timestamps/ScrollContainer" unique_id=1831761466]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="song_timestamps/ScrollContainer/VBoxContainer" unique_id=482390793]
+layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="song_timestamps/ScrollContainer/VBoxContainer" unique_id=1376562395]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="song_timestamps/ScrollContainer/VBoxContainer/VBoxContainer2" unique_id=1344870636]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "add"
+
+[node name="error_label" type="Label" parent="." unique_id=1285533714]
+visible = false
+layout_mode = 0
+offset_left = 87.0
+offset_top = 229.0
+offset_right = 127.0
+offset_bottom = 252.0
+text = "error"
+
+[node name="error_acknowledged_button" type="Button" parent="." unique_id=1627366499]
+visible = false
+layout_mode = 0
+offset_left = 142.0
+offset_top = 229.0
+offset_right = 173.0
+offset_bottom = 260.0
+text = "OK"
+
+[connection signal="pressed" from="song_details/song_audio/browse_files_button" to="." method="_on_browse_files_button_pressed"]
+[connection signal="file_selected" from="FileDialog" to="." method="_on_file_dialog_file_selected"]
+[connection signal="pressed" from="error_acknowledged_button" to="." method="_on_error_acknowledged_button_pressed"]

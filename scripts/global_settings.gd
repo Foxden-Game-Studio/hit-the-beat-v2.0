@@ -4,7 +4,7 @@ var window_size_windowed: Vector2
 var window_is_fullscreen: bool = false
 var input_device = 0
 var selected_song = ""
-var edit_song = false
+var new_song = false
 
 var device_index_to_string = {
 	0: "midi_drum_kit",

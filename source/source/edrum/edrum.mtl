@@ -1,0 +1,695 @@
+newmtl Metal_Frame_EDK-T01
+d 1
+Kd 0.87843138 0.87843138 0.87843138
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKFrame/td3d_Frame-Default_EDK-T01_colour.jpg"
+
+newmtl Plastic_Frame_EDK-T02
+d 1
+Kd 0.87843138 0.87843138 0.87843138
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKFrame/td3d_Frame-Default_EDK-T02_colour.jpg"
+
+newmtl Fittings_Frame_EDK-T03
+d 1
+Kd 0.87843138 0.87843138 0.87843138
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKFrame/td3d_Frame-Default_EDK-T03_colour.jpg"
+
+newmtl Cymbal_Crash_EDK-T07
+d 1
+Kd 0.8509804 0.8509804 0.8509804
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKCymbals/td3d_Crash_Default_EDK-T07_colour.jpg"
+
+newmtl Trigger_Crash_EDK-T07
+d 1
+Kd 0.80784315 0.80784315 0.80784315
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKCymbals/td3d_Crash_Default_EDK-T07_colour.jpg"
+
+newmtl Fittings_Crash_EDK-T07
+d 1
+Kd 0.8509804 0.8509804 0.8509804
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKCymbals/td3d_Crash_Default_EDK-T07_colour.jpg"
+
+newmtl Metal_Crash_EDK-T07
+d 1
+Kd 0.80784315 0.80784315 0.80784315
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKCymbals/td3d_Crash_Default_EDK-T07_colour.jpg"
+
+newmtl Rubber_Crash_EDK-T07
+d 1
+Kd 0.80784315 0.80784315 0.80784315
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKCymbals/td3d_Crash_Default_EDK-T07_colour.jpg"
+
+newmtl Bracket_Crash_EDK-T07
+d 1
+Kd 0.87843138 0.87843138 0.87843138
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKCymbals/td3d_Crash_Default_EDK-T07_colour.jpg"
+
+newmtl Plastic_EDK-T13
+d 1
+Kd 0.56470591 0.56470591 0.56470591
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_WiFi-T13_colour.jpg"
+
+newmtl Light_EDK-T13
+d 1
+Kd 0.92156863 0.92156863 0.92156863
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_WiFi-T13_colour.jpg"
+
+newmtl Rubber_EDK-T13
+d 1
+Kd 0.92156863 0.92156863 0.92156863
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_WiFi-T13_colour.jpg"
+
+newmtl Metal_EDK-T13
+d 1
+Kd 0.92156863 0.92156863 0.92156863
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_WiFi-T13_colour.jpg"
+
+newmtl Mesh_Tom_EDK-T06
+d 1
+Kd 0.80784315 0.80784315 0.80784315
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKDrums/td3d_Tom_Default_EDK-T06_colour.jpg"
+
+newmtl Fittings_Tom_EDK-T06
+d 1
+Kd 0.80784315 0.80784315 0.80784315
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKDrums/td3d_Tom_Default_EDK-T06_colour.jpg"
+
+newmtl Rubber_Tom_EDK-T06
+d 1
+Kd 0.80784315 0.80784315 0.80784315
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKDrums/td3d_Tom_Default_EDK-T06_colour.jpg"
+
+newmtl Metal_Tom_EDK-T06
+d 1
+Kd 0.80784315 0.80784315 0.80784315
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKDrums/td3d_Tom_Default_EDK-T06_colour.jpg"
+
+newmtl Plastic_Tom_EDK-T06
+d 1
+Kd 0.98823529 0.98823529 0.98823529
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKDrums/td3d_Tom_Default_EDK-T06_colour.jpg"
+
+newmtl Plastic_EDK-T13_EDK_WiFi_Receiver_(2)
+d 1
+Kd 0.56470591 0.56470591 0.56470591
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_WiFi-T13_colour.jpg"
+
+newmtl Light_EDK-T13_EDK_WiFi_Receiver_(2)
+d 1
+Kd 0.92156863 0.92156863 0.92156863
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_WiFi-T13_colour.jpg"
+
+newmtl Rubber_EDK-T13_EDK_WiFi_Receiver_(2)
+d 1
+Kd 0.92156863 0.92156863 0.92156863
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_WiFi-T13_colour.jpg"
+
+newmtl Metal_EDK-T13_EDK_WiFi_Receiver_(2)
+d 1
+Kd 0.92156863 0.92156863 0.92156863
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_WiFi-T13_colour.jpg"
+
+newmtl Mesh_Tom_EDK-T06_EDK_Tom_(High)_(2)
+d 1
+Kd 0.80784315 0.80784315 0.80784315
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKDrums/td3d_Tom_Default_EDK-T06_colour.jpg"
+
+newmtl Fittings_Tom_EDK-T06_EDK_Tom_(High)_(2)
+d 1
+Kd 0.80784315 0.80784315 0.80784315
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKDrums/td3d_Tom_Default_EDK-T06_colour.jpg"
+
+newmtl Rubber_Tom_EDK-T06_EDK_Tom_(High)_(2)
+d 1
+Kd 0.80784315 0.80784315 0.80784315
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKDrums/td3d_Tom_Default_EDK-T06_colour.jpg"
+
+newmtl Metal_Tom_EDK-T06_EDK_Tom_(High)_(2)
+d 1
+Kd 0.80784315 0.80784315 0.80784315
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKDrums/td3d_Tom_Default_EDK-T06_colour.jpg"
+
+newmtl Plastic_Tom_EDK-T06_EDK_Tom_(High)_(2)
+d 1
+Kd 0.98823529 0.98823529 0.98823529
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKDrums/td3d_Tom_Default_EDK-T06_colour.jpg"
+
+newmtl Plastic_EDK-T13_EDK_WiFi_Receiver_(3)
+d 1
+Kd 0.56470591 0.56470591 0.56470591
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_WiFi-T13_colour.jpg"
+
+newmtl Light_EDK-T13_EDK_WiFi_Receiver_(3)
+d 1
+Kd 0.92156863 0.92156863 0.92156863
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_WiFi-T13_colour.jpg"
+
+newmtl Rubber_EDK-T13_EDK_WiFi_Receiver_(3)
+d 1
+Kd 0.92156863 0.92156863 0.92156863
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_WiFi-T13_colour.jpg"
+
+newmtl Metal_EDK-T13_EDK_WiFi_Receiver_(3)
+d 1
+Kd 0.92156863 0.92156863 0.92156863
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_WiFi-T13_colour.jpg"
+
+newmtl Cymbal_Crash_EDK-T07_EDK_Crash_(High)_(2)
+d 1
+Kd 0.8509804 0.8509804 0.8509804
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKCymbals/td3d_Crash_Default_EDK-T07_colour.jpg"
+
+newmtl Trigger_Crash_EDK-T07_EDK_Crash_(High)_(2)
+d 1
+Kd 0.80784315 0.80784315 0.80784315
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKCymbals/td3d_Crash_Default_EDK-T07_colour.jpg"
+
+newmtl Fittings_Crash_EDK-T07_EDK_Crash_(High)_(2)
+d 1
+Kd 0.8509804 0.8509804 0.8509804
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKCymbals/td3d_Crash_Default_EDK-T07_colour.jpg"
+
+newmtl Metal_Crash_EDK-T07_EDK_Crash_(High)_(2)
+d 1
+Kd 0.80784315 0.80784315 0.80784315
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKCymbals/td3d_Crash_Default_EDK-T07_colour.jpg"
+
+newmtl Rubber_Crash_EDK-T07_EDK_Crash_(High)_(2)
+d 1
+Kd 0.80784315 0.80784315 0.80784315
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKCymbals/td3d_Crash_Default_EDK-T07_colour.jpg"
+
+newmtl Bracket_Crash_EDK-T07_EDK_Crash_(High)_(2)
+d 1
+Kd 0.87843138 0.87843138 0.87843138
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKCymbals/td3d_Crash_Default_EDK-T07_colour.jpg"
+
+newmtl Plastic_EDK-T13_EDK_WiFi_Receiver_(4)
+d 1
+Kd 0.56470591 0.56470591 0.56470591
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_WiFi-T13_colour.jpg"
+
+newmtl Light_EDK-T13_EDK_WiFi_Receiver_(4)
+d 1
+Kd 0.92156863 0.92156863 0.92156863
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_WiFi-T13_colour.jpg"
+
+newmtl Rubber_EDK-T13_EDK_WiFi_Receiver_(4)
+d 1
+Kd 0.92156863 0.92156863 0.92156863
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_WiFi-T13_colour.jpg"
+
+newmtl Metal_EDK-T13_EDK_WiFi_Receiver_(4)
+d 1
+Kd 0.92156863 0.92156863 0.92156863
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_WiFi-T13_colour.jpg"
+
+newmtl Mesh_Snare_EDK-T05
+d 1
+Kd 0.80784315 0.80784315 0.80784315
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKDrums/td3d_Snare_Default_EDK-T05_colour.jpg"
+
+newmtl Fittings_Snare_EDK-T05
+d 1
+Kd 0.80784315 0.80784315 0.80784315
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKDrums/td3d_Snare_Default_EDK-T05_colour.jpg"
+
+newmtl Rubber_Snare_EDK-T05
+d 1
+Kd 0.80784315 0.80784315 0.80784315
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKDrums/td3d_Snare_Default_EDK-T05_colour.jpg"
+
+newmtl Metal_Snare_EDK-T05
+d 1
+Kd 0.80784315 0.80784315 0.80784315
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKDrums/td3d_Snare_Default_EDK-T05_colour.jpg"
+
+newmtl Plastic_Snare_EDK-T05
+d 1
+Kd 0.98823529 0.98823529 0.98823529
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKDrums/td3d_Snare_Default_EDK-T05_colour.jpg"
+
+newmtl Plastic_EDK-T13_EDK_WiFi_Receiver_(5)
+d 1
+Kd 0.56470591 0.56470591 0.56470591
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_WiFi-T13_colour.jpg"
+
+newmtl Light_EDK-T13_EDK_WiFi_Receiver_(5)
+d 1
+Kd 0.92156863 0.92156863 0.92156863
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_WiFi-T13_colour.jpg"
+
+newmtl Rubber_EDK-T13_EDK_WiFi_Receiver_(5)
+d 1
+Kd 0.92156863 0.92156863 0.92156863
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_WiFi-T13_colour.jpg"
+
+newmtl Metal_EDK-T13_EDK_WiFi_Receiver_(5)
+d 1
+Kd 0.92156863 0.92156863 0.92156863
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_WiFi-T13_colour.jpg"
+
+newmtl Cymbal_HiHat_EDK-T07
+d 1
+Kd 0.8509804 0.8509804 0.8509804
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKCymbals/td3d_Crash_Default_EDK-T07_colour.jpg"
+
+newmtl Trigger_HiHat_EDK-T07
+d 1
+Kd 0.80784315 0.80784315 0.80784315
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKCymbals/td3d_Crash_Default_EDK-T07_colour.jpg"
+
+newmtl Fittings_HiHat_EDK-T07
+d 1
+Kd 0.8509804 0.8509804 0.8509804
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKCymbals/td3d_Crash_Default_EDK-T07_colour.jpg"
+
+newmtl Metal_HiHat_EDK-T07
+d 1
+Kd 0.80784315 0.80784315 0.80784315
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKCymbals/td3d_Crash_Default_EDK-T07_colour.jpg"
+
+newmtl Rubber_HiHat_EDK-T07
+d 1
+Kd 0.80784315 0.80784315 0.80784315
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKCymbals/td3d_Crash_Default_EDK-T07_colour.jpg"
+
+newmtl Bracket_HiHat_EDK-T07
+d 1
+Kd 0.87843138 0.87843138 0.87843138
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKCymbals/td3d_Crash_Default_EDK-T07_colour.jpg"
+
+newmtl Plastic_EDK-T13_EDK_WiFi_Receiver_(6)
+d 1
+Kd 0.56470591 0.56470591 0.56470591
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_WiFi-T13_colour.jpg"
+
+newmtl Light_EDK-T13_EDK_WiFi_Receiver_(6)
+d 1
+Kd 0.92156863 0.92156863 0.92156863
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_WiFi-T13_colour.jpg"
+
+newmtl Rubber_EDK-T13_EDK_WiFi_Receiver_(6)
+d 1
+Kd 0.92156863 0.92156863 0.92156863
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_WiFi-T13_colour.jpg"
+
+newmtl Metal_EDK-T13_EDK_WiFi_Receiver_(6)
+d 1
+Kd 0.92156863 0.92156863 0.92156863
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_WiFi-T13_colour.jpg"
+
+newmtl Socket_Module_EDK-T04
+d 1
+Kd 0.8509804 0.8509804 0.8509804
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_Module_Default_EDK-T04_colour.jpg"
+
+newmtl Glass_Module_EDK-T04
+d 0.2038462
+Kd 0.8509804 0.8509804 0.8509804
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_Module_Default_EDK-T04_colour.jpg"
+
+newmtl Fittings_Module_EDK-T04
+d 1
+Kd 0.8509804 0.8509804 0.8509804
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_Module_Default_EDK-T04_colour.jpg"
+
+newmtl Plastic_USB_Module_EDK-T04
+d 1
+Kd 0.8509804 0.8509804 0.8509804
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_Module_Default_EDK-T04_colour.jpg"
+
+newmtl Plastic_Module_EDK-T04
+d 1
+Kd 0.8509804 0.8509804 0.8509804
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_Module_Default_EDK-T04_colour.jpg"
+
+newmtl Rubber_Module_EDK-T04
+d 1
+Kd 0.8509804 0.8509804 0.8509804
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_Module_Default_EDK-T04_colour.jpg"
+
+newmtl Main_Module_EDK-T04
+d 1
+Kd 0.8509804 0.8509804 0.8509804
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_Module_Default_EDK-T04_colour.jpg"
+
+newmtl Bracket_Module_EDK-T04
+d 1
+Kd 0.8509804 0.8509804 0.8509804
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_Module_Default_EDK-T04_colour.jpg"
+
+newmtl Top_Module_EDK-T04
+d 1
+Kd 0.8509804 0.8509804 0.8509804
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_Module_Default_EDK-T04_colour.jpg"
+
+newmtl Display_Module_EDK-T04
+d 1
+Kd 0.8509804 0.8509804 0.8509804
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_Module_Default_EDK-T04_colour.jpg"
+
+newmtl Lights_Module_EDK-T04
+d 1
+Kd 0.8509804 0.8509804 0.8509804
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_Module_Default_EDK-T04_colour.jpg"
+
+newmtl Metal_EDK-T13_EDK_WiFi_Transmitter
+d 1
+Kd 0.92156863 0.92156863 0.92156863
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_WiFi-T13_colour.jpg"
+
+newmtl Light_EDK-T13_EDK_WiFi_Transmitter
+d 1
+Kd 0.92156863 0.92156863 0.92156863
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_WiFi-T13_colour.jpg"
+
+newmtl Plastic_EDK-T13_EDK_WiFi_Transmitter
+d 1
+Kd 0.56470591 0.56470591 0.56470591
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_WiFi-T13_colour.jpg"
+
+newmtl Metal_EDK-T14
+d 1
+Kd 0.64705884 0.64705884 0.64705884
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_Power_EDK-T14_colour.jpg"
+
+newmtl Rubber_EDK-T14
+d 1
+Kd 1 1 1
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_Power_EDK-T14_colour.jpg"
+
+newmtl Plastic_EDK-T14
+d 1
+Kd 1 1 1
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_Power_EDK-T14_colour.jpg"
+
+newmtl Plug_EDK-T14
+d 1
+Kd 0.5411765 0.5411765 0.5411765
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_Power_EDK-T14_colour.jpg"
+
+newmtl Terminals_EDK-T14
+d 1
+Kd 0.78431374 0.78431374 0.78431374
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_Power_EDK-T14_colour.jpg"
+
+newmtl Cord_EDK-T14
+d 1
+Kd 0.5411765 0.5411765 0.5411765
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_Power_EDK-T14_colour.jpg"
+
+newmtl Grommet_EDK-T14
+d 1
+Kd 0.5411765 0.5411765 0.5411765
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_Power_EDK-T14_colour.jpg"
+
+newmtl Mesh_Tom_EDK-T06_EDK_Tom_(Low)
+d 1
+Kd 0.80784315 0.80784315 0.80784315
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKDrums/td3d_Tom_Default_EDK-T06_colour.jpg"
+
+newmtl Fittings_Tom_EDK-T06_EDK_Tom_(Low)
+d 1
+Kd 0.80784315 0.80784315 0.80784315
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKDrums/td3d_Tom_Default_EDK-T06_colour.jpg"
+
+newmtl Rubber_Tom_EDK-T06_EDK_Tom_(Low)
+d 1
+Kd 0.80784315 0.80784315 0.80784315
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKDrums/td3d_Tom_Default_EDK-T06_colour.jpg"
+
+newmtl Metal_Tom_EDK-T06_EDK_Tom_(Low)
+d 1
+Kd 0.80784315 0.80784315 0.80784315
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKDrums/td3d_Tom_Default_EDK-T06_colour.jpg"
+
+newmtl Plastic_Tom_EDK-T06_EDK_Tom_(Low)
+d 1
+Kd 0.98823529 0.98823529 0.98823529
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKDrums/td3d_Tom_Default_EDK-T06_colour.jpg"
+
+newmtl Plastic_EDK-T13_EDK_WiFi_Receiver_(7)
+d 1
+Kd 0.56470591 0.56470591 0.56470591
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_WiFi-T13_colour.jpg"
+
+newmtl Light_EDK-T13_EDK_WiFi_Receiver_(7)
+d 1
+Kd 0.92156863 0.92156863 0.92156863
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_WiFi-T13_colour.jpg"
+
+newmtl Rubber_EDK-T13_EDK_WiFi_Receiver_(7)
+d 1
+Kd 0.92156863 0.92156863 0.92156863
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_WiFi-T13_colour.jpg"
+
+newmtl Metal_EDK-T13_EDK_WiFi_Receiver_(7)
+d 1
+Kd 0.92156863 0.92156863 0.92156863
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_WiFi-T13_colour.jpg"
+
+newmtl Fittings_Ride_EDK-T08
+d 1
+Kd 0.8509804 0.8509804 0.8509804
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKCymbals/td3d_Ride_Default_EDK-T08_colour.jpg"
+
+newmtl Bracket_Ride_EDK-T08
+d 1
+Kd 0.87843138 0.87843138 0.87843138
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKCymbals/td3d_Ride_Default_EDK-T08_colour.jpg"
+
+newmtl Cymbal_Ride_EDK-T08
+d 1
+Kd 0.8509804 0.8509804 0.8509804
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKCymbals/td3d_Ride_Default_EDK-T08_colour.jpg"
+
+newmtl Trigger_Ride_EDK-T08
+d 1
+Kd 0.80784315 0.80784315 0.80784315
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKCymbals/td3d_Ride_Default_EDK-T08_colour.jpg"
+
+newmtl Metal_Ride_EDK-T08
+d 1
+Kd 0.80784315 0.80784315 0.80784315
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKCymbals/td3d_Ride_Default_EDK-T08_colour.jpg"
+
+newmtl Rubber_Ride_EDK-T08
+d 1
+Kd 0.80784315 0.80784315 0.80784315
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKCymbals/td3d_Ride_Default_EDK-T08_colour.jpg"
+
+newmtl Plastic_EDK-T13_EDK_WiFi_Receiver_(8)
+d 1
+Kd 0.56470591 0.56470591 0.56470591
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_WiFi-T13_colour.jpg"
+
+newmtl Light_EDK-T13_EDK_WiFi_Receiver_(8)
+d 1
+Kd 0.92156863 0.92156863 0.92156863
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_WiFi-T13_colour.jpg"
+
+newmtl Rubber_EDK-T13_EDK_WiFi_Receiver_(8)
+d 1
+Kd 0.92156863 0.92156863 0.92156863
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_WiFi-T13_colour.jpg"
+
+newmtl Metal_EDK-T13_EDK_WiFi_Receiver_(8)
+d 1
+Kd 0.92156863 0.92156863 0.92156863
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_WiFi-T13_colour.jpg"
+
+newmtl Mesh_Tom_EDK-T06_EDK_Tom_(Low)_(2)
+d 1
+Kd 0.80784315 0.80784315 0.80784315
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKDrums/td3d_Tom_Default_EDK-T06_colour.jpg"
+
+newmtl Fittings_Tom_EDK-T06_EDK_Tom_(Low)_(2)
+d 1
+Kd 0.80784315 0.80784315 0.80784315
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKDrums/td3d_Tom_Default_EDK-T06_colour.jpg"
+
+newmtl Rubber_Tom_EDK-T06_EDK_Tom_(Low)_(2)
+d 1
+Kd 0.80784315 0.80784315 0.80784315
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKDrums/td3d_Tom_Default_EDK-T06_colour.jpg"
+
+newmtl Metal_Tom_EDK-T06_EDK_Tom_(Low)_(2)
+d 1
+Kd 0.80784315 0.80784315 0.80784315
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKDrums/td3d_Tom_Default_EDK-T06_colour.jpg"
+
+newmtl Plastic_Tom_EDK-T06_EDK_Tom_(Low)_(2)
+d 1
+Kd 0.98823529 0.98823529 0.98823529
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKDrums/td3d_Tom_Default_EDK-T06_colour.jpg"
+
+newmtl Plastic_EDK-T13_EDK_WiFi_Receiver_(9)
+d 1
+Kd 0.56470591 0.56470591 0.56470591
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_WiFi-T13_colour.jpg"
+
+newmtl Light_EDK-T13_EDK_WiFi_Receiver_(9)
+d 1
+Kd 0.92156863 0.92156863 0.92156863
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_WiFi-T13_colour.jpg"
+
+newmtl Rubber_EDK-T13_EDK_WiFi_Receiver_(9)
+d 1
+Kd 0.92156863 0.92156863 0.92156863
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_WiFi-T13_colour.jpg"
+
+newmtl Metal_EDK-T13_EDK_WiFi_Receiver_(9)
+d 1
+Kd 0.92156863 0.92156863 0.92156863
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_WiFi-T13_colour.jpg"
+
+newmtl Rubber_Kick_EDK-T11
+d 1
+Kd 0.80784315 0.80784315 0.80784315
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKDrums/td3d_Kick_Default_EDK-T11_colour.jpg"
+
+newmtl Fittings_Kick_EDK-T11
+d 1
+Kd 0.80784315 0.80784315 0.80784315
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKDrums/td3d_Kick_Default_EDK-T11_colour.jpg"
+
+newmtl Frame_Kick_EDK-T11
+d 1
+Kd 0.80784315 0.80784315 0.80784315
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKDrums/td3d_Kick_Default_EDK-T11_colour.jpg"
+
+newmtl Mesh_Kick_EDK-T11
+d 1
+Kd 0.80784315 0.80784315 0.80784315
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKDrums/td3d_Kick_Default_EDK-T11_colour.jpg"
+
+newmtl Metal_Kick_EDK-T11
+d 1
+Kd 0.80784315 0.80784315 0.80784315
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKDrums/td3d_Kick_Default_EDK-T11_colour.jpg"
+
+newmtl Plastic_Kick_EDK-T11
+d 1
+Kd 0.98823529 0.98823529 0.98823529
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKDrums/td3d_Kick_Default_EDK-T11_colour.jpg"
+
+newmtl Fittings_Kick_EDK-T10
+d 1
+Kd 0.80784315 0.80784315 0.80784315
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKPedals/td3d_Kick_EDK-T10_colour.jpg"
+
+newmtl Housing_Kick_EDK-T10
+d 1
+Kd 0.80784315 0.80784315 0.80784315
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKPedals/td3d_Kick_EDK-T10_colour.jpg"
+
+newmtl Arm_Kick_EDK-T10
+d 1
+Kd 0.80784315 0.80784315 0.80784315
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKPedals/td3d_Kick_EDK-T10_colour.jpg"
+
+newmtl Hinge_Kick_EDK-T10
+d 1
+Kd 0.80784315 0.80784315 0.80784315
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKPedals/td3d_Kick_EDK-T10_colour.jpg"
+
+newmtl Rubber_Kick_EDK-T10
+d 1
+Kd 0.80784315 0.80784315 0.80784315
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKPedals/td3d_Kick_EDK-T10_colour.jpg"
+
+newmtl FootPedal_Kick_EDK-T10
+d 1
+Kd 0.80784315 0.80784315 0.80784315
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKPedals/td3d_Kick_EDK-T10_colour.jpg"
+
+newmtl Plastic_EDK-T13_EDK_WiFi_Receiver_(10)
+d 1
+Kd 0.56470591 0.56470591 0.56470591
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_WiFi-T13_colour.jpg"
+
+newmtl Light_EDK-T13_EDK_WiFi_Receiver_(10)
+d 1
+Kd 0.92156863 0.92156863 0.92156863
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_WiFi-T13_colour.jpg"
+
+newmtl Rubber_EDK-T13_EDK_WiFi_Receiver_(10)
+d 1
+Kd 0.92156863 0.92156863 0.92156863
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_WiFi-T13_colour.jpg"
+
+newmtl Metal_EDK-T13_EDK_WiFi_Receiver_(10)
+d 1
+Kd 0.92156863 0.92156863 0.92156863
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_WiFi-T13_colour.jpg"
+
+newmtl Fittings_HHControl_EDK-T09
+d 1
+Kd 0.80784315 0.80784315 0.80784315
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKPedals/td3d_HHControl_EDK-T09_colour.jpg"
+
+newmtl Rubber_HHControl_EDK-T09
+d 1
+Kd 0.80784315 0.80784315 0.80784315
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKPedals/td3d_HHControl_EDK-T09_colour.jpg"
+
+newmtl Housing_HHControl_EDK-T09
+d 1
+Kd 0.80784315 0.80784315 0.80784315
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKPedals/td3d_HHControl_EDK-T09_colour.jpg"
+
+newmtl FootPedal_HHControl_EDK-T09
+d 1
+Kd 0.80784315 0.80784315 0.80784315
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKPedals/td3d_HHControl_EDK-T09_colour.jpg"
+
+newmtl TriggerArm_HHControl_EDK-T09
+d 1
+Kd 0.80784315 0.80784315 0.80784315
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/EDKPedals/td3d_HHControl_EDK-T09_colour.jpg"
+
+newmtl Plastic_EDK-T13_EDK_WiFi_Receiver_(11)
+d 1
+Kd 0.56470591 0.56470591 0.56470591
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_WiFi-T13_colour.jpg"
+
+newmtl Light_EDK-T13_EDK_WiFi_Receiver_(11)
+d 1
+Kd 0.92156863 0.92156863 0.92156863
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_WiFi-T13_colour.jpg"
+
+newmtl Rubber_EDK-T13_EDK_WiFi_Receiver_(11)
+d 1
+Kd 0.92156863 0.92156863 0.92156863
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_WiFi-T13_colour.jpg"
+
+newmtl Metal_EDK-T13_EDK_WiFi_Receiver_(11)
+d 1
+Kd 0.92156863 0.92156863 0.92156863
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_WiFi-T13_colour.jpg"
+
+newmtl Leather_Stool_EDK-T12
+d 1
+Kd 0.75294119 0.75294119 0.75294119
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_Stool_EDK-T12_colour.jpg"
+
+newmtl Metal_Stool_EDK-T12
+d 1
+Kd 0.80784315 0.80784315 0.80784315
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_Stool_EDK-T12_colour.jpg"
+
+newmtl Rubber_Stool_EDK-T12
+d 1
+Kd 0.80784315 0.80784315 0.80784315
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_Stool_EDK-T12_colour.jpg"
+
+newmtl Fittings_Stool_EDK-T12
+d 1
+Kd 0.80784315 0.80784315 0.80784315
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_Stool_EDK-T12_colour.jpg"
+
+newmtl Base_Stool_EDK-T12
+d 1
+Kd 0.80784315 0.80784315 0.80784315
+map_Kd "C:/Users/Public/Documents/My DAZ 3D Library/Runtime/Textures/Td3d/Electric Drum Kit/td3d_Stool_EDK-T12_colour.jpg"
+
