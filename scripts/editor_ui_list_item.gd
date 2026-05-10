@@ -36,7 +36,7 @@ func set_info(time: float, type: String):
 	
 func get_info() -> Dictionary:
 	var info = {
-		"time": $LineEdit.text,
+		"time": float($LineEdit.text),
 		"type": DRUM_LOOKUP[$OptionButton.selected],
 	}
 	return info

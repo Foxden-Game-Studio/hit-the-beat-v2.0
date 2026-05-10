@@ -115,7 +115,7 @@ offset_bottom = 674.0
 
 [node name="Label" type="Label" parent="song_timestamps" unique_id=2117913355]
 layout_mode = 2
-text = "timestampts"
+text = "timestamps"
 
 [node name="ScrollContainer" type="ScrollContainer" parent="song_timestamps" unique_id=616657438]
 layout_mode = 2

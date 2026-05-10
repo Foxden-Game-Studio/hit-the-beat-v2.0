@@ -6,7 +6,66 @@
 [ext_resource type="PackedScene" uid="uid://cn4aaepa86u7f" path="res://scenes/editor_ui.tscn" id="5_xg7d5"]
 [ext_resource type="Script" uid="uid://bu1co8u8bfgh3" path="res://scripts/input_handler.gd" id="7_74j0u"]
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_wf456"]
+[sub_resource type="Animation" id="Animation_xg7d5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(13.999629, 7.4724264, 13.332488)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -1.5707964, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_eqbpn"]
+resource_name = "record"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(13.999629, 7.4724264, 13.332488), Vector3(-0.217, 10.786, 6)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, -1.5707964, 0), Vector3(-0.7487463, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5lcyj"]
+_data = {
+&"RESET": SubResource("Animation_xg7d5"),
+&"record": SubResource("Animation_eqbpn")
+}
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_lc8kc"]
 size = Vector2(4, 2.25)
@@ -36,7 +95,7 @@ albedo_texture = SubResource("ViewportTexture_ywkw7")
 [sub_resource type="BoxShape3D" id="BoxShape3D_mbgyq"]
 size = Vector3(32, 18, 0.1)
 
-[node name="Editor" type="Node3D" unique_id=187842444]
+[node name="Game" type="Node3D" unique_id=187842444]
 script = ExtResource("1_xg7d5")
 
 [node name="audio_player" type="AudioStreamPlayer3D" parent="." unique_id=1288260856]
@@ -48,7 +107,7 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 13.9
 [node name="e-drum-kit" parent="." unique_id=1039073883 instance=ExtResource("2_5tm2q")]
 
 [node name="anim_player" type="AnimationPlayer" parent="." unique_id=1578454914]
-libraries/ = SubResource("AnimationLibrary_wf456")
+libraries/ = SubResource("AnimationLibrary_5lcyj")
 autoplay = &"intro"
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1178078700]

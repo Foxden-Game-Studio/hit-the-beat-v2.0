@@ -20,8 +20,16 @@ fullscreen,Fullscreen,Vollbild
 edit,Edit,Bearbeiten
 found_timestamps,Found Timestamps,Gefundende Zeitstempel
 normal,Normal Mode,Normaler Modus
-editor,Song Editor,Lied Editor
+editor,Song Editor,Song Editor
 song_audio,Song Audio, Song Audio
 title, Title, Titel
 audio_file, Audio File, Audio Datei
 audio_file_path,e.g. res://songs/song.mp3,z.B. res://songs/song.mp3
+create_new,Create New,Neu Erstellen
+timestamps,Timestamps,Zeitstempel
+add,Add,Hinzufügen
+record,Record,Aufnehmen
+save,Save,Speichern
+quit_without_save,Quit,Schließen
+save_and_quit,Save & Quit,Speichern & Schließen
+error,Error,Fehler

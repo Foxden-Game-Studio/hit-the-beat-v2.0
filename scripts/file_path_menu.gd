@@ -16,13 +16,12 @@ func _ready() -> void:
 		var file_name = songs_files[i]
 
 		popup.add_item(file_name)
-		popup.set_item_metadata(i, full_path)
+		popup.set_item_metadata(i-1, full_path)
 	
 	popup.id_pressed.connect(_on_path_selected)
 
 func _on_path_selected(id: int):
-	var selected_path = menu_button.get_popup().get_item_metadata(id)
+	var selected_path: String = menu_button.get_popup().get_item_metadata(id)
 
 	line_edit.text = selected_path
 	line_edit.grab_focus()	
-

@@ -5,6 +5,7 @@ extends Control
 @onready var song_difficulty = $song_details/song_difficulty/OptionButton
 @onready var timestamp_list = $song_timestamps/ScrollContainer/VBoxContainer/VBoxContainer
 @onready var timestamp_template: PackedScene = load("res://scenes/editor_ui_list_item.tscn")
+@onready var game = $/root/Game
 
 func setup_ui(title: String, audio: String, difficulty: String, timestamps: Array) -> void:
 	song_title_edit.text = title
@@ -24,7 +25,39 @@ func setup_ui(title: String, audio: String, difficulty: String, timestamps: Arra
 		timestamp_list.add_child(timestamp_row)
 
 func save_song() -> void:
-	pass
+	print("Saving Song")
+	var audio_path: String = song_audio_edit.text
+	var file_name = audio_path.get_file()
+
+	if not FileAccess.file_exists(GlobalDefinitions.USER_SONGS_DIR + file_name):
+		print("File not found in User dir")
+		print("Copying file to User dir...")
+		DirAccess.copy_absolute(audio_path, GlobalDefinitions.USER_SONGS_DIR + file_name)
+		audio_path = GlobalDefinitions.USER_SONGS_DIR + file_name
+
+	var timestamps = []
+
+	for item in timestamp_list.get_children():
+		timestamps.append(item.get_info())
+	
+	var song_config = {
+		"song_name": song_title_edit.text,
+		"difficulty": song_difficulty.get_item_text(song_difficulty.selected).get_slice("_", 1),
+		"audio_file": audio_path,
+		"timestamps": timestamps,
+	}
+
+	var json_string = JSON.stringify(song_config, "  ")
+	var save_file = audio_path.replace(".mp3", ".json")
+
+	var file = FileAccess.open(save_file, FileAccess.WRITE)
+
+	if file:
+		file.store_string(json_string)
+		file.close()
+		print("Song saved successful!")
+	else:
+		print("Failed to save song: Stage: write to file")
 	
 
 func show_error(e: String) -> void:
@@ -36,7 +69,7 @@ func _on_browse_files_button_pressed() -> void:
 	$FileDialog.visible = true
 
 func _on_file_dialog_file_selected(path: String) -> void:
-	$song_details/song_audio/LineEdit.text = path
+	song_audio_edit.text = path
 
 
 func _on_error_acknowledged_button_pressed() -> void:
@@ -66,4 +99,4 @@ func _on_quit_no_save_pressed() -> void:
 
 
 func _on_record_button_pressed() -> void:
-	pass # Replace with function body.
+	game.start_recording()

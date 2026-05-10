@@ -1,6 +1,7 @@
 extends Node3D
 
 @onready var editor_ui = $menu_wall/SubViewport/EditorUi
+@onready var anim_player: AnimationPlayer = $anim_player
 
 var song = ""
 var song_title = ""
@@ -8,6 +9,7 @@ var song_audio_path = ""
 var difficulty = ""
 var timestamps = []
 var timestamp_template = {"time": 0, "type": ""}
+var recording = false
 
 func _ready() -> void:
 	if GlobalSettings.new_song:
@@ -28,3 +30,11 @@ func _ready() -> void:
 	timestamps = json_file["timestamps"]
 	
 	editor_ui.setup_ui(song_title, song_audio_path, difficulty, timestamps)
+
+func _process(_delta: float) -> void:
+	if not recording:
+		return
+
+func start_recording() -> void:
+	anim_player.play("record")
+	recording = true
