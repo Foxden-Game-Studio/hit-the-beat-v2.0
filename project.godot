@@ -23,6 +23,7 @@ config/icon="uid://js56jv0i5t41"
 
 GlobalSettings="*uid://dxead0sso6p3w"
 GlobalDefinitions="*uid://b8fqosivuow52"
+Helpers="*uid://cqycsaqj587ok"
 
 [debug]
 
