@@ -43,6 +43,9 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	var processed = []
 	if not recording:
+		for input in queued_inputs:
+			e_drum_kit.on_drum_hit(input["type"], Color.RED)
+		queued_inputs.clear()
 		return
 
 	for input in queued_inputs:
@@ -57,11 +60,13 @@ func _process(_delta: float) -> void:
 
 	processed.clear()
 
-func setup_recording(audio_file: String) -> void:
+func setup_recording(audio_file: String, _timestamps: Array) -> void:
 	var stream = Helpers.load_audio_file(audio_file)
 	if stream:
 		audio_player.stream = stream
 	anim_player.play("record")
+	timestamps = _timestamps
+	input_handler.enable_input_device()
 
 func start_recording():
 	if overwrite_timestamps:
@@ -79,3 +84,4 @@ func return_to_menu() -> void:
 	anim_player.play_backwards("record")
 	editor_ui.update_timestamp_list(timestamps)
 	audio_resume_position = 0
+	input_handler.disable_input_device()

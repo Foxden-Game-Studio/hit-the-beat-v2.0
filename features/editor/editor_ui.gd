@@ -106,6 +106,10 @@ func _on_quit_no_save_pressed() -> void:
 
 func _on_record_button_pressed() -> void:
 	if FileAccess.file_exists(song_audio_edit.text):
-		game.setup_recording(song_audio_edit.text)
+		var timestamps = []
+		for item in timestamp_list.get_children():
+			timestamps.append(item.get_info())
+			
+		game.setup_recording(song_audio_edit.text, timestamps)
 	else:
 		show_error("please specify an audio file")
