@@ -140,7 +140,7 @@ Eingabegeräte → Eingabe-Handler → Spiellogik → Punkte/UI
 - [x] Multi-Input-Geräte-Framework
 - [x] 3D-Schlagzeug-Visualisierung
 - [x] Grundlegendes Bewertungssystem
-- [ ] Vollständiger Note-Matching-Algorithmus
+- [X] Vollständiger Note-Matching-Algorithmus
 - [ ] Bestenlisten-System
 - [ ] Latenz-Kalibrierungssystem
 - [ ] DIY-Schlagzeug-Unterstützung
