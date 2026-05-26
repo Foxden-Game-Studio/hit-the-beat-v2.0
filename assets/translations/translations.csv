@@ -35,3 +35,4 @@ save_and_quit,Save & Quit,Speichern & Schließen
 error,Error,Fehler
 overwrite_timestamps,Overwrite Timestamps,Zeitstempel Überschreiben
 recorded_timestamps,Recorded Timestamps,Aufgenommene Zeitstempel
+loading,loading,wird geladen

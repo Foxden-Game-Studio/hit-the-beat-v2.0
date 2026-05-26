@@ -3,10 +3,13 @@ extends Control
 var song_dir = GlobalDefinitions.USER_SONGS_DIR
 var song_list_item: PackedScene = load("res://features/editor/song_list/editor_song_list_item.tscn")
 
+var loading_screen: PackedScene
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	load_songs()
 	$settings/input_settings/input_device.select(GlobalSettings.input_device)
+	loading_screen = load("res://features/loading_screen/loading_screen.tscn")
 
 func load_songs():
 	var songs = DirAccess.open(song_dir)
@@ -36,8 +39,14 @@ func _on_back_button_pressed() -> void:
 func _on_song_button_pressed(song: String) -> void:
 	GlobalSettings.selected_song = song
 	GlobalSettings.new_song = false
-	get_tree().change_scene_to_file("res://features/editor/editor.tscn")
+	var instance = loading_screen.instantiate()
+	instance.set_to_load_scene("res://features/editor/editor.tscn")
+	instance.connect("scene_loading_finished", _on_loading_finished)
+	get_tree().root.add_child(instance)
+	instance.start_loading()
 
+func _on_loading_finished(scene: PackedScene) -> void:
+	get_tree().change_scene_to_packed(scene)
 
 func _on_input_device_item_selected(index: int) -> void:
 	GlobalSettings.input_device = index
@@ -45,4 +54,8 @@ func _on_input_device_item_selected(index: int) -> void:
 
 func _on_create_button_pressed() -> void:
 	GlobalSettings.new_song = true
-	get_tree().change_scene_to_file("res://features/editor/editor.tscn")
+	var instance = loading_screen.instantiate()
+	instance.set_to_load_scene("res://features/editor/editor.tscn")
+	instance.connect("scene_loading_finished", _on_loading_finished)
+	get_tree().root.add_child(instance)
+	instance.start_loading()
