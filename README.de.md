@@ -67,23 +67,24 @@ Unterstützt Standard-MIDI-Tonzuordnung für Schlagzeugpolster. Schließen Sie e
 
 ```
 hit-the-beat-v2.0/
-├── scripts/                    # GDScript-Spiellogik
-│   ├── game.gd                # Hauptspielschleife und Bewertung
-│   ├── input_handler.gd       # Eingabegeräteverwaltung
-│   ├── device_*.gd            # Gerätespezifische Eingabe-Handler
-│   ├── e_drum_kit.gd          # 3D-Schlagzeug-Controller
-│   └── ...
-├── scenes/                     # Godot-Szenendateien
-│   ├── game.tscn              # Hauptspielszene
-│   ├── main_menu.tscn         # Hauptmenü
-│   └── song_list.tscn         # Liedauswahlbildschirm
-├── assets/                     # Grafiken, Modelle, Shader
-│   ├── models/e-drum-kit.glb  # 3D-Schlagzeugmodell
-│   ├── shaders/               # Benutzerdefinierte Shader für Effekte
-│   └── icons/                 # UI-Symbole
-├── songs/                      # Lied- und Audiodaten
-│   └── We_Will_Rock_You.json  # Liedmetadaten und Note-Timings
-└── docs/                       # Forschungs- und Implementierungsleitfäden
+├── assets/                     # Grafiken, Symbole und Übersetzungen
+│   ├── graphics/              # 2D-Grafiken und Hintergründe
+│   ├── icons/                 # UI-Symbole
+│   └── translations/          # Übersetzungsdateien (CSV, translation)
+├── core/                       # Kernsysteme und globale Logik
+│   ├── autoloads/             # Globale Variablen und Hilfsfunktionen
+│   ├── input/                 # Eingabeverarbeitungs-Framework
+│   │   └── devices/           # Handler für Tastatur, MIDI, Touch und DIY-Geräte
+│   └── ui/                    # Wiederverwendbare UI-Komponenten
+├── data/                       # Spielinhalte
+│   └── songs/                 # Liedmetadaten (.json) und Audiodateien
+├── features/                   # Hauptspielfunktionen und -szenen
+│   ├── drum_kit/              # 3D-Schlagzeugmodell, Logik und Shader
+│   ├── editor/                # Lied-Editor-Tool
+│   ├── game/                  # Spielschleife, UI und Liedauswahl
+│   ├── main_menu/             # Hauptmenü-Schnittstelle
+│   └── settings/              # Einstellungsmenü
+└── source/                     # Originalquelldateien (Blend-Dateien, Modelle)
 ```
 
 ## Liedformat
@@ -146,7 +147,7 @@ Eingabegeräte → Eingabe-Handler → Spiellogik → Punkte/UI
 - [ ] DIY-Schlagzeug-Unterstützung
 - [ ] Touch-Screen-Eingabe-Unterstützung
 - [ ] Fortgeschrittene visuelle Effekte
-- [ ] Lied-Editor-Tool
+- [x] Lied-Editor-Tool
 - [ ] Zusätzliche Lieder
 
 ## Credits

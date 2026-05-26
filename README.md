@@ -67,23 +67,24 @@ Supports standard MIDI pitch mapping for drum pads. Plug in any MIDI-compatible 
 
 ```
 hit-the-beat-v2.0/
-├── scripts/                    # GDScript game logic
-│   ├── game.gd                # Main game loop and scoring
-│   ├── input_handler.gd       # Input device management
-│   ├── device_*.gd            # Device-specific input handlers
-│   ├── e_drum_kit.gd          # 3D drum kit controller
-│   └── ...
-├── scenes/                     # Godot scene files
-│   ├── game.tscn              # Main gameplay scene
-│   ├── main_menu.tscn         # Main menu
-│   └── song_list.tscn         # Song selection screen
-├── assets/                     # Graphics, models, shaders
-│   ├── models/e-drum-kit.glb  # 3D drum kit model
-│   ├── shaders/               # Custom shaders for effects
-│   └── icons/                 # UI icons
-├── songs/                      # Song data and audio
-│   └── We_Will_Rock_You.json  # Song metadata and note timings
-└── docs/                       # Research and implementation guides
+├── assets/                     # Graphics, icons, and translations
+│   ├── graphics/              # 2D graphics and backgrounds
+│   ├── icons/                 # UI icons
+│   └── translations/          # Translation files (CSV, translation)
+├── core/                       # Core systems and global logic
+│   ├── autoloads/             # Global variables and helper functions
+│   ├── input/                 # Input handling framework
+│   │   └── devices/           # Keyboard, MIDI, touch, and DIY device handlers
+│   └── ui/                    # Reusable UI components
+├── data/                       # Game content
+│   └── songs/                 # Song metadata (.json) and audio files
+├── features/                   # Main game features and scenes
+│   ├── drum_kit/              # 3D drum kit model, logic, and shaders
+│   ├── editor/                # Song editor tool
+│   ├── game/                  # Gameplay loop, UI, and song selection
+│   ├── main_menu/             # Main menu interface
+│   └── settings/              # Settings menu
+└── source/                     # Original source files (Blend files, models)
 ```
 
 ## Song Format
@@ -146,7 +147,7 @@ Input Devices → Input Handler → Game Logic → Score/UI
 - [ ] DIY drum kit support
 - [ ] Touch screen input support
 - [ ] Advanced visual effects
-- [ ] Song editor tool
+- [x] Song editor tool
 - [ ] Additional songs
 
 ## Credits
