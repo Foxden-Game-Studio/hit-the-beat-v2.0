@@ -16,8 +16,9 @@ func load_leaderboard():
 		DirAccess.make_dir_absolute(GlobalDefinitions.USER_LEADERBOARD_DIR)
 		leaderboard_dir = DirAccess.open(GlobalDefinitions.USER_LEADERBOARD_DIR)
 	
+	var song_filename = song.get_file()
 	for tmp_leaderboard in leaderboard_dir.get_files():
-		if tmp_leaderboard == song:
+		if tmp_leaderboard == song_filename:
 			leaderboard = tmp_leaderboard
 			break
 			

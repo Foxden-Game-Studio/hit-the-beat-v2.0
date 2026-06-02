@@ -22,3 +22,4 @@ func _on_input(type: String):
 	if input_device_enabled:
 		var current_time = game.audio_player.get_playback_position()
 		game.queued_inputs.push_back({"type": type, "time": current_time})
+		print("hit: type: " + type + " time: " + String.num(current_time))

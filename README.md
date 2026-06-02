@@ -142,7 +142,7 @@ Input Devices → Input Handler → Game Logic → Score/UI
 - [x] 3D drum kit visualization
 - [x] Basic scoring system
 - [X] Complete note matching algorithm
-- [ ] Leaderboard system
+- [X] Leaderboard system
 - [ ] Latency calibration system
 - [ ] DIY drum kit support
 - [ ] Touch screen input support
