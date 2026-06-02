@@ -36,3 +36,5 @@ error,Error,Fehler
 overwrite_timestamps,Overwrite Timestamps,Zeitstempel Überschreiben
 recorded_timestamps,Recorded Timestamps,Aufgenommene Zeitstempel
 loading,loading,wird geladen
+leaderboard,Leaderboard,Rangliste
+player,Player,Spieler
