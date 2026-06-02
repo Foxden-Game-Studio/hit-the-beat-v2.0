@@ -38,3 +38,5 @@ recorded_timestamps,Recorded Timestamps,Aufgenommene Zeitstempel
 loading,loading,wird geladen
 leaderboard,Leaderboard,Rangliste
 player,Player,Spieler
+save_to_leaderboard, Save to Leaderboard,In Rangliste speichern
+show_leaderboard, Show Leaderboard,Zeige Rangliste
