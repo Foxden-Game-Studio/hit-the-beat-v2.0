@@ -22,9 +22,13 @@ func _on_normal_pressed() -> void:
 func _on_back_pressed() -> void:
 	main_menu.visible = !main_menu.visible
 	mode_select.visible = !mode_select.visible
+	
+func _on_leaderboard_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://features/leaderboard/song_list/song_list.tscn")
 
 func _ready() -> void:
 	sync_songs_to_user_dir()
+	sync_leaderboards_to_user_dir()
 
 func sync_songs_to_user_dir() -> void:
 	var source_path = "res://data/songs/"
@@ -50,3 +54,23 @@ func sync_songs_to_user_dir() -> void:
 						print("Exported default song file with unknown extension: ", file)
 	else:
 		print("Error: Could not find the source songs folder in res://")
+
+func sync_leaderboards_to_user_dir() -> void:
+	var source_path = "res://data/leaderboards/"
+	var dest_path = GlobalDefinitions.USER_LEADERBOARD_DIR
+
+	if not DirAccess.dir_exists_absolute(dest_path):
+		DirAccess.make_dir_absolute(dest_path)
+
+	var dir = DirAccess.open(source_path)
+	if dir:
+		for file in dir.get_files():
+			if not file.ends_with(".import") and file.ends_with(".json"): 
+				var full_source = source_path + file
+				var full_dest = dest_path + file
+
+				if not FileAccess.file_exists(full_dest):
+					DirAccess.copy_absolute(full_source, full_dest)
+					print("Exported default leaderboard: ", file)
+	else:
+		print("Error: Could not find the source leaderboards folder in res://")

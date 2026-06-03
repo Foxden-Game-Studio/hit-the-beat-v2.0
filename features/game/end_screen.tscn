@@ -1,0 +1,178 @@
+[gd_scene format=3 uid="uid://xij28riehj6y"]
+
+[ext_resource type="Texture2D" uid="uid://ik5nj4hlvrty" path="res://assets/icons/refresh_100dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.svg" id="1_5c81y"]
+[ext_resource type="Script" uid="uid://dxn3k1upiofkq" path="res://features/game/end_screen.gd" id="1_kd35x"]
+
+[node name="EndScreen" type="Control" unique_id=938968705 node_paths=PackedStringArray("player_name_edit", "save_leaderboard_button", "score_label", "best_combo_label", "perfect_label", "great_label", "good_label", "ok_label", "miss_label")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kd35x")
+player_name_edit = NodePath("player_name")
+save_leaderboard_button = NodePath("save_quit_control/save_leaderboard_button")
+score_label = NodePath("main_score/score/score")
+best_combo_label = NodePath("main_score/best_combo/score")
+perfect_label = NodePath("points/perfect/score")
+great_label = NodePath("points/great/score")
+good_label = NodePath("points/good/score")
+ok_label = NodePath("points/ok/score")
+miss_label = NodePath("points/miss/score")
+
+[node name="restart_button" type="Button" parent="." unique_id=689852327]
+layout_mode = 1
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 72.0
+offset_bottom = 72.0
+icon = ExtResource("1_5c81y")
+
+[node name="main_score" type="VBoxContainer" parent="." unique_id=1747009620]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -53.5
+offset_top = 21.0
+offset_right = 53.5
+offset_bottom = 71.0
+grow_horizontal = 2
+
+[node name="score" type="HBoxContainer" parent="main_score" unique_id=352502935]
+layout_mode = 2
+
+[node name="title" type="Label" parent="main_score/score" unique_id=660951100]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "score"
+
+[node name="score" type="Label" parent="main_score/score" unique_id=2057004505]
+layout_mode = 2
+text = "0"
+
+[node name="best_combo" type="HBoxContainer" parent="main_score" unique_id=599057084]
+layout_mode = 2
+
+[node name="title" type="Label" parent="main_score/best_combo" unique_id=1739185574]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "best_combo"
+
+[node name="score" type="Label" parent="main_score/best_combo" unique_id=1591704536]
+layout_mode = 2
+text = "0"
+
+[node name="points" type="VBoxContainer" parent="." unique_id=630171197]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 16.0
+offset_top = -100.0
+offset_right = 86.0
+offset_bottom = 58.0
+grow_vertical = 2
+
+[node name="perfect" type="HBoxContainer" parent="points" unique_id=1834156133]
+layout_mode = 2
+
+[node name="title" type="Label" parent="points/perfect" unique_id=788048080]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "perfect"
+
+[node name="score" type="Label" parent="points/perfect" unique_id=1457458646]
+layout_mode = 2
+text = "0"
+
+[node name="great" type="HBoxContainer" parent="points" unique_id=465048518]
+layout_mode = 2
+
+[node name="title" type="Label" parent="points/great" unique_id=412226832]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "great"
+
+[node name="score" type="Label" parent="points/great" unique_id=1615591934]
+layout_mode = 2
+text = "0"
+
+[node name="good" type="HBoxContainer" parent="points" unique_id=1973610825]
+layout_mode = 2
+
+[node name="title" type="Label" parent="points/good" unique_id=1914534404]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "good"
+
+[node name="score" type="Label" parent="points/good" unique_id=509074378]
+layout_mode = 2
+text = "0"
+
+[node name="ok" type="HBoxContainer" parent="points" unique_id=1849536094]
+layout_mode = 2
+
+[node name="title" type="Label" parent="points/ok" unique_id=900769248]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "ok"
+
+[node name="score" type="Label" parent="points/ok" unique_id=154448966]
+layout_mode = 2
+text = "0"
+
+[node name="miss" type="HBoxContainer" parent="points" unique_id=2026173443]
+layout_mode = 2
+
+[node name="title" type="Label" parent="points/miss" unique_id=2117589603]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "miss"
+
+[node name="score" type="Label" parent="points/miss" unique_id=381953737]
+layout_mode = 2
+text = "0"
+
+[node name="player_name" type="LineEdit" parent="." unique_id=701553409]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = -112.0
+offset_right = 176.0
+offset_bottom = -81.0
+grow_vertical = 0
+placeholder_text = "player"
+max_length = 16
+
+[node name="save_quit_control" type="HBoxContainer" parent="." unique_id=1651807026]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = -72.0
+offset_right = 442.0
+offset_bottom = -32.0
+grow_vertical = 0
+
+[node name="quit_button" type="Button" parent="save_quit_control" unique_id=863742912]
+layout_mode = 2
+text = "quit_button"
+
+[node name="save_leaderboard_button" type="Button" parent="save_quit_control" unique_id=415777032]
+layout_mode = 2
+disabled = true
+text = "save_to_leaderboard"
+
+[node name="view_leaderboard_button" type="Button" parent="save_quit_control" unique_id=946089213]
+layout_mode = 2
+text = "show_leaderboard"
+
+[connection signal="pressed" from="restart_button" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="save_quit_control/quit_button" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="save_quit_control/save_leaderboard_button" to="." method="_on_save_leaderboard_button_pressed"]
+[connection signal="pressed" from="save_quit_control/view_leaderboard_button" to="." method="_on_view_leaderboard_button_pressed"]

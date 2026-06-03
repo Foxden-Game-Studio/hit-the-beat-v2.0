@@ -1,0 +1,18 @@
+{
+	"song_name": "Dummy Song",
+	"difficulty": "hard",
+	"leaderboard": [
+		{
+			"player": "MasterDrummer",
+			"score": 9500
+		},
+		{
+			"player": "BeatMaker",
+			"score": 8200
+		},
+		{
+			"player": "NoobPlayer",
+			"score": 1500
+		}
+	]
+}

@@ -13,6 +13,13 @@ var queued_inputs = []
 
 var score: int = 0
 var combo: int = 0
+var best_combo: int = 0
+
+var perfect: int = 0
+var great: int = 0
+var good: int = 0
+var ok: int = 0
+var miss: int = 0
 
 var last_search_index = 0
 var look_ahead_time = 1500
@@ -35,6 +42,8 @@ func _ready() -> void:
 	var stream = Helpers.load_audio_file(song_data["audio_file"])
 	if stream:
 		audio_player.stream = stream
+
+func _process(_delta: float) -> void:	
 	
 	if GlobalSettings.input_device != 1:
 		$KeyboardOverlay.visible = false
@@ -99,6 +108,8 @@ func update_score(hit_quality: String) -> void:
 
 	if hit_quality == "PERFECT" || hit_quality == "GREAT":
 		combo += 1
+		if combo > best_combo:
+			best_combo = combo
 	else:
 		combo = 0
 
@@ -131,14 +142,19 @@ func evaluate_hit(delta: float) -> String:
 	var abs_delta = abs(delta)
 
 	if abs_delta <= GlobalDefinitions.HIT_WINDOWS[GlobalDefinitions.PERFECT]:
+		perfect += 1
 		return GlobalDefinitions.PERFECT
 	elif abs_delta <= GlobalDefinitions.HIT_WINDOWS[GlobalDefinitions.GREAT]:
+		great += 1
 		return GlobalDefinitions.GREAT
 	elif abs_delta <= GlobalDefinitions.HIT_WINDOWS[GlobalDefinitions.GOOD]:
+		good += 1
 		return GlobalDefinitions.GOOD
 	elif abs_delta <= GlobalDefinitions.HIT_WINDOWS[GlobalDefinitions.OK]:
+		ok += 1
 		return GlobalDefinitions.OK
 	else:
+		miss += 1
 		return GlobalDefinitions.MISS
 
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
@@ -146,6 +162,33 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 		return
 
 	input_handler.setup_input_device()
+	input_handler.enable_input_device()
+	
+func restart():
+	music_resume_position = 0
+	score = 0
+	combo = 0
+	best_combo = 0
+	perfect = 0
+	great = 0
+	good = 0
+	ok = 0
+	miss = 0
+	last_search_index = 0
+	queued_inputs.clear()
+	
+	for i in range(timestamps.size()):
+		timestamps[i]["matched"] = false
+		
+	game_overlay.restart()
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("dev_jump_to_end") and audio_player.stream:
+		var target_time = max(0.0, audio_player.stream.get_length() - 10.0)
+		if audio_player.playing:
+			audio_player.play(target_time)
+		else:
+			music_resume_position = target_time
 
 func hide_keybidingHud():
 	$KeyboardOverlay.visible = false

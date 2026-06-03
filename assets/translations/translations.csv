@@ -36,3 +36,13 @@ error,Error,Fehler
 overwrite_timestamps,Overwrite Timestamps,Zeitstempel Überschreiben
 recorded_timestamps,Recorded Timestamps,Aufgenommene Zeitstempel
 loading,loading,wird geladen
+leaderboard,Leaderboard,Rangliste
+player,Player,Spieler
+save_to_leaderboard, Save to Leaderboard,In Rangliste speichern
+show_leaderboard, Show Leaderboard,Zeige Rangliste
+best_combo,Best Combo, Beste Combo
+perfect,Perfect,Perfekt
+great,Great,Super
+good,Good,Gut
+ok,Ok,Ok
+miss,Miss,Verfehlt

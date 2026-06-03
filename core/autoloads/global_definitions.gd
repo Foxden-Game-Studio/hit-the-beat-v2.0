@@ -43,3 +43,4 @@ const FEEDBACK_COLOR = {
 }
 
 const USER_SONGS_DIR = "user://songs/"
+const USER_LEADERBOARD_DIR = "user://leaderboards/"

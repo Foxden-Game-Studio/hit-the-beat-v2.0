@@ -8,6 +8,7 @@ extends Control
 @onready var combo_label = $"game_statistics/VBoxContainer/combo_HBoxContainer/combo"
 @onready var play_pause_button: Button = $"game_statistics/play_pause_button"
 @onready var song_label: Label = $"game_statistics/song_title"
+@onready var end_screen: Control = $EndScreen
 
 var play_icon = load("res://assets/icons/play_arrow_100dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.svg")
 var pause_icon = load("res://assets/icons/pause_100dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.svg")
@@ -45,3 +46,23 @@ func _on_pause_play_button_toggled(toggled_on: bool) -> void:
 		game.music_resume_position = game.audio_player.get_playback_position()
 		game.audio_player.stop()
 		play_pause_button.icon = play_icon
+
+
+func _on_audio_player_finished() -> void:
+	anim_player.play("toggle_game_menu")
+	game_statistics_screen.visible = false
+	game_menu_screen.visible = false
+	end_screen.visible = true
+	end_screen.set_score_values()
+	
+func restart():
+	anim_player.play_backwards("toggle_game_menu")
+	game_statistics_screen.visible = true
+	game_menu_screen.visible = false
+	end_screen.visible = false
+	
+	set_score(0)
+	set_combo(0)
+	play_pause_button.set_pressed_no_signal(false)
+	play_pause_button.icon = play_icon
+	

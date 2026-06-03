@@ -1,0 +1,10 @@
+{
+	"song_name": "Song Name",
+	"difficulty": "easy",
+	"leaderboard": [
+		{
+			"player": "Player",
+			"score": 0
+		}
+	]
+}
