@@ -60,6 +60,21 @@ func _process(_delta: float) -> void:
 
 	var current_time = audio_player.get_playback_position()
 
+	var search_start = max(0, last_search_index - 20)
+	for i in range(search_start, timestamps.size()):
+		var note = timestamps[i]
+
+		if note["matched"]:
+			continue
+		
+		if note["time"] < current_time - GlobalDefinitions.HIT_WINDOWS[GlobalDefinitions.OK]:
+			note["matched"] = true
+			miss += 1
+			update_score(GlobalDefinitions.MISS)
+		elif note["time"] > current_time + GlobalDefinitions.HIT_WINDOWS[GlobalDefinitions.OK]:
+			last_search_index = i
+			break
+
 	for input in queued_inputs:
 		process_input(input, current_time)
 		processed.append(input)

@@ -171,6 +171,7 @@ offset_left = 16.0
 offset_top = 16.0
 offset_right = 72.0
 offset_bottom = 72.0
+focus_mode = 0
 icon = ExtResource("4_gee14")
 icon_alignment = 1
 
@@ -180,6 +181,7 @@ offset_left = 80.0
 offset_top = 16.0
 offset_right = 136.0
 offset_bottom = 72.0
+focus_mode = 0
 toggle_mode = true
 icon = ExtResource("6_p57ef")
 
