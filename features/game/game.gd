@@ -35,7 +35,9 @@ func _ready() -> void:
 	var stream = Helpers.load_audio_file(song_data["audio_file"])
 	if stream:
 		audio_player.stream = stream
-
+	
+	if GlobalSettings.input_device != 1:
+		$KeyboardOverlay.visible = false
 
 func _process(_delta: float) -> void:
 	var processed = []
