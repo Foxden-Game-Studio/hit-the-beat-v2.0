@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://b65p5pe5hj8l3"]
+
+[ext_resource type="Texture2D" uid="uid://lsekflq1idcu" path="res://assets/graphics/Screenshot 2026-06-03 at 11.00.01.png" id="1_2xktx"]
+[ext_resource type="Script" uid="uid://ke8kqj27gweu" path="res://features/game/keyboard_overlay.gd" id="1_l3ms7"]
+
+[node name="KeyboardOverlay" type="Control" unique_id=855589186]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l3ms7")
+
+[node name="Label" type="Label" parent="." unique_id=1418029057]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -64.5
+offset_right = 64.5
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "keyboard_layout"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1823358728]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -189.0
+offset_right = 886.0
+offset_bottom = 189.0
+grow_vertical = 2
+texture = ExtResource("1_2xktx")
+expand_mode = 1
+
+[node name="Label2" type="Label" parent="." unique_id=1667073974]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -178.0
+offset_top = -154.5
+offset_bottom = 154.5
+grow_horizontal = 0
+grow_vertical = 2
+text = "Bass Drum: 			Spacebar
+Snare: 					F
+Rack Tom 1:    	G
+Rack Tom 2:    	J
+Floor Tom 1: 		K
+Floor Tom 2: 		M
+Hi-Hat 1: 			D
+Hi-Hat 2:				S
+Crash Cymbal 1:	R
+Crash Cymbal 2: I
+Ride:					 L"
+
+[node name="Button" type="Button" parent="." unique_id=1011887703]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -15.5
+offset_top = -120.0
+offset_right = 46.5
+offset_bottom = -89.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "OK"
+
+[node name="Label3" type="Label" parent="." unique_id=1324568069]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -74.0
+offset_top = 50.0
+offset_right = 74.0
+offset_bottom = 73.0
+grow_horizontal = 2
+text = "press_play_to_start"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

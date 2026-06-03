@@ -44,6 +44,11 @@ func _ready() -> void:
 		audio_player.stream = stream
 
 func _process(_delta: float) -> void:	
+	
+	if GlobalSettings.input_device != 1:
+		$KeyboardOverlay.visible = false
+
+func _process(_delta: float) -> void:
 	var processed = []
 	if not audio_player.playing:
 		for input in queued_inputs:
@@ -184,3 +189,6 @@ func _unhandled_input(event: InputEvent) -> void:
 			audio_player.play(target_time)
 		else:
 			music_resume_position = target_time
+
+func hide_keybidingHud():
+	$KeyboardOverlay.visible = false

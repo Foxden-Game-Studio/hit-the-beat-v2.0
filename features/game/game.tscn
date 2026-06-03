@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bn7rets4il5jp" path="res://assets/icons/play_arrow_100dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.svg" id="6_p57ef"]
 [ext_resource type="Script" uid="uid://bu1co8u8bfgh3" path="res://core/input/input_handler.gd" id="7_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://xij28riehj6y" path="res://features/game/end_screen.tscn" id="7_wvfi7"]
+[ext_resource type="PackedScene" uid="uid://b65p5pe5hj8l3" path="res://features/game/keyboard_overlay.tscn" id="8_wvfi7"]
 
 [sub_resource type="Animation" id="Animation_pqflw"]
 length = 0.001
@@ -272,6 +273,9 @@ game = NodePath("../../../..")
 script = ExtResource("7_u5sy4")
 
 [connection signal="finished" from="audio_player" to="MeshInstance3D/SubViewport/overlay" method="_on_audio_player_finished"]
+[node name="KeyboardOverlay" parent="." unique_id=855589186 node_paths=PackedStringArray("game") instance=ExtResource("8_wvfi7")]
+game = NodePath("..")
+
 [connection signal="animation_finished" from="anim_player" to="." method="_on_animation_player_animation_finished"]
 [connection signal="pressed" from="MeshInstance3D/SubViewport/overlay/game_statistics/menu_button" to="MeshInstance3D/SubViewport/overlay" method="_on_menu_button_pressed"]
 [connection signal="toggled" from="MeshInstance3D/SubViewport/overlay/game_statistics/play_pause_button" to="MeshInstance3D/SubViewport/overlay" method="_on_pause_play_button_toggled"]
