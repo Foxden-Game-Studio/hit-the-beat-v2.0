@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hit the Beat – Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ══ NAVBAR ══════════════════════════════════════════════════════════
+         Um einen neuen Link hinzuzufügen, einfach ein neues <li> in .nav-links
+         und ein passendes <a> in .mobile-menu einfügen (Beispiel auskommentiert).
+    ═══════════════════════════════════════════════════════════════════════ -->
+    <nav>
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">🥁 Hit the Beat</a>
+
+            <ul class="nav-links">
+                <li>
+                    <a href="index.html" class="active">
+                        <svg fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+                        Start
+                    </a>
+                </li>
+                <li>
+                    <a href="esp32-Anleitung.html">
+                        <svg fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/></svg>
+                        Anleitung
+                    </a>
+                </li>
+                <!-- ══ NEUEN NAV-EINTRAG HIER HINZUFÜGEN ══════════════════
+                <li>
+                    <a href="meine-seite.html">
+                        <svg fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 4v16m8-8H4"/></svg>
+                        Meine Seite
+                    </a>
+                </li>
+                ══════════════════════════════════════════════════════════ -->
+            </ul>
+
+            <button class="hamburger" id="hamburger" aria-label="Menü öffnen">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menü (spiegelt .nav-links) -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html" class="active">
+            <svg fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            Start
+        </a>
+        <a href="esp32-Anleitung.html">
+            <svg fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/></svg>
+            Anleitung
+        </a>
+        <!-- ══ MOBILEN EINTRAG HIER HINZUFÜGEN ═══════════════════════════
+        <a href="meine-seite.html">
+            <svg fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 4v16m8-8H4"/></svg>
+            Meine Seite
+        </a>
+        ══════════════════════════════════════════════════════════════════ -->
+    </div>
+
+    <!-- ══ CONTENT ══════════════════════════════════════════════════════ -->
+    <main>
+
+        <!-- Hero -->
+        <section class="hero">
+            <span class="hero-badge">
+                <svg style="width:14px;height:14px;stroke:currentColor;fill:none;" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                Open-Source DIY Projekt
+            </span>
+
+            <h1>Hit the Beat</h1>
+
+            <p class="subtitle">
+               Bleib im Takt und stell dein Rhythmusgefühl auf die Probe – direkt am echten Schlagzeug. Folge den bunten Signalen auf dem Screen und triff genau dann, wenn der Beat kommt. Jeder perfekte Schlag bringt Punkte, Effekte und dieses satte Gefühl, mitten im Groove zu sein.
+            </p>
+
+            <div class="cta-group">
+                <a href="esp32-Anleitung.html" class="btn-primary">
+                    <svg style="width:18px;height:18px;stroke:currentColor;fill:none;" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                    Zur Anleitung
+                </a>
+                <a href="https://github.com/Foxden-Game-Studio/Hit-the-Beat" class="btn-ghost">
+                    <svg style="width:18px;height:18px;stroke:currentColor;fill:none;" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/></svg>
+                    Software installieren
+                </a>
+            </div>
+        </section>
+
+        <!-- Feature Cards -->
+        <section class="features">
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                </div>
+                <h3>Schritt-für-Schritt Anleitung</h3>
+                <p>Von der Materialliste bis zum fertigen Schlagzeug - alles ist klar und verständlich dokumentiert, auch ohne Vorkenntnisse.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/></svg>
+                </div>
+                <h3>Echte Schlagzeugsounds</h3>
+                <p>Die mitgelieferte Windows-App empfängt die Sensordaten und spielt hochwertige Drum-Samples in Echtzeit ab.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                </div>
+                <h3>Software direkt installierbar</h3>
+                <p>Die Firmware lässt sich per Browser direkt auf das Board flashen – kein Aufwand, kein Fachwissen nötig.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
+                </div>
+                <h3>Schaltplan inklusive</h3>
+                <p>Ein übersichtlicher Schaltplan zeigt genau, wie alle Bauteile miteinander verbunden werden müssen.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                </div>
+                <h3>Kein Python nötig</h3>
+                <p>Die Windows-App ist als eigenständige .exe verpackt – einfach entpacken und starten, keine Laufzeitumgebungen.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                </div>
+                <h3>Open Source</h3>
+                <p>Vollständig offen – Firmware, App-Code und Schaltplan stehen zur freien Nutzung und Weiterentwicklung bereit.</p>
+            </div>
+
+        </section>
+    </main>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        hamburger.addEventListener('click', () => {
+            const open = mobileMenu.classList.toggle('open');
+            hamburger.classList.toggle('open', open);
+            hamburger.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => {
+                mobileMenu.classList.remove('open');
+                hamburger.classList.remove('open');
+            });
+        });
+    </script>
+
+</body>
+</html>
