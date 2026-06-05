@@ -50,7 +50,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector3(-55.190212, 57.055546, 45.285576), Vector3(-0.21747875, 10.785628, 6.011755)]
+"values": [Vector3(-55.190212, 57.055546, 45.285576), Vector3(-0.21747875, 13.559667, 3.996275)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -77,7 +77,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector3(-0.217, 10.786, 6.012), Vector3(-6.3108835, 5.392911, 3.3244762)]
+"values": [Vector3(-0.21747875, 13.559667, 3.996275), Vector3(-5.044848, 7.5864954, -0.61897016)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -89,7 +89,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector3(-0.7487463, 0, 0), Vector3(-0.6981317, 0.46251225, 0)]
+"values": [Vector3(-0.74900806, 0, 0), Vector3(-0.69813174, 1.178359, 5.4637544e-10)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wf456"]
@@ -124,7 +124,7 @@ transform = Transform3D(1, 0, 0, 0, -0.023751676, 0.9997178, 0, -0.9997178, -0.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.567072, 3.9254007)
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=388735014]
-transform = Transform3D(0.89493436, -0.28681034, 0.34180734, 0, 0.7660443, 0.6427876, -0.4461978, -0.5752526, 0.6855595, -6.3108835, 5.392911, 3.3244762)
+transform = Transform3D(0.89493436, -0.2868104, 0.34180734, 0, 0.76604444, 0.6427876, -0.4461978, -0.5752527, 0.6855595, -6.3108835, 5.392911, 3.3244762)
 
 [node name="e-drum-kit" parent="." unique_id=1039073883 instance=ExtResource("2_p57ef")]
 
@@ -133,7 +133,7 @@ libraries/ = SubResource("AnimationLibrary_wf456")
 autoplay = &"intro"
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1178078700]
-transform = Transform3D(0.8925858, 0.34539223, 0.2898185, 0, 0.64278764, -0.76604444, -0.45087752, 0.6837604, 0.5737431, -6.93923, 4.345, 2.193474)
+transform = Transform3D(0.33525434, 0.7217118, 0.60558814, -1.9659323e-09, 0.6427877, -0.76604456, -0.9421279, 0.25681958, 0.21549736, -6.4696727, 5.8753557, -1.6052613)
 mesh = SubResource("PlaneMesh_wse1b")
 surface_material_override/0 = SubResource("StandardMaterial3D_pqflw")
 
@@ -274,10 +274,10 @@ game = NodePath("../../../..")
 [node name="input_handler" type="Node" parent="." unique_id=979150013]
 script = ExtResource("7_u5sy4")
 
-[connection signal="finished" from="audio_player" to="MeshInstance3D/SubViewport/overlay" method="_on_audio_player_finished"]
 [node name="KeyboardOverlay" parent="." unique_id=855589186 node_paths=PackedStringArray("game") instance=ExtResource("8_wvfi7")]
 game = NodePath("..")
 
+[connection signal="finished" from="audio_player" to="MeshInstance3D/SubViewport/overlay" method="_on_audio_player_finished"]
 [connection signal="animation_finished" from="anim_player" to="." method="_on_animation_player_animation_finished"]
 [connection signal="pressed" from="MeshInstance3D/SubViewport/overlay/game_statistics/menu_button" to="MeshInstance3D/SubViewport/overlay" method="_on_menu_button_pressed"]
 [connection signal="toggled" from="MeshInstance3D/SubViewport/overlay/game_statistics/play_pause_button" to="MeshInstance3D/SubViewport/overlay" method="_on_pause_play_button_toggled"]
