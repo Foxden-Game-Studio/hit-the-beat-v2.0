@@ -16,8 +16,13 @@ var device_index_to_string = {
 func _ready():
 	var viewport_width = ProjectSettings.get("display/window/size/viewport_width")
 	var viewport_height = ProjectSettings.get("display/window/size/viewport_height")
-
+	call_deferred("initialize_midi")
 	window_size_windowed = Vector2(viewport_width, viewport_height)
+
+func initialize_midi():
+	OS.open_midi_inputs()
+	var devices = OS.get_connected_midi_inputs()
+	print("[MIDI] Initialized. Connected devices: ", devices)
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("dev_toggle_fullscreen"):

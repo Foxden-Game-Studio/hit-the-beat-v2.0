@@ -2,6 +2,10 @@ extends Node
 
 signal input(drum: String)
 
+func _ready() -> void:
+	OS.open_midi_inputs()
+	print("[MIDI Drum Kit Device] Initialized. Connected devices: ", OS.get_connected_midi_inputs())
+
 func pitch_to_drum(pitch: int) -> String:
 	match  pitch:
 		41: return GlobalDefinitions.Drum.floor_tom_2
@@ -18,13 +22,13 @@ func pitch_to_drum(pitch: int) -> String:
 		_: return GlobalDefinitions.Drum.undefined
 
 func _input(event: InputEvent) -> void:
-	if event == InputEventMIDI:
+	if event is InputEventMIDI:
 		_process_midi_input(event)
 
 func _process_midi_input(midi_event: InputEventMIDI) -> void:
-	match midi_event.message:
-		248: pass
-		_:
-			var drum = pitch_to_drum(midi_event.pitch)
-			if !drum.is_empty():
-				input.emit(drum)
+	if midi_event.message == MIDI_MESSAGE_NOTE_ON and midi_event.velocity > 0:
+		var drum = pitch_to_drum(midi_event.pitch)
+		if !drum.is_empty():
+			input.emit(drum)
+		else:
+			print("[MIDI Drum Kit Device] Note hit was ignored. Pitch: ", midi_event.pitch, " is not mapped to any drum.")
