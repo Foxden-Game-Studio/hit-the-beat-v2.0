@@ -5,6 +5,8 @@ extends Node3D
 @onready var game_overlay: Control = $"MeshInstance3D/SubViewport/overlay"
 @onready var input_handler: Node = $"input_handler"
 
+var VisualCue = preload("res://features/game/visual_cue.gd")
+
 var music_resume_position = 0
 
 var song = GlobalSettings.selected_song
@@ -22,6 +24,7 @@ var ok: int = 0
 var miss: int = 0
 
 var last_search_index = 0
+var last_visual_index = 0
 var look_ahead_time = 1500
 
 func _ready() -> void:
@@ -60,6 +63,20 @@ func _process(_delta: float) -> void:
 
 	var current_time = audio_player.get_playback_position()
 
+	# Visual cue spawning loop
+	var visual_search_start = max(0, last_visual_index - 20)
+	for i in range(visual_search_start, timestamps.size()):
+		var note = timestamps[i]
+		if note.get("visual_spawned", false):
+			continue
+			
+		if note["time"] <= current_time + (look_ahead_time / 1000.0):
+			note["visual_spawned"] = true
+			note["visual_cue"] = spawn_visual_cue(note)
+		elif note["time"] > current_time + (look_ahead_time / 1000.0):
+			last_visual_index = i
+			break
+
 	var search_start = max(0, last_search_index - 20)
 	for i in range(search_start, timestamps.size()):
 		var note = timestamps[i]
@@ -69,6 +86,8 @@ func _process(_delta: float) -> void:
 		
 		if note["time"] < current_time - GlobalDefinitions.HIT_WINDOWS[GlobalDefinitions.OK]:
 			note["matched"] = true
+			if note.has("visual_cue") and is_instance_valid(note["visual_cue"]):
+				note["visual_cue"].queue_free()
 			miss += 1
 			update_score(GlobalDefinitions.MISS)
 		elif note["time"] > current_time + GlobalDefinitions.HIT_WINDOWS[GlobalDefinitions.OK]:
@@ -84,6 +103,15 @@ func _process(_delta: float) -> void:
 
 	processed.clear()
 
+func spawn_visual_cue(note: Dictionary) -> Node3D:
+	if not e_drum_kit.has_node(note["type"]):
+		return null
+	var drum_node = e_drum_kit.get_node(note["type"])
+	var visual_cue = VisualCue.new()
+	drum_node.add_child(visual_cue)
+	visual_cue.setup(note["time"], audio_player, look_ahead_time / 1000.0)
+	return visual_cue
+
 func process_input(input: Dictionary, current_time: float) -> void:
 	var input_type = input["type"]
 	var candidates = find_nearby_notes(current_time, GlobalDefinitions.HIT_WINDOWS[GlobalDefinitions.OK])
@@ -94,6 +122,8 @@ func process_input(input: Dictionary, current_time: float) -> void:
 		var delta = current_time - best_match["time"]
 		var hit_quality = evaluate_hit(delta)
 		best_match["matched"] = true
+		if best_match.has("visual_cue") and is_instance_valid(best_match["visual_cue"]):
+			best_match["visual_cue"].queue_free()
 		update_score(hit_quality)
 		e_drum_kit.on_drum_hit(best_match["type"], GlobalDefinitions.FEEDBACK_COLOR[hit_quality])
 	else:
@@ -187,10 +217,14 @@ func restart():
 	ok = 0
 	miss = 0
 	last_search_index = 0
+	last_visual_index = 0
 	queued_inputs.clear()
 	
 	for i in range(timestamps.size()):
 		timestamps[i]["matched"] = false
+		timestamps[i]["visual_spawned"] = false
+		if timestamps[i].has("visual_cue") and is_instance_valid(timestamps[i]["visual_cue"]):
+			timestamps[i]["visual_cue"].queue_free()
 		
 	game_overlay.restart()
 
