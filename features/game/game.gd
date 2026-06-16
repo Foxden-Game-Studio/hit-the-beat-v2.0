@@ -8,6 +8,17 @@ extends Node3D
 var VisualCue = preload("res://features/game/visual_cue.gd")
 
 var music_resume_position = 0
+var countdown_timer: float = 0.0
+var is_game_paused: bool = true
+var countdown_label: Label
+
+func get_current_time() -> float:
+	if countdown_timer > 0.0:
+		if music_resume_position == 0:
+			return -countdown_timer
+		else:
+			return music_resume_position
+	return audio_player.get_playback_position()
 
 var song = GlobalSettings.selected_song
 var timestamps = []
@@ -48,20 +59,52 @@ func _ready() -> void:
 	
 	if GlobalSettings.input_device != 1:
 		$KeyboardOverlay.visible = false
+		
+	countdown_label = Label.new()
+	countdown_label.set_anchors_preset(Control.PRESET_CENTER)
+	countdown_label.add_theme_font_size_override("font_size", 120)
+	countdown_label.add_theme_color_override("font_color", Color(1, 1, 1, 1))
+	countdown_label.add_theme_color_override("font_outline_color", Color(0, 0, 0, 1))
+	countdown_label.add_theme_constant_override("outline_size", 10)
+	countdown_label.text = ""
+	countdown_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	countdown_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+	game_overlay.add_child(countdown_label)
 func _process(_delta: float) -> void:	
 	var processed = []
-	if not audio_player.playing:
+	
+	if is_game_paused:
 		for input in queued_inputs:
 			e_drum_kit.on_drum_hit(input["type"], Color.BLUE_VIOLET)
 			processed.append(input)
-
 		for input in processed:
 			queued_inputs.erase(input)
+		processed.clear()
+		return
+	
+	if countdown_timer > 0.0:
+		countdown_timer -= _delta
+		if countdown_label:
+			countdown_label.text = str(ceil(countdown_timer))
+		if countdown_timer <= 0.0:
+			countdown_timer = 0.0
+			if countdown_label:
+				countdown_label.text = ""
+			if not audio_player.playing:
+				audio_player.play(music_resume_position)
+			else:
+				audio_player.stream_paused = false
 
+	if not audio_player.playing and countdown_timer <= 0.0:
+		for input in queued_inputs:
+			e_drum_kit.on_drum_hit(input["type"], Color.BLUE_VIOLET)
+			processed.append(input)
+		for input in processed:
+			queued_inputs.erase(input)
 		processed.clear()
 		return
 
-	var current_time = audio_player.get_playback_position()
+	var current_time = get_current_time()
 
 	# Visual cue spawning loop
 	var visual_search_start = max(0, last_visual_index - 20)
@@ -208,6 +251,10 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	
 func restart():
 	music_resume_position = 0
+	countdown_timer = 0.0
+	is_game_paused = true
+	if countdown_label:
+		countdown_label.text = ""
 	score = 0
 	combo = 0
 	best_combo = 0
