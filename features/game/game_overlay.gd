@@ -23,6 +23,7 @@ func set_combo(combo: int) -> void:
 	combo_label.text = String.num_int64(combo)
 
 func _on_menu_button_pressed() -> void:
+	play_pause_button.button_pressed = false
 	anim_player.play("toggle_game_menu")
 	game_statistics_screen.visible = false
 	game_menu_screen.visible = true

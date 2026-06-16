@@ -5,8 +5,6 @@ extends Node3D
 @onready var game_overlay: Control = $"MeshInstance3D/SubViewport/overlay"
 @onready var input_handler: Node = $"input_handler"
 
-var VisualCue = preload("res://features/game/visual_cue.gd")
-
 var music_resume_position = 0
 var countdown_timer: float = 0.0
 var is_game_paused: bool = true
@@ -35,8 +33,7 @@ var ok: int = 0
 var miss: int = 0
 
 var last_search_index = 0
-var last_visual_index = 0
-var look_ahead_time = 1500
+var visual_threshold = 0.016
 
 func _ready() -> void:
 	var song_file = FileAccess.get_file_as_string(song)
@@ -52,6 +49,7 @@ func _ready() -> void:
 	for i in range(timestamps.size()):
 		timestamps[i]["matched"] = false
 		timestamps[i]["id"] = i
+		timestamps[i]["hit_fired"] = false
 
 	var stream = Helpers.load_audio_file(song_data["audio_file"])
 	if stream:
@@ -106,20 +104,6 @@ func _process(_delta: float) -> void:
 
 	var current_time = get_current_time()
 
-	# Visual cue spawning loop
-	var visual_search_start = max(0, last_visual_index - 20)
-	for i in range(visual_search_start, timestamps.size()):
-		var note = timestamps[i]
-		if note.get("visual_spawned", false):
-			continue
-			
-		if note["time"] <= current_time + (look_ahead_time / 1000.0):
-			note["visual_spawned"] = true
-			note["visual_cue"] = spawn_visual_cue(note)
-		elif note["time"] > current_time + (look_ahead_time / 1000.0):
-			last_visual_index = i
-			break
-
 	var search_start = max(0, last_search_index - 20)
 	for i in range(search_start, timestamps.size()):
 		var note = timestamps[i]
@@ -129,13 +113,21 @@ func _process(_delta: float) -> void:
 		
 		if note["time"] < current_time - GlobalDefinitions.HIT_WINDOWS[GlobalDefinitions.OK]:
 			note["matched"] = true
-			if note.has("visual_cue") and is_instance_valid(note["visual_cue"]):
-				note["visual_cue"].queue_free()
 			miss += 1
 			update_score(GlobalDefinitions.MISS)
 		elif note["time"] > current_time + GlobalDefinitions.HIT_WINDOWS[GlobalDefinitions.OK]:
 			last_search_index = i
 			break
+			
+	for i in range(search_start, timestamps.size()):
+		var note = timestamps[i]
+		if note["matched"]:
+			continue
+		if note["time"] > current_time + visual_threshold:
+			break
+		if not note.get("hit_fired", false) and abs(note["time"] - current_time) <= visual_threshold:
+			note["hit_fired"] = true
+			e_drum_kit.on_note(note["type"], Color.BLUE)
 
 	for input in queued_inputs:
 		process_input(input, current_time)
@@ -145,15 +137,6 @@ func _process(_delta: float) -> void:
 		queued_inputs.erase(input)
 
 	processed.clear()
-
-func spawn_visual_cue(note: Dictionary) -> Node3D:
-	if not e_drum_kit.has_node(note["type"]):
-		return null
-	var drum_node = e_drum_kit.get_node(note["type"])
-	var visual_cue = VisualCue.new()
-	drum_node.add_child(visual_cue)
-	visual_cue.setup(note["time"], audio_player, look_ahead_time / 1000.0)
-	return visual_cue
 
 func process_input(input: Dictionary, current_time: float) -> void:
 	var input_type = input["type"]
@@ -264,14 +247,11 @@ func restart():
 	ok = 0
 	miss = 0
 	last_search_index = 0
-	last_visual_index = 0
 	queued_inputs.clear()
 	
 	for i in range(timestamps.size()):
 		timestamps[i]["matched"] = false
-		timestamps[i]["visual_spawned"] = false
-		if timestamps[i].has("visual_cue") and is_instance_valid(timestamps[i]["visual_cue"]):
-			timestamps[i]["visual_cue"].queue_free()
+		timestamps[i]["hit_fired"] = false
 		
 	game_overlay.restart()
 

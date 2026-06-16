@@ -63,7 +63,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector3(-0.4604095, -0.7412806, -0.013602698), Vector3(-0.74900806, 0, 0)]
+"values": [Vector3(-0.4604095, -0.7412806, -0.013602698), Vector3(-0.6440265, 0, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_wf456"]
@@ -90,7 +90,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector3(-0.74900806, 0, 0), Vector3(-0.69813174, 1.178359, 5.4637544e-10)]
+"values": [Vector3(-0.6440265, 0, 0), Vector3(-0.69813174, 1.178359, 5.4637544e-10)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wf456"]
@@ -125,7 +125,7 @@ transform = Transform3D(1, 0, 0, 0, -0.023751676, 0.9997178, 0, -0.9997178, -0.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.567072, 3.9254007)
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=388735014]
-transform = Transform3D(0.89493436, -0.2868104, 0.34180734, 0, 0.76604444, 0.6427876, -0.4461978, -0.5752527, 0.6855595, -6.3108835, 5.392911, 3.3244762)
+transform = Transform3D(0.89493436, -0.28681034, 0.34180734, 0, 0.7660443, 0.6427876, -0.4461978, -0.5752526, 0.6855595, -6.3108835, 5.392911, 3.3244762)
 
 [node name="e-drum-kit" parent="." unique_id=1039073883 instance=ExtResource("2_p57ef")]
 
@@ -151,12 +151,12 @@ size = Vector2i(640, 360)
 
 [node name="overlay" type="Control" parent="MeshInstance3D/SubViewport" unique_id=1089076550]
 layout_mode = 3
-theme = ExtResource("theme_game_overlay")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("theme_game_overlay")
 script = ExtResource("4_p57ef")
 
 [node name="game_statistics" type="Control" parent="MeshInstance3D/SubViewport/overlay" unique_id=725647083]
