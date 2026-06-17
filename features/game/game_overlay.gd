@@ -9,9 +9,19 @@ extends Control
 @onready var play_pause_button: Button = $"game_statistics/play_pause_button"
 @onready var song_label: Label = $"game_statistics/song_title"
 @onready var end_screen: Control = $EndScreen
+@onready var mode_label: Label = $game_statistics/mode
+@onready var mode_button: Button = $game_statistics/mode_switch
 
 var play_icon = load("res://assets/icons/play_arrow_100dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.svg")
 var pause_icon = load("res://assets/icons/pause_100dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.svg")
+
+func _process(_delta: float) -> void:
+	if game.listen_first:
+		mode_label.text = TranslationServer.translate("mode") + ": " + TranslationServer.translate("listening")
+	elif not game.listen_first:
+		mode_label.text = TranslationServer.translate("mode") + ": " + TranslationServer.translate("playing")
+		
+	mode_button.disabled = not game.is_game_paused or game.music_resume_position != 0
 
 func set_song_title(song: String) -> void:
 	song_label.text = song
@@ -63,7 +73,8 @@ func _on_audio_player_finished() -> void:
 	end_screen.set_score_values()
 	
 func restart():
-	anim_player.play_backwards("toggle_game_menu")
+	if end_screen.visible:
+		anim_player.play_backwards("toggle_game_menu")
 	game_statistics_screen.visible = true
 	game_menu_screen.visible = false
 	end_screen.visible = false
@@ -73,3 +84,9 @@ func restart():
 	play_pause_button.set_pressed_no_signal(false)
 	play_pause_button.icon = play_icon
 	
+func _on_mode_switch_pressed() -> void:
+	game.listen_first =! game.listen_first
+
+
+func _on_reset_button_pressed() -> void:
+	game.restart()

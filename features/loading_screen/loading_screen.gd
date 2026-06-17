@@ -2,7 +2,7 @@ extends Control
 
 signal scene_loading_finished(scene: PackedScene)
 
-var scene_path: String = ""
+var scene_path: String
 var loading = false
 
 func start_loading() -> void:

@@ -5,6 +5,8 @@ extends Node3D
 @onready var game_overlay: Control = $"MeshInstance3D/SubViewport/overlay"
 @onready var input_handler: Node = $"input_handler"
 
+var listen_first = false
+
 var music_resume_position = 0
 var countdown_timer: float = 0.0
 var is_game_paused: bool = true
@@ -68,6 +70,8 @@ func _ready() -> void:
 	countdown_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	countdown_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 	game_overlay.add_child(countdown_label)
+	
+	
 func _process(_delta: float) -> void:	
 	var processed = []
 	
@@ -113,8 +117,9 @@ func _process(_delta: float) -> void:
 		
 		if note["time"] < current_time - GlobalDefinitions.HIT_WINDOWS[GlobalDefinitions.OK]:
 			note["matched"] = true
-			miss += 1
-			update_score(GlobalDefinitions.MISS)
+			if not listen_first:
+				miss += 1
+				update_score(GlobalDefinitions.MISS)
 		elif note["time"] > current_time + GlobalDefinitions.HIT_WINDOWS[GlobalDefinitions.OK]:
 			last_search_index = i
 			break
@@ -127,7 +132,7 @@ func _process(_delta: float) -> void:
 			break
 		if not note.get("hit_fired", false) and abs(note["time"] - current_time) <= visual_threshold:
 			note["hit_fired"] = true
-			e_drum_kit.on_note(note["type"], Color.BLUE)
+			e_drum_kit.on_note(note["type"], Color.RED)
 
 	for input in queued_inputs:
 		process_input(input, current_time)
@@ -172,6 +177,9 @@ func find_best_match(candidates: Array, input_type: String, search_time: float) 
 	return best_match
 
 func update_score(hit_quality: String) -> void:
+	if listen_first:
+		return
+
 	score += GlobalDefinitions.POINTS.get(hit_quality)
 
 	if hit_quality == "PERFECT" || hit_quality == "GREAT":

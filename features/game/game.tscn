@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bn7rets4il5jp" path="res://assets/icons/play_arrow_100dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.svg" id="6_p57ef"]
 [ext_resource type="Script" uid="uid://bu1co8u8bfgh3" path="res://core/input/input_handler.gd" id="7_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://xij28riehj6y" path="res://features/game/end_screen.tscn" id="7_wvfi7"]
+[ext_resource type="Texture2D" uid="uid://ik5nj4hlvrty" path="res://assets/icons/refresh_100dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.svg" id="8_smqlc"]
 [ext_resource type="PackedScene" uid="uid://b65p5pe5hj8l3" path="res://features/game/keyboard_overlay.tscn" id="8_wvfi7"]
 [ext_resource type="Theme" uid="uid://ceftpng8y138u" path="res://assets/themes/game_overlay_theme.tres" id="theme_game_overlay"]
 
@@ -134,7 +135,7 @@ libraries/ = SubResource("AnimationLibrary_wf456")
 autoplay = &"intro"
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1178078700]
-transform = Transform3D(0.33525434, 0.7217118, 0.60558814, -1.9659323e-09, 0.6427877, -0.76604456, -0.9421279, 0.25681958, 0.21549736, -6.4696727, 5.8753557, -1.6052613)
+transform = Transform3D(0.33525434, 0.7217118, 0.60558814, -1.9659323e-09, 0.6427877, -0.76604456, -0.9421279, 0.25681958, 0.21549736, -6.552612, 5.9031615, -1.5076449)
 mesh = SubResource("PlaneMesh_wse1b")
 surface_material_override/0 = SubResource("StandardMaterial3D_pqflw")
 
@@ -187,6 +188,14 @@ focus_mode = 0
 toggle_mode = true
 icon = ExtResource("6_p57ef")
 
+[node name="reset_button" type="Button" parent="MeshInstance3D/SubViewport/overlay/game_statistics" unique_id=1937316529]
+layout_mode = 1
+offset_left = 16.0
+offset_top = 88.0
+offset_right = 72.0
+offset_bottom = 144.0
+icon = ExtResource("8_smqlc")
+
 [node name="song_title" type="Label" parent="MeshInstance3D/SubViewport/overlay/game_statistics" unique_id=1457435100]
 layout_mode = 1
 anchors_preset = 5
@@ -200,6 +209,17 @@ grow_horizontal = 2
 text = "song title"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="mode" type="Label" parent="MeshInstance3D/SubViewport/overlay/game_statistics" unique_id=780921408]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -101.5
+offset_top = 60.0
+offset_right = 101.5
+offset_bottom = 102.0
+grow_horizontal = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MeshInstance3D/SubViewport/overlay/game_statistics" unique_id=406534064]
 layout_mode = 1
@@ -236,6 +256,19 @@ text = "combo"
 [node name="combo" type="Label" parent="MeshInstance3D/SubViewport/overlay/game_statistics/VBoxContainer/combo_HBoxContainer" unique_id=627399765]
 layout_mode = 2
 text = "0"
+
+[node name="mode_switch" type="Button" parent="MeshInstance3D/SubViewport/overlay/game_statistics" unique_id=63589782]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = -70.0
+offset_right = 175.0
+offset_bottom = -20.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 30
+text = "listen_first"
 
 [node name="game_menu" type="Control" parent="MeshInstance3D/SubViewport/overlay" unique_id=1788451941]
 visible = false
@@ -283,5 +316,7 @@ game = NodePath("..")
 [connection signal="animation_finished" from="anim_player" to="." method="_on_animation_player_animation_finished"]
 [connection signal="pressed" from="MeshInstance3D/SubViewport/overlay/game_statistics/menu_button" to="MeshInstance3D/SubViewport/overlay" method="_on_menu_button_pressed"]
 [connection signal="toggled" from="MeshInstance3D/SubViewport/overlay/game_statistics/play_pause_button" to="MeshInstance3D/SubViewport/overlay" method="_on_pause_play_button_toggled"]
+[connection signal="pressed" from="MeshInstance3D/SubViewport/overlay/game_statistics/reset_button" to="MeshInstance3D/SubViewport/overlay" method="_on_reset_button_pressed"]
+[connection signal="pressed" from="MeshInstance3D/SubViewport/overlay/game_statistics/mode_switch" to="MeshInstance3D/SubViewport/overlay" method="_on_mode_switch_pressed"]
 [connection signal="pressed" from="MeshInstance3D/SubViewport/overlay/game_menu/VBoxContainer/resume_button" to="MeshInstance3D/SubViewport/overlay" method="_on_resume_button_pressed"]
 [connection signal="pressed" from="MeshInstance3D/SubViewport/overlay/game_menu/VBoxContainer/quit_button" to="MeshInstance3D/SubViewport/overlay" method="_on_quit_button_pressed"]
