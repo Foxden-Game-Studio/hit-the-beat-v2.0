@@ -46,10 +46,12 @@ layout_mode = 2
 [node name="title" type="Label" parent="main_score/score" unique_id=660951100]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 22
 text = "score"
 
 [node name="score" type="Label" parent="main_score/score" unique_id=2057004505]
 layout_mode = 2
+theme_override_font_sizes/font_size = 22
 text = "0"
 
 [node name="best_combo" type="HBoxContainer" parent="main_score" unique_id=599057084]
@@ -58,10 +60,12 @@ layout_mode = 2
 [node name="title" type="Label" parent="main_score/best_combo" unique_id=1739185574]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 22
 text = "best_combo"
 
 [node name="score" type="Label" parent="main_score/best_combo" unique_id=1591704536]
 layout_mode = 2
+theme_override_font_sizes/font_size = 22
 text = "0"
 
 [node name="points" type="VBoxContainer" parent="." unique_id=630171197]
@@ -81,10 +85,12 @@ layout_mode = 2
 [node name="title" type="Label" parent="points/perfect" unique_id=788048080]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 22
 text = "perfect"
 
 [node name="score" type="Label" parent="points/perfect" unique_id=1457458646]
 layout_mode = 2
+theme_override_font_sizes/font_size = 22
 text = "0"
 
 [node name="great" type="HBoxContainer" parent="points" unique_id=465048518]
@@ -93,10 +99,12 @@ layout_mode = 2
 [node name="title" type="Label" parent="points/great" unique_id=412226832]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 22
 text = "great"
 
 [node name="score" type="Label" parent="points/great" unique_id=1615591934]
 layout_mode = 2
+theme_override_font_sizes/font_size = 22
 text = "0"
 
 [node name="good" type="HBoxContainer" parent="points" unique_id=1973610825]
@@ -105,10 +113,12 @@ layout_mode = 2
 [node name="title" type="Label" parent="points/good" unique_id=1914534404]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 22
 text = "good"
 
 [node name="score" type="Label" parent="points/good" unique_id=509074378]
 layout_mode = 2
+theme_override_font_sizes/font_size = 22
 text = "0"
 
 [node name="ok" type="HBoxContainer" parent="points" unique_id=1849536094]
@@ -117,10 +127,12 @@ layout_mode = 2
 [node name="title" type="Label" parent="points/ok" unique_id=900769248]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 22
 text = "ok"
 
 [node name="score" type="Label" parent="points/ok" unique_id=154448966]
 layout_mode = 2
+theme_override_font_sizes/font_size = 22
 text = "0"
 
 [node name="miss" type="HBoxContainer" parent="points" unique_id=2026173443]
@@ -129,10 +141,12 @@ layout_mode = 2
 [node name="title" type="Label" parent="points/miss" unique_id=2117589603]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 22
 text = "miss"
 
 [node name="score" type="Label" parent="points/miss" unique_id=381953737]
 layout_mode = 2
+theme_override_font_sizes/font_size = 22
 text = "0"
 
 [node name="player_name" type="LineEdit" parent="." unique_id=701553409]

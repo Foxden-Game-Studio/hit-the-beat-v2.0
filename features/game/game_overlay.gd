@@ -23,6 +23,7 @@ func set_combo(combo: int) -> void:
 	combo_label.text = String.num_int64(combo)
 
 func _on_menu_button_pressed() -> void:
+	play_pause_button.button_pressed = false
 	anim_player.play("toggle_game_menu")
 	game_statistics_screen.visible = false
 	game_menu_screen.visible = true
@@ -40,11 +41,17 @@ func _on_quit_button_pressed() -> void:
 
 func _on_pause_play_button_toggled(toggled_on: bool) -> void:
 	if toggled_on:
-		game.audio_player.play(game.music_resume_position)
+		game.is_game_paused = false
+		if not game.audio_player.playing and game.countdown_timer <= 0.0:
+			game.countdown_timer = 3.0
+		elif game.audio_player.playing and game.audio_player.stream_paused:
+			game.countdown_timer = 3.0
 		play_pause_button.icon = pause_icon
 	elif not toggled_on:
-		game.music_resume_position = game.audio_player.get_playback_position()
-		game.audio_player.stop()
+		game.is_game_paused = true
+		if game.audio_player.playing:
+			game.audio_player.stream_paused = true
+			game.music_resume_position = game.audio_player.get_playback_position()
 		play_pause_button.icon = play_icon
 
 
