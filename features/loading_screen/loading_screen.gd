@@ -6,7 +6,7 @@ var scene_path: String = ""
 var loading = false
 
 func start_loading() -> void:
-	if !FileAccess.file_exists(scene_path):
+	if !ResourceLoader.exists(scene_path):
 		printerr("Error: Scene not found")
 		return
 	
