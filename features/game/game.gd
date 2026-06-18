@@ -126,8 +126,6 @@ func _process(_delta: float) -> void:
 			
 	for i in range(search_start, timestamps.size()):
 		var note = timestamps[i]
-		if note["matched"]:
-			continue
 		if note["time"] > current_time + visual_threshold:
 			break
 		if not note.get("hit_fired", false) and abs(note["time"] - current_time) <= visual_threshold:
