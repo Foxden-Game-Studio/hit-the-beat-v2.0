@@ -63,6 +63,14 @@ A rhythm game built in **Godot 4.6** where players play along with drum patterns
 ### MIDI Drum Kit
 Supports standard MIDI pitch mapping for drum pads. Plug in any MIDI-compatible drum kit and play!
 
+### DIY Drum Kit
+You can connect a custom Arduino/ESP32 based drum kit!
+1. Start the `Code_PC_app.py` script to read the serial data from your microcontroller.
+2. Select the correct COM port for your ESP32 in the python app popup.
+3. Open "Hit the Beat" and go to the Settings menu.
+4. Select the **DIY Drum Kit** as your input device.
+The python script will automatically send UDP packets to the game on port `5005` whenever you hit a drum pad.
+
 ## Project Structure
 
 ```
@@ -142,9 +150,9 @@ Input Devices → Input Handler → Game Logic → Score/UI
 - [x] 3D drum kit visualization
 - [x] Basic scoring system
 - [X] Complete note matching algorithm
-- [X] Leaderboard system
+- [x] Leaderboard system
 - [ ] Latency calibration system
-- [ ] DIY drum kit support
+- [x] DIY drum kit support
 - [ ] Touch screen input support
 - [ ] Advanced visual effects
 - [x] Song editor tool

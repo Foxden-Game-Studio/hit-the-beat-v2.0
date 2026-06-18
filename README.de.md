@@ -63,6 +63,14 @@ Ein Rhythmusspiel, das in **Godot 4.6** entwickelt wurde, bei dem Spieler zusamm
 ### MIDI-Schlagzeug
 Unterstützt Standard-MIDI-Tonzuordnung für Schlagzeugpolster. Schließen Sie ein beliebiges MIDI-kompatibles Schlagzeug an und spielen Sie!
 
+### DIY-Schlagzeug
+Sie können ein benutzerdefiniertes Arduino/ESP32-basiertes Schlagzeug anschließen!
+1. Starten Sie das Skript `Code_PC_app.py`, um die seriellen Daten von Ihrem Mikrocontroller zu lesen.
+2. Wählen Sie den richtigen COM-Port für Ihren ESP32 im Popup der Python-App aus.
+3. Öffnen Sie "Hit the Beat" und gehen Sie zum Einstellungsmenü (Settings).
+4. Wählen Sie das **DIY Drum Kit** als Eingabegerät.
+Das Python-Skript sendet automatisch UDP-Pakete an das Spiel auf Port `5005`, wenn Sie ein Schlagzeugpolster anschlagen.
+
 ## Projektstruktur
 
 ```
@@ -144,7 +152,7 @@ Eingabegeräte → Eingabe-Handler → Spiellogik → Punkte/UI
 - [X] Vollständiger Note-Matching-Algorithmus
 - [x] Ranglisten-System
 - [ ] Latenz-Kalibrierungssystem
-- [ ] DIY-Schlagzeug-Unterstützung
+- [x] DIY-Schlagzeug-Unterstützung
 - [ ] Touch-Screen-Eingabe-Unterstützung
 - [ ] Fortgeschrittene visuelle Effekte
 - [x] Lied-Editor-Tool
