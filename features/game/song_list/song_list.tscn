@@ -143,7 +143,6 @@ popup/item_2/id = 2
 popup/item_2/disabled = true
 popup/item_3/text = "diy_device"
 popup/item_3/id = 3
-popup/item_3/disabled = true
 
 [connection signal="pressed" from="back_button" to="." method="_on_back_button_pressed"]
 [connection signal="item_selected" from="settings/input_settings/input_device" to="." method="_on_input_device_item_selected"]

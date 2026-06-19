@@ -151,7 +151,6 @@ popup/item_2/id = 2
 popup/item_2/disabled = true
 popup/item_3/text = "diy_device"
 popup/item_3/id = 3
-popup/item_3/disabled = true
 
 [node name="create_button" type="Button" parent="." unique_id=1710633590]
 layout_mode = 1
