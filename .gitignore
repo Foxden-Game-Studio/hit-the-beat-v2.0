@@ -3,3 +3,5 @@
 /android/
 
 .antigravitycli
+.DS_Store
+features/.DS_Store
