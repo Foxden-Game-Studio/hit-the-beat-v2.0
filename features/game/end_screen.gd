@@ -23,7 +23,10 @@ var good: int = 0
 var ok: int = 0
 var miss: int = 0
 
+var score_saved: bool = false
+
 func set_score_values():
+	score_saved = false
 	score = game.score
 	best_combo = game.best_combo
 
@@ -44,7 +47,7 @@ func set_score_values():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	if player_name_edit.text.is_empty():
+	if score_saved or player_name_edit.text.is_empty():
 		save_leaderboard_button.disabled = true
 	else:
 		save_leaderboard_button.disabled = false
@@ -60,6 +63,7 @@ func _on_quit_button_pressed() -> void:
 
 func _on_save_leaderboard_button_pressed() -> void:
 	save_leaderboard()
+	score_saved = true
 
 
 func _on_view_leaderboard_button_pressed() -> void:

@@ -32,7 +32,8 @@ const POINTS = {
 	"GREAT": 80,
 	"GOOD": 50,
 	"OK": 10,
-	"MISS": 0
+	"MISS": 0,
+	"ACTIVE_MISS": -50
 }
 const FEEDBACK_COLOR = {
 	"PERFECT": Color.LIGHT_BLUE,

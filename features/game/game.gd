@@ -158,6 +158,7 @@ func process_input(input: Dictionary, current_time: float) -> void:
 	else:
 		e_drum_kit.on_drum_hit(input_type, GlobalDefinitions.FEEDBACK_COLOR[GlobalDefinitions.MISS])
 		combo = 0
+		update_score("ACTIVE_MISS")
 
 func find_best_match(candidates: Array, input_type: String, search_time: float) -> Dictionary:
 	var best_match = {}
@@ -178,7 +179,9 @@ func update_score(hit_quality: String) -> void:
 	if listen_first:
 		return
 
-	score += GlobalDefinitions.POINTS.get(hit_quality)
+	score += GlobalDefinitions.POINTS.get(hit_quality, 0)
+	if score < 0:
+		score = 0
 
 	if hit_quality == "PERFECT" || hit_quality == "GREAT":
 		combo += 1

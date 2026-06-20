@@ -28,7 +28,11 @@ func load_leaderboard():
 		
 	var leaderboard_conten = JSON.parse_string(FileAccess.get_file_as_string(GlobalDefinitions.USER_LEADERBOARD_DIR + leaderboard))
 	
-	for player in leaderboard_conten["leaderboard"]:
+	var players = leaderboard_conten.get("leaderboard", [])
+	if players is Array:
+		players.sort_custom(func(a, b): return a["score"] > b["score"])
+	
+	for player in players:
 		var new_player_list_item = player_list_item.instantiate()
 		new_player_list_item.set_info(player["player"], String.num_int64(player["score"]))
 		$player_list/player_list.add_child(new_player_list_item)
