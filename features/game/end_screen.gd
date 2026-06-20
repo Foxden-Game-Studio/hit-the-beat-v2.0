@@ -73,3 +73,5 @@ func save_leaderboard():
 	var player_name: String = player_name_edit.text
 	
 	Helpers.save_leaderboard_entry(GlobalSettings.selected_song, player_name, score)
+	GlobalSettings.last_player_name = player_name
+	GlobalSettings.last_player_score = score

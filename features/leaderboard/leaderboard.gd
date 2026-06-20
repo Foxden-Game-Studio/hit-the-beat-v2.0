@@ -32,10 +32,24 @@ func load_leaderboard():
 	if players is Array:
 		players.sort_custom(func(a, b): return a["score"] > b["score"])
 	
+	var target_item: Control = null
 	for player in players:
 		var new_player_list_item = player_list_item.instantiate()
 		new_player_list_item.set_info(player["player"], String.num_int64(player["score"]))
 		$player_list/player_list.add_child(new_player_list_item)
+		
+		if player["player"] == GlobalSettings.last_player_name and player["score"] == GlobalSettings.last_player_score:
+			new_player_list_item.modulate = Color.YELLOW
+			target_item = new_player_list_item
+			
+	if target_item:
+		await get_tree().process_frame
+		await get_tree().process_frame
+		$player_list.scroll_vertical = int(target_item.position.y)
+		
+		GlobalSettings.last_player_name = ""
+		GlobalSettings.last_player_score = -1
+
 		
 func _on_back_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://features/leaderboard/song_list/song_list.tscn")

@@ -6,6 +6,9 @@ var input_device = 0
 var selected_song = ""
 var new_song = false
 
+var last_player_name: String = ""
+var last_player_score: int = -1
+
 var device_index_to_string = {
 	0: "midi_drum_kit",
 	1: "keyboard",
