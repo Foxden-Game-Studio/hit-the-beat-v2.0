@@ -16,7 +16,7 @@ func _ready() -> void:
 		var file_name = songs_files[i]
 
 		popup.add_item(file_name)
-		popup.set_item_metadata(i-1, full_path)
+		popup.set_item_metadata(i, full_path)
 	
 	popup.id_pressed.connect(_on_path_selected)
 

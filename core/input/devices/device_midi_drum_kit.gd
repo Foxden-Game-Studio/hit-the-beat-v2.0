@@ -16,9 +16,9 @@ func pitch_to_drum(pitch: int) -> String:
 		51, 53, 59: return GlobalDefinitions.Drum.ride
 		57: return GlobalDefinitions.Drum.crash_cymbal_2
 		49: return GlobalDefinitions.Drum.crash_cymbal_1
-		46: return GlobalDefinitions.Drum.hi_hat_1
+		46, 26, 42, 44, 22: return GlobalDefinitions.Drum.hi_hat_1
 		36: return GlobalDefinitions.Drum.bass
-		42: return GlobalDefinitions.Drum.hi_hat_2
+		42, 26, 46, 44, 22: return GlobalDefinitions.Drum.hi_hat_2
 		_: return GlobalDefinitions.Drum.undefined
 
 func _input(event: InputEvent) -> void:
