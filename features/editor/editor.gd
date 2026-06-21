@@ -23,6 +23,18 @@ var queued_inputs = []
 
 func _ready() -> void:
 	input_handler.setup_input_device()
+
+	countdown_label = Label.new()
+	countdown_label.set_anchors_preset(Control.PRESET_CENTER)
+	countdown_label.add_theme_font_size_override("font_size", 120)
+	countdown_label.add_theme_color_override("font_color", Color(1, 1, 1, 1))
+	countdown_label.add_theme_color_override("font_outline_color", Color(0, 0, 0, 1))
+	countdown_label.add_theme_constant_override("outline_size", 10)
+	countdown_label.text = ""
+	countdown_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	countdown_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+	overlay.add_child(countdown_label)
+
 	if GlobalSettings.new_song:
 		return
 	
@@ -41,17 +53,6 @@ func _ready() -> void:
 	timestamps = json_file["timestamps"]
 	
 	editor_ui.setup_ui(song_title, song_audio_path, difficulty, timestamps)
-	
-	countdown_label = Label.new()
-	countdown_label.set_anchors_preset(Control.PRESET_CENTER)
-	countdown_label.add_theme_font_size_override("font_size", 120)
-	countdown_label.add_theme_color_override("font_color", Color(1, 1, 1, 1))
-	countdown_label.add_theme_color_override("font_outline_color", Color(0, 0, 0, 1))
-	countdown_label.add_theme_constant_override("outline_size", 10)
-	countdown_label.text = ""
-	countdown_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	countdown_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
-	overlay.add_child(countdown_label)
 
 func _process(_delta: float) -> void:
 	var processed = []
