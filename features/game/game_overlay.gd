@@ -11,9 +11,14 @@ extends Control
 @onready var end_screen: Control = $EndScreen
 @onready var mode_label: Label = $game_statistics/mode
 @onready var mode_button: Button = $game_statistics/mode_switch
+@onready var song_progress_bar: ProgressBar = $game_statistics/ProgressBar
 
 var play_icon = load("res://assets/icons/play_arrow_100dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.svg")
 var pause_icon = load("res://assets/icons/pause_100dp_E3E3E3_FILL0_wght400_GRAD0_opsz48.svg")
+
+func _ready() -> void:
+	song_progress_bar.min_value = 0.0
+	song_progress_bar.max_value = 1.0
 
 func _process(_delta: float) -> void:
 	if game.listen_first:
@@ -22,6 +27,11 @@ func _process(_delta: float) -> void:
 		mode_label.text = TranslationServer.translate("mode") + ": " + TranslationServer.translate("playing")
 		
 	mode_button.disabled = not game.is_game_paused or game.music_resume_position != 0
+	
+	if not game.is_game_paused:
+		var duration = game.audio_player.stream.get_length()
+		if duration > 0:
+			song_progress_bar.value = game.audio_player.get_playback_position() / duration
 
 func set_song_title(song: String) -> void:
 	song_label.text = song
