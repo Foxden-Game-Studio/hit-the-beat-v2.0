@@ -9,6 +9,14 @@ offset_bottom = 23.0
 grow_horizontal = 2
 script = ExtResource("1_j5onr")
 
+[node name="place" type="Label" parent="." unique_id=1539561750]
+custom_minimum_size = Vector2(42, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+text = "#"
+horizontal_alignment = 2
+vertical_alignment = 1
+
 [node name="player" type="Label" parent="." unique_id=2103938806]
 layout_mode = 2
 size_flags_horizontal = 3

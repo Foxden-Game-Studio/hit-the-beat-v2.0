@@ -46,6 +46,14 @@ offset_right = 481.0
 offset_bottom = 140.0
 grow_horizontal = 2
 
+[node name="place" type="Label" parent="header" unique_id=1676349065]
+custom_minimum_size = Vector2(42, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+text = "#"
+horizontal_alignment = 2
+vertical_alignment = 1
+
 [node name="player" type="Label" parent="header" unique_id=319797979]
 layout_mode = 2
 size_flags_horizontal = 3
