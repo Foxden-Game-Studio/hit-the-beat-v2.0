@@ -33,6 +33,9 @@
             <h1>Hit-The-Beat <span>DIY Hub</span></h1>
         </div>
         <p class="subtitle">Bauen, Flashen, Noten programmieren und Spielen – Alles an einem Ort.</p>
+        <p style="margin: 0.5rem 0 0 0; font-size: 0.85rem; text-align: center;">
+            <a href="https://github.com/Foxden-Game-Studio/hit-the-beat-v2.0" target="_blank" style="color: var(--accent-purple); text-decoration: none; opacity: 0.8; transition: opacity 0.2s;">View on GitHub</a>
+        </p>
     </header>
 
     <!-- Main Navigation Bar -->
@@ -68,7 +71,7 @@
             <!-- Bauanleitung / Hardware Section -->
             <section class="content-section">
                 <h2>Bauanleitung & Hardware-Dokumentation</h2>
-                <p>Mit dieser Anleitung kannst du dir dein eigenes DIY-Schlagzeug aufbauen. Die Sensoren erfassen Schläge über Piezo-Elemente, die Signale werden vom ESP32 ausgewertet und per USB-Verbindung an den PC übertragen.</p>
+                <p>Mit dieser Anleitung kannst du dir dein eigenes DIY-Schlagzeug aufbauen. Die Sensoren erfassen Schläge über Piezo-Elemente, die Signale werden vom ESP32 ausgewertet und per USB-Verbindung zum PC übertragen.</p>
 
                 <h3>Benötigte Materialien</h3>
                 <div class="materials-grid">
@@ -99,12 +102,12 @@
                         <img src="Bilder/Schaltplan.png" alt="Grafischer Steckplatinen-Schaltplan" class="schema-image">
                         <div class="image-explanation">
                             <h4>1. Steckplatinen-Verdrahtungsplan</h4>
-                            <p>Diese Zeichnung zeigt die praktische Verkabelung auf einem Breadboard. Hier siehst du, wie die analogen Datenpins der 4 Piezo-Sensormodule an die analogen Eingänge des ESP32 angeschlossen sind:</p>
+                            <p>Diese Zeichnung zeigt die praktische Verkabelung auf einem Breadboard. Hier siehst du, wie die analogen Datenpins der 4 Piezo-Sensormodule an die analogen Eingänge des ESP32 angeschlossen werden:</p>
                             <ul style="padding-left: 1rem; margin-top: 0.5rem; list-style-type: disc;">
-                                <li style="margin: 0 0 0.3rem 0; padding: 0; background: transparent; border: none; font-size: 0.85rem; color: var(--text-secondary);"><strong>Kick/Bass:</strong> GPIO 35 (Analog)</li>
-                                <li style="margin: 0 0 0.3rem 0; padding: 0; background: transparent; border: none; font-size: 0.85rem; color: var(--text-secondary);"><strong>Hi-Hat:</strong> GPIO 34 (Analog)</li>
-                                <li style="margin: 0 0 0.3rem 0; padding: 0; background: transparent; border: none; font-size: 0.85rem; color: var(--text-secondary);"><strong>Snare:</strong> GPIO 32 (Analog)</li>
-                                <li style="margin: 0 0 0.3rem 0; padding: 0; background: transparent; border: none; font-size: 0.85rem; color: var(--text-secondary);"><strong>Tom:</strong> GPIO 33 (Analog)</li>
+                                <li style="margin: 0 0 0.3rem 0; padding: 0; background: transparent; border: none; font-size: 0.85rem; color: var(--text-secondary);"><strong>Kick/Bass:</strong> GPIO 35 (ADC1_CH7)</li>
+                                <li style="margin: 0 0 0.3rem 0; padding: 0; background: transparent; border: none; font-size: 0.85rem; color: var(--text-secondary);"><strong>Hi-Hat:</strong> GPIO 34 (ADC1_CH6)</li>
+                                <li style="margin: 0 0 0.3rem 0; padding: 0; background: transparent; border: none; font-size: 0.85rem; color: var(--text-secondary);"><strong>Snare:</strong> GPIO 32 (ADC1_CH4)</li>
+                                <li style="margin: 0 0 0.3rem 0; padding: 0; background: transparent; border: none; font-size: 0.85rem; color: var(--text-secondary);"><strong>Tom:</strong> GPIO 33 (ADC1_CH5)</li>
                             </ul>
                         </div>
                     </div>
@@ -114,7 +117,7 @@
                         <img src="Bilder/Schaltplan1.png" alt="Elektronischer Schaltplan Detail" class="schema-image">
                         <div class="image-explanation">
                             <h4>2. Detaillierter Elektronik-Schaltplan</h4>
-                            <p>Ein detaillierter, technischer Schaltplan. Er verdeutlicht die Spannungsversorgung (5V VCC an die Piezos, 3.3V an den Taster) und zeigt präzise, wie der Taster an <strong>GPIO 14</strong> angebunden ist. Die Ground-Leitungen (GND) aller Module fließen hier auf einen gemeinsamen Massepunkt am ESP32 zusammen.</p>
+                            <p>Ein detaillierter, technischer Schaltplan. Er verdeutlicht die Spannungsversorgung (5V VCC an die Piezos, 3.3V an den Taster) und zeigt präzise, wie der Taster an GPIO 14 mit einem Pull-Down-Widerstand angeschlossen wird.</p>
                         </div>
                     </div>
 
@@ -123,7 +126,7 @@
                         <img src="Bilder/platine schaltplan .jpeg" alt="Schaltplan für die Leiterplatte" class="schema-image">
                         <div class="image-explanation">
                             <h4>3. Platinen-Schaltplan (PCB Schematic)</h4>
-                            <p>Dieser Schaltplan dient als direkte Vorlage für den Entwurf einer gedruckten Leiterplatte (PCB). Er definiert die exakten elektrischen Netze, Steckerleisten (Header) für den ESP32 und Schraubklemmen für die Piezos, inklusive notwendiger Glättungskondensatoren zur Stabilisierung der Versorgungsspannung.</p>
+                            <p>Dieser Schaltplan dient als direkte Vorlage für den Entwurf einer gedruckten Leiterplatte (PCB). Er definiert die exakten elektrischen Netze, Steckerleisten (Header) für die Sensoren und Stromversorgung.</p>
                         </div>
                     </div>
 
@@ -132,7 +135,7 @@
                         <img src="Bilder/Platine layout.jpeg" alt="Gedrucktes Leiterplatten-Layout" class="schema-image">
                         <div class="image-explanation">
                             <h4>4. Leiterplatten-Layout (PCB Trace Layout)</h4>
-                            <p>Das physische Kupfer-Layout der Platine. Es zeigt die Leiterbahnen, Lötpads und Kupferebenen. Dieses kompakte Layout kann als "Shield" oder "Hat" direkt auf den ESP32 aufgesteckt werden. Die breiten Leiterbahnen minimieren Signalverluste und Störgeräusche bei der analogen Messung der Trommelschläge.</p>
+                            <p>Das physische Kupfer-Layout der Platine. Es zeigt die Leiterbahnen, Lötpads und Kupferebenen. Dieses kompakte Layout kann als "Shield" oder "Hat" direkt auf den ESP32 aufgesteckt werden.</p>
                         </div>
                     </div>
                 </div>
@@ -141,7 +144,7 @@
                 <ul class="step-list">
                     <li>
                         <strong>Schritt 1: Stromversorgung vorbereiten</strong>
-                        Verbinde den 5V-Pin (VIN/5V) des ESP32 mit der VCC-Leitung deiner Sensormodule. Verbinde die GND-Pins aller Komponenten mit dem GND-Pin des ESP32, um ein einheitliches Bezugspotenzial herzustellen.
+                        Verbinde den 5V-Pin (VIN/5V) des ESP32 mit der VCC-Leitung deiner Sensormodule. Verbinde die GND-Pins aller Komponenten mit dem GND-Pin des ESP32, um ein einheitliches Bezugspotenzial zu schaffen.
                     </li>
                     <li>
                         <strong>Schritt 2: Piezosensoren verkabeln</strong>
@@ -155,7 +158,7 @@
                     </li>
                     <li>
                         <strong>Schritt 3: Taster mit Pull-Down-Widerstand verkabeln</strong>
-                        Verbinde eine Seite des Tasters mit der 3.3V-Spannung des ESP32. Verbinde die andere Seite des Tasters mit dem Pin <strong>GPIO 14</strong> des ESP32. Schließe an diesen Pin 14 zusätzlich den 10kOhm-Widerstand an und verbinde dessen anderes Ende mit GND (Pull-Down-Schaltung).
+                        Verbinde eine Seite des Tasters mit der 3.3V-Spannung des ESP32. Verbinde die andere Seite des Tasters mit dem Pin <strong>GPIO 14</strong> des ESP32. Schließe an diesen Pin einen 10 kΩ Widerstand an, der gegen Masse geht, um Störungen zu vermeiden.
                     </li>
                     <li>
                         <strong>Schritt 4: Firmware flashen & Kalibrieren</strong>
@@ -165,7 +168,7 @@
 
                 <div class="warning-box">
                     <h3>Sicherheitshinweis zur Tasterschaltung (Pull-Down)</h3>
-                    <p>Ohne den Pull-Down-Widerstand kann es zu Geister-Triggern kommen, da der digitale Pin 14 bei unbetätigtem Knopf in der Luft schwebt ("floating input") und elektromagnetische Störungen als Knopfdruck fehlinterpretiert.</p>
+                    <p>Ohne den Pull-Down-Widerstand kann es zu Geister-Triggern kommen, da der digitale Pin 14 bei unbetätigtem Knopf in der Luft schwebt ("floating input") und elektromagnetische Störungen aufpicken kann.</p>
                     <ul>
                         <li><strong>Der Widerstand:</strong> Zieht den Pegel an Pin 14 dauerhaft auf 0V (Low), solange der Taster offen ist.</li>
                         <li><strong>Der Tastendruck:</strong> Schließt den Stromkreis zu 3.3V, überwindet den Widerstand und zieht den Pegel sicher auf 3.3V (High).</li>
@@ -176,7 +179,7 @@
             <!-- MicroPython Source Code Section -->
             <section class="content-section">
                 <h2>ESP32 Quellcodes (MicroPython)</h2>
-                <p>Wenn du den Code manuell anpassen oder über Tools wie Thonny/VS Code hochladen möchtest, kannst du die Quellcodedateien hier kopieren. Alternativ stehen sie im Download-Tab als Datei bereit.</p>
+                <p>Wenn du den Code manuell anpassen oder über Tools wie Thonny/VS Code hochladen möchtest, kannst du die Quellcodedateien hier kopieren. Alternativ stehen sie im Download-Tab als Dateien zur Verfügung.</p>
                 
                 <div class="code-container">
                     <div class="code-header">
@@ -560,7 +563,7 @@ while True:
                         <div class="resource-info-badge">3D STL</div>
                         
                         <!-- 3D Casing Preview Image -->
-                        <div style="width: 100%; height: 120px; border-radius: 10px; overflow: hidden; border: 1px solid var(--surface-border); background: rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center; margin-bottom: 0.5rem;">
+                        <div style="width: 100%; height: 120px; border-radius: 10px; overflow: hidden; border: 1px solid var(--surface-border); background: rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
                             <img src="Bilder/3d_drum_pad_housing.png" alt="3D Modell Gehäuse Vorschau" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
                         
@@ -665,7 +668,7 @@ while True:
                             
                             <div class="input-field" style="margin-bottom: 1.5rem;">
                                 <label for="fb-message">Nachricht / Feedback</label>
-                                <textarea id="fb-message" rows="5" placeholder="Schreibe uns deine Meinung..." style="width: 100%; padding: 0.8rem; border-radius: 12px; background: rgba(0,0,0,0.25); border: 1px solid var(--surface-border); color: var(--text-primary); font-family: inherit; font-size: 0.95rem; resize: vertical;" required></textarea>
+                                <textarea id="fb-message" rows="5" placeholder="Schreibe uns deine Meinung..." style="width: 100%; padding: 0.8rem; border-radius: 12px; background: rgba(0,0,0,0.25); border: 1px solid rgba(129, 140, 248, 0.2); color: inherit; font-family: inherit; resize: vertical;"></textarea>
                             </div>
                             
                             <button type="submit" id="fb-submit-btn" class="primary-btn" style="width: 100%; display: flex; justify-content: center; align-items: center; gap: 0.5rem;">Feedback senden</button>
@@ -673,7 +676,7 @@ while True:
                         
                         <!-- Form Success Message (hidden by default) -->
                         <div id="fb-success-msg" class="hidden" style="text-align: center; padding: 2rem 0; animation: fadeIn 0.4s ease-out;">
-                            <div class="success-icon-wrapper" style="width: 70px; height: 70px; border-radius: 50%; background: rgba(34, 197, 94, 0.15); border: 2px solid #4ade80; color: #4ade80; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem auto; font-size: 2.2rem;">✓</div>
+                            <div class="success-icon-wrapper" style="width: 70px; height: 70px; border-radius: 50%; background: rgba(34, 197, 94, 0.15); border: 2px solid #4ade80; color: #4ade80; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem auto; font-size: 2rem;">✓</div>
                             <h3 style="color: #4ade80; margin: 0 0 0.5rem 0; font-size: 1.4rem;">Vielen Dank!</h3>
                             <p style="margin: 0; color: var(--text-secondary);">Dein Feedback wurde erfolgreich übermittelt und lokal gespeichert.</p>
                             <button id="fb-reset-btn" class="secondary-btn" style="margin-top: 1.5rem; padding: 0.5rem 1.5rem; font-size: 0.85rem;">Neues Feedback senden</button>
