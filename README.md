@@ -1,3 +1,6 @@
+# Note on the 20.08.2026
+This repo has been temporarily archived 
+
 # Hit the Beat v2.0
 
 Switch language if needed:
